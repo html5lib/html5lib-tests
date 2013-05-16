@@ -259,3 +259,14 @@ nobr should have closed the div inside it implicitly. "
 |       "
 
 "
+
+#data
+<p xml:lang="pl">Witam wszystkich.
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       xml:lang="pl"
+|       "Witam wszystkich."
