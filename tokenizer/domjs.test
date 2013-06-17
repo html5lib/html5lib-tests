@@ -77,8 +77,8 @@
         {
             "description":"--!NUL in comment ",
             "doubleEscaped":true,
-            "input":"<!----!\\u0000-->",
-            "output":["ParseError", ["Comment", "--!\\uFFFD"]]
+            "input":"<!----!\u0000-->",
+            "output":["ParseError", ["Comment", "--!\uFFFD"]]
         },
         {
             "description":"space EOF after doctype ",
