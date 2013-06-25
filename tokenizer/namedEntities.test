@@ -67,7 +67,6 @@
             "input": "&Abreve", 
             "description": "Bad named entity: Abreve without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "&Abreve"
