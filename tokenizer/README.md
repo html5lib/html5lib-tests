@@ -8,16 +8,15 @@ the disadvantage that it is relatively verbose.
 Basic Structure
 ---------------
 
-`{"tests": [`  
-  
-`    {"description":"Test description",`  
-`    "input":"input_string",`  
-`    "output":[expected_output_tokens],`  
-`    "initialStates":[initial_states],`  
-`    "lastStartTag":last_start_tag,`  
-`    "ignoreErrorOrder":ignore_error_order`  
-`    }`  
-`]}`
+    {"tests": [
+        {"description": "Test description",
+        "input": "input_string",
+        "output": [expected_output_tokens],
+        "initialStates": [initial_states],
+        "lastStartTag": last_start_tag,
+        "ignoreErrorOrder": ignore_error_order
+        }
+    ]}
 
 Multiple tests per file are allowed simply by adding more objects to the
 "tests" list.
@@ -60,13 +59,13 @@ the tokenizer the first (leftmost) in the list. The list must mach the
 **complete** list of tokens that the tokenizer should produce. Valid
 tokens are:
 
-`["DOCTYPE", name, public_id, system_id, correctness]`  
-`["StartTag", name, {attributes}`*`,` `true`*`]`  
-`["StartTag", name, {attributes}]`  
-`["EndTag", name]`  
-`["Comment", data]`  
-`["Character", data]`  
-`"ParseError"`
+    ["DOCTYPE", name, public_id, system_id, correctness]
+    ["StartTag", name, {attributes}*, true*]
+    ["StartTag", name, {attributes}]
+    ["EndTag", name]
+    ["Comment", data]
+    ["Character", data]
+    "ParseError"
 
 `public_id` and `system_id` are either strings or `null`. `correctness`
 is either `true` or `false`; `true` corresponds to the force-quirks flag
