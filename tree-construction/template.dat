@@ -1615,3 +1615,75 @@ eof table
 |                 content
 |                   <table>
 |                     <script>
+
+#data
+<body><form><template><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <form>
+|       <template>
+|         content
+|           <form>
+
+#data
+<body><template><table><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <template>
+|       content
+|         <table>
+
+#data
+<body><template><form><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <template>
+|       content
+|         <form>
+|           <form>
+
+#data
+<body><form><template><isindex>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <form>
+|       <template>
+|         content
+|           <form>
+|             <hr>
+|             <label>
+|               "This is a searchable index. Enter search keywords: "
+|               <input>
+|                 name="isindex"
+|             <hr>
+
+#data
+<body><form><template><isindex><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <form>
+|       <template>
+|         content
+|           <form>
+|             <hr>
+|             <label>
+|               "This is a searchable index. Enter search keywords: "
+|               <input>
+|                 name="isindex"
+|             <hr>
+|           <form>
