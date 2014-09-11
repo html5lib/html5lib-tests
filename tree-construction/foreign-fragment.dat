@@ -1,0 +1,362 @@
+#data
+<b></b><mglyph/><i></i><malignmark/><u></u><ms/>X
+#errors
+51: Self-closing syntax (“/>”) used on a non-void HTML element. Ignoring the slash and treating as a start tag.
+52: End of file seen and there were open elements.
+51: Unclosed element “ms”.
+#document-fragment
+math ms
+#document
+| <b>
+| <math mglyph>
+| <i>
+| <math malignmark>
+| <u>
+| <ms>
+|   "X"
+
+#data
+<malignmark></malignmark>
+#errors
+#document-fragment
+math ms
+#document
+| <math malignmark>
+
+#data
+<div></div>
+#errors
+#document-fragment
+math ms
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+math ms
+#document
+| <figure>
+
+#data
+<b></b><mglyph/><i></i><malignmark/><u></u><mn/>X
+#errors
+51: Self-closing syntax (“/>”) used on a non-void HTML element. Ignoring the slash and treating as a start tag.
+52: End of file seen and there were open elements.
+51: Unclosed element “mn”.
+#document-fragment
+math mn
+#document
+| <b>
+| <math mglyph>
+| <i>
+| <math malignmark>
+| <u>
+| <mn>
+|   "X"
+
+#data
+<malignmark></malignmark>
+#errors
+#document-fragment
+math mn
+#document
+| <math malignmark>
+
+#data
+<div></div>
+#errors
+#document-fragment
+math mn
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+math mn
+#document
+| <figure>
+
+#data
+<b></b><mglyph/><i></i><malignmark/><u></u><mo/>X
+#errors
+51: Self-closing syntax (“/>”) used on a non-void HTML element. Ignoring the slash and treating as a start tag.
+52: End of file seen and there were open elements.
+51: Unclosed element “mo”.
+#document-fragment
+math mo
+#document
+| <b>
+| <math mglyph>
+| <i>
+| <math malignmark>
+| <u>
+| <mo>
+|   "X"
+
+#data
+<malignmark></malignmark>
+#errors
+#document-fragment
+math mo
+#document
+| <math malignmark>
+
+#data
+<div></div>
+#errors
+#document-fragment
+math mo
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+math mo
+#document
+| <figure>
+
+#data
+<b></b><mglyph/><i></i><malignmark/><u></u><mi/>X
+#errors
+51: Self-closing syntax (“/>”) used on a non-void HTML element. Ignoring the slash and treating as a start tag.
+52: End of file seen and there were open elements.
+51: Unclosed element “mi”.
+#document-fragment
+math mi
+#document
+| <b>
+| <math mglyph>
+| <i>
+| <math malignmark>
+| <u>
+| <mi>
+|   "X"
+
+#data
+<malignmark></malignmark>
+#errors
+#document-fragment
+math mi
+#document
+| <math malignmark>
+
+#data
+<div></div>
+#errors
+#document-fragment
+math mi
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+math mi
+#document
+| <figure>
+
+#data
+<b></b><mglyph/><i></i><malignmark/><u></u><mtext/>X
+#errors
+51: Self-closing syntax (“/>”) used on a non-void HTML element. Ignoring the slash and treating as a start tag.
+52: End of file seen and there were open elements.
+51: Unclosed element “mtext”.
+#document-fragment
+math mtext
+#document
+| <b>
+| <math mglyph>
+| <i>
+| <math malignmark>
+| <u>
+| <mtext>
+|   "X"
+
+#data
+<malignmark></malignmark>
+#errors
+#document-fragment
+math mtext
+#document
+| <math malignmark>
+
+#data
+<div></div>
+#errors
+#document-fragment
+math mtext
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+math mtext
+#document
+| <figure>
+
+#data
+<div></div>
+#errors
+5: HTML start tag “div” in a foreign namespace context.
+#document-fragment
+math annotation-xml
+#document
+| <math div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+math annotation-xml
+#document
+| <math figure>
+
+#data
+<div></div>
+#errors
+5: HTML start tag “div” in a foreign namespace context.
+#document-fragment
+math math
+#document
+| <math div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+math math
+#document
+| <math figure>
+
+#data
+<div></div>
+#errors
+#document-fragment
+svg foreignObject
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+svg foreignObject
+#document
+| <figure>
+
+#data
+<div></div>
+#errors
+#document-fragment
+svg title
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+svg title
+#document
+| <figure>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+svg desc
+#document
+| <figure>
+
+#data
+<div><h1>X</h1></div>
+#errors
+5: HTML start tag “div” in a foreign namespace context.
+9: HTML start tag “h1” in a foreign namespace context.
+#document-fragment
+svg svg
+#document
+| <svg div>
+|   <svg h1>
+|     "X"
+
+#data
+<div></div>
+#errors
+5: HTML start tag “div” in a foreign namespace context.
+#document-fragment
+svg svg
+#document
+| <svg div>
+
+#data
+<div></div>
+#errors
+#document-fragment
+svg desc
+#document
+| <div>
+
+#data
+<figure></figure>
+#errors
+#document-fragment
+svg desc
+#document
+| <figure>
+
+#data
+<plaintext><foo>
+#errors
+16: End of file seen and there were open elements.
+11: Unclosed element “plaintext”.
+#document-fragment
+svg desc
+#document
+| <plaintext>
+|   "<foo>"
+
+#data
+<frameset>X
+#errors
+6: Stray start tag “frameset”.
+#document-fragment
+svg desc
+#document
+| "X"
+
+#data
+<head>X
+#errors
+6: Stray start tag “head”.
+#document-fragment
+svg desc
+#document
+| "X"
+
+#data
+<body>X
+#errors
+6: Stray start tag “body”.
+#document-fragment
+svg desc
+#document
+| "X"
+
+#data
+<html>X
+#errors
+6: Stray start tag “html”.
+#document-fragment
+svg desc
+#document
+| "X"
