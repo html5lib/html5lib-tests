@@ -360,3 +360,21 @@ svg desc
 svg desc
 #document
 | "X"
+
+#data
+<html class="foo">X
+#errors
+6: Stray start tag “html”.
+#document-fragment
+svg desc
+#document
+| "X"
+
+#data
+<body class="foo">X
+#errors
+6: Stray start tag “body”.
+#document-fragment
+svg desc
+#document
+| "X"
