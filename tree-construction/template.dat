@@ -633,6 +633,18 @@ foster-parented /div
 |         <div>
 
 #data
+<body><template><tr>Foo</tr></template>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <template>
+|       content
+|         <tr>
+|         "Foo"
+
+#data
 <body><template><tr></tr><td></td></template>
 #errors
 no doctype
@@ -1362,6 +1374,20 @@ eof
 |   <body>
 
 #data
+<template><template><table><div>
+#errors
+#document
+| <html>
+|   <head>
+|     <template>
+|       content
+|         <template>
+|           content
+|             <div>
+|             <table>
+|   <body>
+
+#data
 <template><template><frame>
 #errors
 no doctype
@@ -1589,3 +1615,75 @@ eof table
 |                 content
 |                   <table>
 |                     <script>
+
+#data
+<body><form><template><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <form>
+|       <template>
+|         content
+|           <form>
+
+#data
+<body><template><table><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <template>
+|       content
+|         <table>
+
+#data
+<body><template><form><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <template>
+|       content
+|         <form>
+|           <form>
+
+#data
+<body><form><template><isindex>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <form>
+|       <template>
+|         content
+|           <form>
+|             <hr>
+|             <label>
+|               "This is a searchable index. Enter search keywords: "
+|               <input>
+|                 name="isindex"
+|             <hr>
+
+#data
+<body><form><template><isindex><form>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <form>
+|       <template>
+|         content
+|           <form>
+|             <hr>
+|             <label>
+|               "This is a searchable index. Enter search keywords: "
+|               <input>
+|                 name="isindex"
+|             <hr>
+|           <form>
