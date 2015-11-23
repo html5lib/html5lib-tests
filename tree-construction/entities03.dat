@@ -1,0 +1,79 @@
+#data
+FOO&fjlig;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOOfjBAR"
+
+#data
+FOO&ThickSpace;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOO  BAR"
+
+#data
+FOO&race;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOO∽̱BAR"
+
+#data
+FOO&acE;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOO∾̳BAR"
+
+#data
+FOO&DownBreve;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOO ̑BAR"
+
+#data
+FOO&tdot;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOO ⃛BAR"
+
+#data
+FOO&TripleDot;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOO ⃛BAR"
+
+#data
+FOO&DotDot;BAR
+#errors
+(1,3): expected-doctype-but-got-chars
+#document
+| <html>
+|   <head>
+|   <body>
+|     "FOO ⃜BAR"
