@@ -1,5 +1,5 @@
 #data
-<head><noscript><!doctype html></noscript>
+<head><noscript><!doctype html><!--foo--></noscript>
 #script-off
 #errors
 Line: 1 Col: 6 Unexpected start tag (head). Expected DOCTYPE.
@@ -8,10 +8,11 @@ Line: 1 Col: 31 Unexpected DOCTYPE. Ignored.
 | <html>
 |   <head>
 |     <noscript>
+|       <!-- foo -->
 |   <body>
 
 #data
-<head><noscript><html class="foo"></noscript>
+<head><noscript><html class="foo"><!--foo--></noscript>
 #script-off
 #errors
 Line: 1 Col: 6 Unexpected start tag (head). Expected DOCTYPE.
@@ -21,6 +22,7 @@ Line: 1 Col: 34 html needs to be the first start tag.
 |   class="foo"
 |   <head>
 |     <noscript>
+|       <!-- foo -->
 |   <body>
 
 #data
