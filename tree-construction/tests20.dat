@@ -514,3 +514,57 @@
 |       <math annotation-xml>
 |         encoding=" text/html "
 |     <div>
+
+#data
+<math><annotation-xml> </annotation-xml>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       <math annotation-xml>
+|         " "
+
+#data
+<math><annotation-xml>c</annotation-xml>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       <math annotation-xml>
+|         "c"
+
+#data
+<math><annotation-xml><!--foo-->
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       <math annotation-xml>
+|         <!-- foo -->
+
+#data
+<math><annotation-xml></svg>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       <math annotation-xml>
+
+#data
+<math><annotation-xml><svg>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       <math annotation-xml>
+|         <svg svg>
