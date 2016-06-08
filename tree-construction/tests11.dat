@@ -272,7 +272,7 @@
 |       zoomandpan=""
 
 #data
-<!DOCTYPE html><body><svg contentScriptType='' contentStyleType=''externalResourcesRequired='' filterRes=''></svg>
+<!DOCTYPE html><body><svg contentScriptType='' contentStyleType='' externalResourcesRequired='' filterRes=''></svg>
 #errors
 #document
 | <!DOCTYPE html>
@@ -286,7 +286,7 @@
 |       filterres=""
 
 #data
-<!DOCTYPE html><body><svg CONTENTSCRIPTTYPE='' CONTENTSTYLETYPE=''EXTERNALRESOURCESREQUIRED='' FILTERRES=''></svg>
+<!DOCTYPE html><body><svg CONTENTSCRIPTTYPE='' CONTENTSTYLETYPE='' EXTERNALRESOURCESREQUIRED='' FILTERRES=''></svg>
 #errors
 #document
 | <!DOCTYPE html>
@@ -300,7 +300,7 @@
 |       filterres=""
 
 #data
-<!DOCTYPE html><body><svg contentscripttype='' contentstyletype=''externalresourcesrequired='' filterres=''></svg>
+<!DOCTYPE html><body><svg contentscripttype='' contentstyletype='' externalresourcesrequired='' filterres=''></svg>
 #errors
 #document
 | <!DOCTYPE html>
@@ -314,7 +314,7 @@
 |       filterres=""
 
 #data
-<!DOCTYPE html><body><math contentScriptType='' contentStyleType=''externalResourcesRequired='' filterRes=''></math>
+<!DOCTYPE html><body><math contentScriptType='' contentStyleType='' externalResourcesRequired='' filterRes=''></math>
 #errors
 #document
 | <!DOCTYPE html>
