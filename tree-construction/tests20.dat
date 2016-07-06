@@ -518,6 +518,8 @@
 #data
 <math><annotation-xml> </annotation-xml>
 #errors
+(1,6): expected-doctype-but-got-start-tag
+(1,40): expected-closing-tag-but-got-eof
 #document
 | <html>
 |   <head>
@@ -529,6 +531,8 @@
 #data
 <math><annotation-xml>c</annotation-xml>
 #errors
+(1,6): expected-doctype-but-got-start-tag
+(1,40): expected-closing-tag-but-got-eof
 #document
 | <html>
 |   <head>
@@ -540,6 +544,8 @@
 #data
 <math><annotation-xml><!--foo-->
 #errors
+(1,6): expected-doctype-but-got-start-tag
+(1,32): expected-closing-tag-but-got-eof
 #document
 | <html>
 |   <head>
@@ -549,18 +555,24 @@
 |         <!-- foo -->
 
 #data
-<math><annotation-xml></svg>
+<math><annotation-xml></svg>x
 #errors
+(1,6): expected-doctype-but-got-start-tag
+(1,28): unexpected-end-tag
+(1,29): expected-closing-tag-but-got-eof
 #document
 | <html>
 |   <head>
 |   <body>
 |     <math math>
 |       <math annotation-xml>
+|         "x"
 
 #data
-<math><annotation-xml><svg>
+<math><annotation-xml><svg>x
 #errors
+(1,6): expected-doctype-but-got-start-tag
+(1,28): expected-closing-tag-but-got-eof
 #document
 | <html>
 |   <head>
@@ -568,3 +580,4 @@
 |     <math math>
 |       <math annotation-xml>
 |         <svg svg>
+|           "x"
