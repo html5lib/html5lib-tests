@@ -43,6 +43,12 @@ parser must set the scripting flag to disabled. If a line that says
 "\#script-on" is present, it must set it to enabled. Otherwise, the
 test should be run in both modes.
 
+Then there \*may\* be a line that says "\#script-off" or
+"\#script-in". If a line that says "\#script-off" is present, the
+parser must set the scripting flag to disabled. If a line that says
+"\#script-on" is present, it must set it to enabled. Otherwise, the
+test should be run in both modes.
+
 Then there must be a line that says "\#document", which must be followed
 by a dump of the tree of the parsed DOM. Each node must be represented
 by a single line. Each line must start with "| ", followed by two spaces
