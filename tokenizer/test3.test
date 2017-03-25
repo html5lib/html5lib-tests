@@ -14,7 +14,10 @@
 
 {"description":"\\u000B",
 "input":"\u000B",
-"output":["ParseError", ["Character", "\u000B"]]},
+"output":["ParseError", ["Character", "\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 1 }
+]},
 
 {"description":"\\u000C",
 "input":"\u000C",
@@ -94,7 +97,10 @@
 
 {"description":"<\\u000B",
 "input":"<\u000B",
-"output":["ParseError", "ParseError", ["Character", "<\u000B"]]},
+"output":["ParseError", "ParseError", ["Character", "<\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 2 }
+]},
 
 {"description":"<\\u000C",
 "input":"<\u000C",
@@ -122,7 +128,10 @@
 
 {"description":"<!\\u000B",
 "input":"<!\u000B",
-"output":["ParseError", "ParseError", ["Comment", "\u000B"]]},
+"output":["ParseError", "ParseError", ["Comment", "\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 }
+]},
 
 {"description":"<!\\u000C",
 "input":"<!\u000C",
@@ -170,7 +179,10 @@
 
 {"description":"<!--\\u000B",
 "input":"<!--\u000B",
-"output":["ParseError", "ParseError", ["Comment", "\u000B"]]},
+"output":["ParseError", "ParseError", ["Comment", "\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 5 }
+]},
 
 {"description":"<!--\\u000C",
 "input":"<!--\u000C",
@@ -194,7 +206,10 @@
 
 {"description":"<!-- \\u000B",
 "input":"<!-- \u000B",
-"output":["ParseError", "ParseError", ["Comment", " \u000B"]]},
+"output":["ParseError", "ParseError", ["Comment", " \u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<!-- \\u000C",
 "input":"<!-- \u000C",
@@ -242,7 +257,10 @@
 
 {"description":"<!-- -\\u000B",
 "input":"<!-- -\u000B",
-"output":["ParseError", "ParseError", ["Comment", " -\u000B"]]},
+"output":["ParseError", "ParseError", ["Comment", " -\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- -\\u000C",
 "input":"<!-- -\u000C",
@@ -482,7 +500,10 @@
 
 {"description":"<!---\\u000B",
 "input":"<!---\u000B",
-"output":["ParseError", "ParseError", ["Comment", "-\u000B"]]},
+"output":["ParseError", "ParseError", ["Comment", "-\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<!---\\u000C",
 "input":"<!---\u000C",
@@ -530,7 +551,10 @@
 
 {"description":"<!----\\u000B",
 "input":"<!----\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["Comment", "--\u000B"]]},
+"output":["ParseError", "ParseError", "ParseError", ["Comment", "--\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+]},
 
 {"description":"<!----\\u000C",
 "input":"<!----\u000C",
@@ -922,7 +946,10 @@
 
 {"description":"<!DOCTYPE\\u0008",
 "input":"<!DOCTYPE\u0008",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u0008", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u0008", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 10 }
+]},
 
 {"description":"<!DOCTYPE\\u0009",
 "input":"<!DOCTYPE\u0009",
@@ -934,7 +961,10 @@
 
 {"description":"<!DOCTYPE\\u000B",
 "input":"<!DOCTYPE\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u000B", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u000B", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 10 }
+]},
 
 {"description":"<!DOCTYPE\\u000C",
 "input":"<!DOCTYPE\u000C",
@@ -946,7 +976,10 @@
 
 {"description":"<!DOCTYPE\\u001F",
 "input":"<!DOCTYPE\u001F",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u001F", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u001F", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 10 }
+]},
 
 {"description":"<!DOCTYPE ",
 "input":"<!DOCTYPE ",
@@ -958,7 +991,10 @@
 
 {"description":"<!DOCTYPE \\u0008",
 "input":"<!DOCTYPE \u0008",
-"output":["ParseError", "ParseError", ["DOCTYPE", "\u0008", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "\u0008", null, null, false]],
+"errors":[
+   { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE \\u0009",
 "input":"<!DOCTYPE \u0009",
@@ -970,7 +1006,10 @@
 
 {"description":"<!DOCTYPE \\u000B",
 "input":"<!DOCTYPE \u000B",
-"output":["ParseError", "ParseError", ["DOCTYPE", "\u000B", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "\u000B", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE \\u000C",
 "input":"<!DOCTYPE \u000C",
@@ -982,7 +1021,10 @@
 
 {"description":"<!DOCTYPE \\u001F",
 "input":"<!DOCTYPE \u001F",
-"output":["ParseError", "ParseError", ["DOCTYPE", "\u001F", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "\u001F", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE  ",
 "input":"<!DOCTYPE  ",
@@ -1078,7 +1120,10 @@
 
 {"description":"<!DOCTYPE a\\u0008",
 "input":"<!DOCTYPE a\u0008",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a\u0008", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a\u0008", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE a\\u0009",
 "input":"<!DOCTYPE a\u0009",
@@ -1090,7 +1135,10 @@
 
 {"description":"<!DOCTYPE a\\u000B",
 "input":"<!DOCTYPE a\u000B",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a\u000B", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a\u000B", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE a\\u000C",
 "input":"<!DOCTYPE a\u000C",
@@ -1102,7 +1150,10 @@
 
 {"description":"<!DOCTYPE a\\u001F",
 "input":"<!DOCTYPE a\u001F",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a\u001F", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a\u001F", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE a ",
 "input":"<!DOCTYPE a ",
@@ -1114,7 +1165,10 @@
 
 {"description":"<!DOCTYPE a \\u0008",
 "input":"<!DOCTYPE a \u0008",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a \\u0009",
 "input":"<!DOCTYPE a \u0009",
@@ -1126,7 +1180,10 @@
 
 {"description":"<!DOCTYPE a \\u000B",
 "input":"<!DOCTYPE a \u000B",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a \\u000C",
 "input":"<!DOCTYPE a \u000C",
@@ -1138,7 +1195,10 @@
 
 {"description":"<!DOCTYPE a \\u001F",
 "input":"<!DOCTYPE a \u001F",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a  ",
 "input":"<!DOCTYPE a  ",
@@ -1218,7 +1278,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC\\u0008",
 "input":"<!DOCTYPE a PUBLIC\u0008",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC\\u0009",
 "input":"<!DOCTYPE a PUBLIC\u0009",
@@ -1230,7 +1293,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC\\u000B",
 "input":"<!DOCTYPE a PUBLIC\u000B",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC\\u000C",
 "input":"<!DOCTYPE a PUBLIC\u000C",
@@ -1242,7 +1308,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC\\u001F",
 "input":"<!DOCTYPE a PUBLIC\u001F",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC ",
 "input":"<!DOCTYPE a PUBLIC ",
@@ -1270,7 +1339,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC\"\\u000B",
 "input":"<!DOCTYPE a PUBLIC\"\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC\"\\u000C",
 "input":"<!DOCTYPE a PUBLIC\"\u000C",
@@ -1410,7 +1482,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC'\\u000B",
 "input":"<!DOCTYPE a PUBLIC'\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC'\\u000C",
 "input":"<!DOCTYPE a PUBLIC'\u000C",
@@ -1442,7 +1517,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC''\\u0008",
 "input":"<!DOCTYPE a PUBLIC''\u0008",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 21 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC''\\u0009",
 "input":"<!DOCTYPE a PUBLIC''\u0009",
@@ -1454,7 +1532,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC''\\u000B",
 "input":"<!DOCTYPE a PUBLIC''\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 21 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC''\\u000C",
 "input":"<!DOCTYPE a PUBLIC''\u000C",
@@ -1466,7 +1547,10 @@
 
 {"description":"<!DOCTYPE a PUBLIC''\\u001F",
 "input":"<!DOCTYPE a PUBLIC''\u001F",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 21 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC'' ",
 "input":"<!DOCTYPE a PUBLIC'' ",
@@ -1766,7 +1850,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM\\u0008",
 "input":"<!DOCTYPE a SYSTEM\u0008",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM\\u0009",
 "input":"<!DOCTYPE a SYSTEM\u0009",
@@ -1778,7 +1865,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM\\u000B",
 "input":"<!DOCTYPE a SYSTEM\u000B",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM\\u000C",
 "input":"<!DOCTYPE a SYSTEM\u000C",
@@ -1790,7 +1880,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM\\u001F",
 "input":"<!DOCTYPE a SYSTEM\u001F",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM ",
 "input":"<!DOCTYPE a SYSTEM ",
@@ -1818,7 +1911,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM\"\\u000B",
 "input":"<!DOCTYPE a SYSTEM\"\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM\"\\u000C",
 "input":"<!DOCTYPE a SYSTEM\"\u000C",
@@ -1958,7 +2054,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM'\\u000B",
 "input":"<!DOCTYPE a SYSTEM'\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM'\\u000C",
 "input":"<!DOCTYPE a SYSTEM'\u000C",
@@ -1990,7 +2089,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM''\\u0008",
 "input":"<!DOCTYPE a SYSTEM''\u0008",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 21 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM''\\u0009",
 "input":"<!DOCTYPE a SYSTEM''\u0009",
@@ -2002,7 +2104,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM''\\u000B",
 "input":"<!DOCTYPE a SYSTEM''\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 21 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM''\\u000C",
 "input":"<!DOCTYPE a SYSTEM''\u000C",
@@ -2014,7 +2119,10 @@
 
 {"description":"<!DOCTYPE a SYSTEM''\\u001F",
 "input":"<!DOCTYPE a SYSTEM''\u001F",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 21 }
+]},
 
 {"description":"<!DOCTYPE a SYSTEM'' ",
 "input":"<!DOCTYPE a SYSTEM'' ",
@@ -2326,7 +2434,10 @@
 
 {"description":"<!DOCTYPE a a\\u000B",
 "input":"<!DOCTYPE a a\u000B",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 14 }
+]},
 
 {"description":"<!DOCTYPE a a\\u000C",
 "input":"<!DOCTYPE a a\u000C",
@@ -2666,7 +2777,10 @@
 
 {"description":"<!DOCTYPEa\\u0008",
 "input":"<!DOCTYPEa\u0008",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u0008", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u0008", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPEa\\u0009",
 "input":"<!DOCTYPEa\u0009",
@@ -2678,7 +2792,10 @@
 
 {"description":"<!DOCTYPEa\\u000B",
 "input":"<!DOCTYPEa\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u000B", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u000B", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPEa\\u000C",
 "input":"<!DOCTYPEa\u000C",
@@ -2690,7 +2807,10 @@
 
 {"description":"<!DOCTYPEa\\u001F",
 "input":"<!DOCTYPEa\u001F",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u001F", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u001F", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPEa ",
 "input":"<!DOCTYPEa ",
@@ -2702,7 +2822,10 @@
 
 {"description":"<!DOCTYPEa \\u0008",
 "input":"<!DOCTYPEa \u0008",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPEa \\u0009",
 "input":"<!DOCTYPEa \u0009",
@@ -2714,7 +2837,10 @@
 
 {"description":"<!DOCTYPEa \\u000B",
 "input":"<!DOCTYPEa \u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPEa \\u000C",
 "input":"<!DOCTYPEa \u000C",
@@ -2726,7 +2852,10 @@
 
 {"description":"<!DOCTYPEa \\u001F",
 "input":"<!DOCTYPEa \u001F",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPEa  ",
 "input":"<!DOCTYPEa  ",
@@ -2806,7 +2935,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC\\u0008",
 "input":"<!DOCTYPEa PUBLIC\u0008",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 18 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC\\u0009",
 "input":"<!DOCTYPEa PUBLIC\u0009",
@@ -2818,7 +2950,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC\\u000B",
 "input":"<!DOCTYPEa PUBLIC\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 18 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC\\u000C",
 "input":"<!DOCTYPEa PUBLIC\u000C",
@@ -2830,7 +2965,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC\\u001F",
 "input":"<!DOCTYPEa PUBLIC\u001F",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 18 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC ",
 "input":"<!DOCTYPEa PUBLIC ",
@@ -2858,7 +2996,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC\"\\u000B",
 "input":"<!DOCTYPEa PUBLIC\"\u000B",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC\"\\u000C",
 "input":"<!DOCTYPEa PUBLIC\"\u000C",
@@ -2998,7 +3139,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC'\\u000B",
 "input":"<!DOCTYPEa PUBLIC'\u000B",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "\u000B", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC'\\u000C",
 "input":"<!DOCTYPEa PUBLIC'\u000C",
@@ -3030,7 +3174,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC''\\u0008",
 "input":"<!DOCTYPEa PUBLIC''\u0008",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC''\\u0009",
 "input":"<!DOCTYPEa PUBLIC''\u0009",
@@ -3042,7 +3189,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC''\\u000B",
 "input":"<!DOCTYPEa PUBLIC''\u000B",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC''\\u000C",
 "input":"<!DOCTYPEa PUBLIC''\u000C",
@@ -3054,7 +3204,10 @@
 
 {"description":"<!DOCTYPEa PUBLIC''\\u001F",
 "input":"<!DOCTYPEa PUBLIC''\u001F",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", "", null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPEa PUBLIC'' ",
 "input":"<!DOCTYPEa PUBLIC'' ",
@@ -3354,7 +3507,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM\\u0008",
 "input":"<!DOCTYPEa SYSTEM\u0008",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 18 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM\\u0009",
 "input":"<!DOCTYPEa SYSTEM\u0009",
@@ -3366,7 +3522,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM\\u000B",
 "input":"<!DOCTYPEa SYSTEM\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 18 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM\\u000C",
 "input":"<!DOCTYPEa SYSTEM\u000C",
@@ -3378,7 +3537,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM\\u001F",
 "input":"<!DOCTYPEa SYSTEM\u001F",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 18 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM ",
 "input":"<!DOCTYPEa SYSTEM ",
@@ -3406,7 +3568,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM\"\\u000B",
 "input":"<!DOCTYPEa SYSTEM\"\u000B",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM\"\\u000C",
 "input":"<!DOCTYPEa SYSTEM\"\u000C",
@@ -3546,7 +3711,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM'\\u000B",
 "input":"<!DOCTYPEa SYSTEM'\u000B",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "\u000B", false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 19 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM'\\u000C",
 "input":"<!DOCTYPEa SYSTEM'\u000C",
@@ -3578,7 +3746,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM''\\u0008",
 "input":"<!DOCTYPEa SYSTEM''\u0008",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM''\\u0009",
 "input":"<!DOCTYPEa SYSTEM''\u0009",
@@ -3590,7 +3761,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM''\\u000B",
 "input":"<!DOCTYPEa SYSTEM''\u000B",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM''\\u000C",
 "input":"<!DOCTYPEa SYSTEM''\u000C",
@@ -3602,7 +3776,10 @@
 
 {"description":"<!DOCTYPEa SYSTEM''\\u001F",
 "input":"<!DOCTYPEa SYSTEM''\u001F",
-"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]]},
+"output":["ParseError", "ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, "", true]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 20 }
+]},
 
 {"description":"<!DOCTYPEa SYSTEM'' ",
 "input":"<!DOCTYPEa SYSTEM'' ",
@@ -3914,7 +4091,10 @@
 
 {"description":"<!DOCTYPEa a\\u000B",
 "input":"<!DOCTYPEa a\u000B",
-"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPEa a\\u000C",
 "input":"<!DOCTYPEa a\u000C",
@@ -4242,7 +4422,10 @@
 
 {"description":"</\\u000B",
 "input":"</\u000B",
-"output":["ParseError", "ParseError", ["Comment", "\u000B"]]},
+"output":["ParseError", "ParseError", ["Comment", "\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 }
+]},
 
 {"description":"</\\u000C",
 "input":"</\u000C",
@@ -4398,7 +4581,10 @@
 
 {"description":"<?\\u000B",
 "input":"<?\u000B",
-"output":["ParseError", "ParseError", ["Comment", "?\u000B"]]},
+"output":["ParseError", "ParseError", ["Comment", "?\u000B"]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 }
+]},
 
 {"description":"<?\\u000C",
 "input":"<?\u000C",
@@ -4546,7 +4732,10 @@
 
 {"description":"<a\\u0008>",
 "input":"<a\u0008>",
-"output":["ParseError", ["StartTag", "a\u0008", {}]]},
+"output":["ParseError", ["StartTag", "a\u0008", {}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 }
+]},
 
 {"description":"<a\\u0009>",
 "input":"<a\u0009>",
@@ -4558,7 +4747,10 @@
 
 {"description":"<a\\u000B>",
 "input":"<a\u000B>",
-"output":["ParseError", ["StartTag", "a\u000B", {}]]},
+"output":["ParseError", ["StartTag", "a\u000B", {}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 }
+]},
 
 {"description":"<a\\u000C>",
 "input":"<a\u000C>",
@@ -4570,7 +4762,10 @@
 
 {"description":"<a\\u001F>",
 "input":"<a\u001F>",
-"output":["ParseError", ["StartTag", "a\u001F", {}]]},
+"output":["ParseError", ["StartTag", "a\u001F", {}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 }
+]},
 
 {"description":"<a >",
 "input":"<a >",
@@ -4582,7 +4777,10 @@
 
 {"description":"<a \\u0008>",
 "input":"<a \u0008>",
-"output":["ParseError", ["StartTag", "a", {"\u0008":""}]]},
+"output":["ParseError", ["StartTag", "a", {"\u0008":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 4 }
+]},
 
 {"description":"<a \\u0009>",
 "input":"<a \u0009>",
@@ -4594,7 +4792,10 @@
 
 {"description":"<a \\u000B>",
 "input":"<a \u000B>",
-"output":["ParseError", ["StartTag", "a", {"\u000B":""}]]},
+"output":["ParseError", ["StartTag", "a", {"\u000B":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 4 }
+]},
 
 {"description":"<a \\u000C>",
 "input":"<a \u000C>",
@@ -4606,7 +4807,10 @@
 
 {"description":"<a \\u001F>",
 "input":"<a \u001F>",
-"output":["ParseError", ["StartTag", "a", {"\u001F":""}]]},
+"output":["ParseError", ["StartTag", "a", {"\u001F":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 4 }
+]},
 
 {"description":"<a  >",
 "input":"<a  >",
@@ -4714,7 +4918,10 @@
 
 {"description":"<a a\\u0008>",
 "input":"<a a\u0008>",
-"output":["ParseError", ["StartTag", "a", {"a\u0008":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a\u0008":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 5 }
+]},
 
 {"description":"<a a\\u0009>",
 "input":"<a a\u0009>",
@@ -4726,7 +4933,10 @@
 
 {"description":"<a a\\u000B>",
 "input":"<a a\u000B>",
-"output":["ParseError", ["StartTag", "a", {"a\u000B":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a\u000B":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 5 }
+]},
 
 {"description":"<a a\\u000C>",
 "input":"<a a\u000C>",
@@ -4738,7 +4948,10 @@
 
 {"description":"<a a\\u001F>",
 "input":"<a a\u001F>",
-"output":["ParseError", ["StartTag", "a", {"a\u001F":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a\u001F":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 5 }
+]},
 
 {"description":"<a a >",
 "input":"<a a >",
@@ -4750,7 +4963,10 @@
 
 {"description":"<a a \\u0008>",
 "input":"<a a \u0008>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "\u0008":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "\u0008":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a \\u0009>",
 "input":"<a a \u0009>",
@@ -4762,7 +4978,10 @@
 
 {"description":"<a a \\u000B>",
 "input":"<a a \u000B>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "\u000B":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "\u000B":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a \\u000C>",
 "input":"<a a \u000C>",
@@ -4774,7 +4993,10 @@
 
 {"description":"<a a \\u001F>",
 "input":"<a a \u001F>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "\u001F":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "\u001F":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a  >",
 "input":"<a a  >",
@@ -4958,7 +5180,10 @@
 
 {"description":"<a a=\\u0008>",
 "input":"<a a=\u0008>",
-"output":["ParseError", ["StartTag", "a", {"a":"\u0008"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\u0008"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=\\u0009>",
 "input":"<a a=\u0009>",
@@ -4970,7 +5195,10 @@
 
 {"description":"<a a=\\u000B>",
 "input":"<a a=\u000B>",
-"output":["ParseError", ["StartTag", "a", {"a":"\u000B"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\u000B"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=\\u000C>",
 "input":"<a a=\u000C>",
@@ -4982,7 +5210,10 @@
 
 {"description":"<a a=\\u001F>",
 "input":"<a a=\u001F>",
-"output":["ParseError", ["StartTag", "a", {"a":"\u001F"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\u001F"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a= >",
 "input":"<a a= >",
@@ -5010,7 +5241,10 @@
 
 {"description":"<a a=\"\\u000B\">",
 "input":"<a a=\"\u000B\">",
-"output":["ParseError", ["StartTag", "a", {"a":"\u000B"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\u000B"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=\"\\u000C\">",
 "input":"<a a=\"\u000C\">",
@@ -5158,7 +5392,10 @@
 
 {"description":"<a a='\\u000B'>",
 "input":"<a a='\u000B'>",
-"output":["ParseError", ["StartTag", "a", {"a":"\u000B"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\u000B"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a='\\u000C'>",
 "input":"<a a='\u000C'>",
@@ -5194,7 +5431,10 @@
 
 {"description":"<a a=''\\u0008>",
 "input":"<a a=''\u0008>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u0008":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u0008":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''\\u0009>",
 "input":"<a a=''\u0009>",
@@ -5206,7 +5446,10 @@
 
 {"description":"<a a=''\\u000B>",
 "input":"<a a=''\u000B>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u000B":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u000B":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''\\u000C>",
 "input":"<a a=''\u000C>",
@@ -5218,7 +5461,10 @@
 
 {"description":"<a a=''\\u001F>",
 "input":"<a a=''\u001F>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u001F":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u001F":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a='' >",
 "input":"<a a='' >",
@@ -5490,7 +5736,10 @@
 
 {"description":"<a a=a\\u0008>",
 "input":"<a a=a\u0008>",
-"output":["ParseError", ["StartTag", "a", {"a":"a\u0008"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a\u0008"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a\\u0009>",
 "input":"<a a=a\u0009>",
@@ -5502,7 +5751,10 @@
 
 {"description":"<a a=a\\u000B>",
 "input":"<a a=a\u000B>",
-"output":["ParseError", ["StartTag", "a", {"a":"a\u000B"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a\u000B"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a\\u000C>",
 "input":"<a a=a\u000C>",
@@ -5514,7 +5766,10 @@
 
 {"description":"<a a=a\\u001F>",
 "input":"<a a=a\u001F>",
-"output":["ParseError", ["StartTag", "a", {"a":"a\u001F"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a\u001F"}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a >",
 "input":"<a a=a >",
@@ -5774,7 +6029,10 @@
 
 {"description":"<a/\\u000B>",
 "input":"<a/\u000B>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"\u000B":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"\u000B":""}]],
+"errors":[
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/\\u000C>",
 "input":"<a/\u000C>",
