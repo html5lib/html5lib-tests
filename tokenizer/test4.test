@@ -186,11 +186,17 @@
 
 {"description":"Uppercase close tag attributes",
 "input":"</x X>",
-"output":["ParseError", ["EndTag", "x"]]},
+"output":["ParseError", ["EndTag", "x"]],
+"errors":[
+    { "code": "end-tag-with-attributes", "line": 1, "col": 6 }
+]},
 
 {"description":"Duplicate close tag attributes",
 "input":"</x x x>",
-"output":["ParseError", "ParseError", ["EndTag", "x"]]},
+"output":["ParseError", "ParseError", ["EndTag", "x"]],
+"errors":[
+    { "code": "end-tag-with-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"Permitted slash",
 "input":"<br/>",

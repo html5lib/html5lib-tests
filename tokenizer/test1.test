@@ -54,7 +54,10 @@
 
 {"description":"End Tag w/attribute",
 "input":"<h></h a='b'>",
-"output":[["StartTag", "h", {}], "ParseError", ["EndTag", "h"]]},
+"output":[["StartTag", "h", {}], "ParseError", ["EndTag", "h"]],
+"errors":[
+    { "code": "end-tag-with-attributes", "line": 1, "col": 13 }
+]},
 
 {"description":"Multiple atts",
 "input":"<h a='b' c='d'>",

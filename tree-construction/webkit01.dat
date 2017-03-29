@@ -133,6 +133,9 @@ console.log("FOO<span>BAR</span>BAZ");
 (1,5): expected-doctype-but-got-start-tag
 (1,21): attributes-in-end-tag
 (1,51): attributes-in-end-tag
+#new-errors
+(1:21) end-tag-with-attributes
+(1:51) end-tag-with-attributes
 #document
 | <html>
 |   <head>
@@ -233,6 +236,8 @@ console.log("FOO<span>BAR</span>BAZ");
 (1,6): expected-doctype-but-got-start-tag
 (1,21): attributes-in-end-tag
 (1,21): unexpected-end-tag-treated-as
+#new-errors
+(1:21) end-tag-with-attributes
 #document
 | <html>
 |   <head>
@@ -259,6 +264,8 @@ console.log("FOO<span>BAR</span>BAZ");
 (1,28): attributes-in-end-tag
 (1,28): unexpected-end-tag-after-body
 (1,28): unexpected-end-tag-treated-as
+#new-errors
+(1:28) end-tag-with-attributes
 #document
 | <html>
 |   <head>
