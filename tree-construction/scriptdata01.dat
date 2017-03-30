@@ -40,6 +40,8 @@ FOO<script></script/>BAR
 #errors
 (1,3): expected-doctype-but-got-chars
 (1,21): self-closing-flag-on-end-tag
+#new-errors
+(1:21) self-closing-end-tag
 #document
 | <html>
 |   <head>

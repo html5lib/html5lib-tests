@@ -208,7 +208,10 @@
 
 {"description":"Permitted slash but in close tag",
 "input":"</br/>",
-"output":["ParseError", ["EndTag", "br"]]},
+"output":["ParseError", ["EndTag", "br"]],
+"errors":[
+    { "code": "self-closing-end-tag", "line": 1, "col": 6 }
+]},
 
 {"description":"Doctype public case-sensitivity (1)",
 "input":"<!DoCtYpE HtMl PuBlIc \"AbC\" \"XyZ\">",
