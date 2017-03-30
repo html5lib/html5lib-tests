@@ -232,7 +232,10 @@
 {"description":"U+0000 in lookahead region after non-matching character",
 "input":"<!doc>\u0000",
 "output":["ParseError", ["Comment", "doc"], "ParseError", ["Character", "\u0000"]],
-"ignoreErrorOrder":true},
+"ignoreErrorOrder":true,
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 }
+]},
 
 {"description":"U+0000 in lookahead region",
 "input":"<!doc\u0000",

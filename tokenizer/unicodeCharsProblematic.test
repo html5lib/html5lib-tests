@@ -38,6 +38,9 @@
 {"description":"CR followed by U+0000",
 "input":"\r\u0000",
 "output":[["Character", "\n"], "ParseError", ["Character", "\u0000"]],
-"ignoreErrorOrder":true}
+"ignoreErrorOrder":true,
+"errors":[
+    { "code": "unexpected-null-character", "line": 2, "col": 1 }
+]}
 ]
 }
