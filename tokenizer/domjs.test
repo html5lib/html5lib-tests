@@ -16,11 +16,14 @@
             "output":["ParseError", ["Comment", "?\u000a\u000a"]]
         },
         {
-            "description":"NUL in RCDATA and RAWTEXT",
+            "description":"NUL in RCDATA, RAWTEXT, PLAINTEXT and Script data",
             "doubleEscaped":true,
-            "initialStates":["RCDATA state", "RAWTEXT state"],
+            "initialStates":["RCDATA state", "RAWTEXT state", "PLAINTEXT state", "Script data state"],
             "input":"\\u0000",
-            "output":["ParseError", ["Character", "\\uFFFD"]]
+            "output":["ParseError", ["Character", "\\uFFFD"]],
+            "errors":[
+                { "code": "unexpected-null-character", "line": 1, "col": 1 }
+            ]
         },
         {
             "description":"leading U+FEFF must pass through",
