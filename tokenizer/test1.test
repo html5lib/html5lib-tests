@@ -34,7 +34,10 @@
 
 {"description":"Empty start tag",
 "input":"<>",
-"output":["ParseError", ["Character", "<>"]]},
+"output":["ParseError", ["Character", "<>"]],
+"errors":[
+    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+]},
 
 {"description":"Start Tag w/attribute",
 "input":"<h a='b'>",

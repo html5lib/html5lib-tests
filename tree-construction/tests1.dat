@@ -498,6 +498,8 @@ Line1<br>Line2<br>Line3<br>Line4
 #errors
 (1,1): expected-tag-name
 (1,1): expected-doctype-but-got-chars
+#new-errors
+(1:2) unexpected-first-character-of-tag-name
 #document
 | <html>
 |   <head>
@@ -509,6 +511,8 @@ Line1<br>Line2<br>Line3<br>Line4
 #errors
 (1,1): expected-tag-name
 (1,1): expected-doctype-but-got-chars
+#new-errors
+(1:2) unexpected-first-character-of-tag-name
 #document
 | <html>
 |   <head>
@@ -542,6 +546,8 @@ Line1<br>Line2<br>Line3<br>Line4
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,2): expected-doctype-but-got-eof
+#new-errors
+(1:2) start-of-processing-instruction-or-xml-declaration
 #document
 | <!-- ? -->
 | <html>
@@ -553,6 +559,8 @@ Line1<br>Line2<br>Line3<br>Line4
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,3): expected-doctype-but-got-eof
+#new-errors
+(1:2) start-of-processing-instruction-or-xml-declaration
 #document
 | <!-- ?# -->
 | <html>
@@ -586,6 +594,8 @@ Line1<br>Line2<br>Line3<br>Line4
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,11): expected-doctype-but-got-eof
+#new-errors
+(1:2) start-of-processing-instruction-or-xml-declaration
 #document
 | <!-- ?COMMENT? -->
 | <html>
@@ -619,6 +629,8 @@ Line1<br>Line2<br>Line3<br>Line4
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,13): expected-doctype-but-got-eof
+#new-errors
+(1:2) start-of-processing-instruction-or-xml-declaration
 #document
 | <!-- ?COM--MENT? -->
 | <html>

@@ -122,15 +122,24 @@
 
 {"description":"Simili processing instruction",
 "input":"<?namespace>",
-"output":["ParseError", ["Comment", "?namespace"]]},
+"output":["ParseError", ["Comment", "?namespace"]],
+"errors":[
+    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+]},
 
 {"description":"A bogus comment stops at >, even if preceeded by two dashes",
 "input":"<?foo-->",
-"output":["ParseError", ["Comment", "?foo--"]]},
+"output":["ParseError", ["Comment", "?foo--"]],
+"errors":[
+    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+]},
 
 {"description":"Unescaped <",
 "input":"foo < bar",
-"output":[["Character", "foo "], "ParseError", ["Character", "< bar"]]},
+"output":[["Character", "foo "], "ParseError", ["Character", "< bar"]],
+"errors":[
+    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 6 }
+]},
 
 {"description":"Null Byte Replacement",
 "input":"\u0000",

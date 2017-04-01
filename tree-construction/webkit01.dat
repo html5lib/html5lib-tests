@@ -201,6 +201,8 @@ console.log("FOO<span>BAR</span>BAZ");
 (1,3): expected-doctype-but-got-start-tag
 (1,8): expected-tag-name
 (1,12): expected-closing-tag-but-got-eof
+#new-errors
+(1:9) unexpected-first-character-of-tag-name
 #document
 | <html>
 |   <head>

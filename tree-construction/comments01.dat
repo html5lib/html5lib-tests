@@ -123,6 +123,8 @@ FOO<!-->BAZ
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,22): expected-doctype-but-got-chars
+#new-errors
+(1:2) start-of-processing-instruction-or-xml-declaration
 #document
 | <!-- ?xml version="1.0" -->
 | <html>
@@ -135,6 +137,8 @@ FOO<!-->BAZ
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,20): expected-doctype-but-got-eof
+#new-errors
+(1:2) start-of-processing-instruction-or-xml-declaration
 #document
 | <!-- ?xml version="1.0" -->
 | <html>
@@ -146,6 +150,8 @@ FOO<!-->BAZ
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,13): expected-doctype-but-got-eof
+#new-errors
+(1:2) start-of-processing-instruction-or-xml-declaration
 #document
 | <!-- ?xml version -->
 | <html>

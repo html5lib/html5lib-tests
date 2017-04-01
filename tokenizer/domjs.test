@@ -3,17 +3,26 @@
         {
             "description":"CR in bogus comment state",
             "input":"<?\u000d",
-            "output":["ParseError", ["Comment", "?\u000a"]]
+            "output":["ParseError", ["Comment", "?\u000a"]],
+            "errors":[
+                { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+            ]
         },
         {
             "description":"CRLF in bogus comment state",
             "input":"<?\u000d\u000a",
-            "output":["ParseError", ["Comment", "?\u000a"]]
+            "output":["ParseError", ["Comment", "?\u000a"]],
+            "errors":[
+                { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+            ]
         },
         {
             "description":"CRLFLF in bogus comment state",
             "input":"<?\u000d\u000a\u000a",
-            "output":["ParseError", ["Comment", "?\u000a\u000a"]]
+            "output":["ParseError", ["Comment", "?\u000a\u000a"]],
+            "errors":[
+                { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+            ]
         },
         {
             "description":"NUL in RCDATA, RAWTEXT, PLAINTEXT and Script data",
