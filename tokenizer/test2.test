@@ -114,7 +114,10 @@
 
 {"description":"Unescaped </",
 "input":"</",
-"output":["ParseError", ["Character", "</"]]},
+"output":["ParseError", ["Character", "</"]],
+"errors":[
+    { "code": "eof-before-end-tag-name", "line": 1, "col": 3 }
+]},
 
 {"description":"Illegal end tag name",
 "input":"</1>",
@@ -138,7 +141,7 @@
 "input":"foo < bar",
 "output":[["Character", "foo "], "ParseError", ["Character", "< bar"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 6 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 6 }
 ]},
 
 {"description":"Null Byte Replacement",
@@ -174,18 +177,30 @@
 
 {"description":"Empty end tag with following characters",
 "input":"a</>bc",
-"output":[["Character", "a"], "ParseError", ["Character", "bc"]]},
+"output":[["Character", "a"], "ParseError", ["Character", "bc"]],
+"errors":[
+    { "code": "missing-end-tag-name", "line": 1, "col": 4 }
+]},
 
 {"description":"Empty end tag with following tag",
 "input":"a</><b>c",
-"output":[["Character", "a"], "ParseError", ["StartTag", "b", {}], ["Character", "c"]]},
+"output":[["Character", "a"], "ParseError", ["StartTag", "b", {}], ["Character", "c"]],
+"errors":[
+    { "code": "missing-end-tag-name", "line": 1, "col": 4 }
+]},
 
 {"description":"Empty end tag with following comment",
 "input":"a</><!--b-->c",
-"output":[["Character", "a"], "ParseError", ["Comment", "b"], ["Character", "c"]]},
+"output":[["Character", "a"], "ParseError", ["Comment", "b"], ["Character", "c"]],
+"errors":[
+    { "code": "missing-end-tag-name", "line": 1, "col": 4 }
+]},
 
 {"description":"Empty end tag with following end tag",
 "input":"a</></b>c",
-"output":[["Character", "a"], "ParseError", ["EndTag", "b"], ["Character", "c"]]}
+"output":[["Character", "a"], "ParseError", ["EndTag", "b"], ["Character", "c"]],
+"errors":[
+    { "code": "missing-end-tag-name", "line": 1, "col": 4 }
+]}
 
 ]}

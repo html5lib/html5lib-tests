@@ -83,14 +83,14 @@
 "input":"<",
 "output":["ParseError", ["Character", "<"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<\\u0000",
 "input":"<\u0000",
 "output":["ParseError", ["Character", "<"], "ParseError", ["Character", "\u0000"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 },
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 },
     { "code": "unexpected-null-character", "line": 1, "col": 2 }
 ]},
 
@@ -98,14 +98,14 @@
 "input":"<\u0009",
 "output":["ParseError", ["Character", "<\u0009"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<\\u000A",
 "input":"<\u000A",
 "output":["ParseError", ["Character", "<\u000A"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<\\u000B",
@@ -113,21 +113,21 @@
 "output":["ParseError", "ParseError", ["Character", "<\u000B"]],
 "errors":[
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 2 },
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<\\u000C",
 "input":"<\u000C",
 "output":["ParseError", ["Character", "<\u000C"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"< ",
 "input":"< ",
 "output":["ParseError", ["Character", "< "]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<!",
@@ -4408,40 +4408,43 @@
 "input":"<\"",
 "output":["ParseError", ["Character", "<\""]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<&",
 "input":"<&",
 "output":["ParseError", ["Character", "<&"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<'",
 "input":"<'",
 "output":["ParseError", ["Character", "<'"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<-",
 "input":"<-",
 "output":["ParseError", ["Character", "<-"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<.",
 "input":"<.",
 "output":["ParseError", ["Character", "<."]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"</",
 "input":"</",
-"output":["ParseError", ["Character", "</"]]},
+"output":["ParseError", ["Character", "</"]],
+"errors":[
+    { "code": "eof-before-end-tag-name", "line": 1, "col": 3 }
+]},
 
 {"description":"</\\u0000",
 "input":"</\u0000",
@@ -4516,7 +4519,10 @@
 
 {"description":"</>",
 "input":"</>",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "missing-end-tag-name", "line": 1, "col": 3 }
+]},
 
 {"description":"</?",
 "input":"</?",
@@ -4578,43 +4584,43 @@
 "input":"<0",
 "output":["ParseError", ["Character", "<0"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<1",
 "input":"<1",
 "output":["ParseError", ["Character", "<1"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<9",
 "input":"<9",
 "output":["ParseError", ["Character", "<9"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<<",
 "input":"<<",
 "output":["ParseError", ["Character", "<"], "ParseError", ["Character", "<"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 },
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 3 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 },
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 3 }
 ]},
 
 {"description":"<=",
 "input":"<=",
 "output":["ParseError", ["Character", "<="]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<>",
 "input":"<>",
 "output":["ParseError", ["Character", "<>"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?",
@@ -4846,7 +4852,7 @@
 "input":"<@",
 "output":["ParseError", ["Character", "<@"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<A>",
@@ -4869,14 +4875,14 @@
 "input":"<[",
 "output":["ParseError", ["Character", "<["]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<`",
 "input":"<`",
 "output":["ParseError", ["Character", "<`"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<a>",
@@ -6395,14 +6401,14 @@
 "input":"<{",
 "output":["ParseError", ["Character", "<{"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<\\uDBC0\\uDC00",
 "input":"<\uDBC0\uDC00",
 "output":["ParseError", ["Character", "<\uDBC0\uDC00"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"=",

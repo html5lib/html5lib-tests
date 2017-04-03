@@ -30,13 +30,16 @@
 
 {"description":"Empty end tag",
 "input":"</>",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "missing-end-tag-name", "line": 1, "col": 3 }
+]},
 
 {"description":"Empty start tag",
 "input":"<>",
 "output":["ParseError", ["Character", "<>"]],
 "errors":[
-    { "code": "unexpected-first-character-of-tag-name", "line": 1, "col": 2 }
+    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"Start Tag w/attribute",
