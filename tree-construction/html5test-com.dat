@@ -148,6 +148,8 @@
 #errors
 (1,2): expected-dashes-or-doctype
 (1,13): expected-doctype-but-got-eof
+#new-errors
+(1:9) cdata-in-html-content
 #document
 | <!-- [CDATA[x]] -->
 | <html>

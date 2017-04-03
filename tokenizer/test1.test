@@ -18,7 +18,10 @@
 
 {"description":"Truncated doctype start",
 "input":"<!DOC>", 
-"output":["ParseError", ["Comment", "DOC"]]},
+"output":["ParseError", ["Comment", "DOC"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"Doctype in error",
 "input":"<!DOCTYPE foo>", 
@@ -95,7 +98,10 @@
 
 {"description":"Start of a comment",
 "input":"<!-",
-"output":["ParseError", ["Comment", "-"]]},
+"output":["ParseError", ["Comment", "-"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"Short comment",
  "input":"<!-->",

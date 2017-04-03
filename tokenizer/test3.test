@@ -132,54 +132,88 @@
 
 {"description":"<!",
 "input":"<!",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!\\u0000",
 "input":"<!\u0000",
-"output":["ParseError", ["Comment", "\uFFFD"]]},
+"output":["ParseError", ["Comment", "\uFFFD"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!\\u0009",
 "input":"<!\u0009",
-"output":["ParseError", ["Comment", "\u0009"]]},
+"output":["ParseError", ["Comment", "\u0009"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!\\u000A",
 "input":"<!\u000A",
-"output":["ParseError", ["Comment", "\u000A"]]},
+"output":["ParseError", ["Comment", "\u000A"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!\\u000B",
 "input":"<!\u000B",
 "output":["ParseError", "ParseError", ["Comment", "\u000B"]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 3 },
+    { "code": "malformed-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\\u000C",
 "input":"<!\u000C",
-"output":["ParseError", ["Comment", "\u000C"]]},
+"output":["ParseError", ["Comment", "\u000C"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<! ",
 "input":"<! ",
-"output":["ParseError", ["Comment", " "]]},
+"output":["ParseError", ["Comment", " "]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!!",
 "input":"<!!",
-"output":["ParseError", ["Comment", "!"]]},
+"output":["ParseError", ["Comment", "!"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!\"",
 "input":"<!\"",
-"output":["ParseError", ["Comment", "\""]]},
+"output":["ParseError", ["Comment", "\""]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!&",
 "input":"<!&",
-"output":["ParseError", ["Comment", "&"]]},
+"output":["ParseError", ["Comment", "&"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!'",
 "input":"<!'",
-"output":["ParseError", ["Comment", "'"]]},
+"output":["ParseError", ["Comment", "'"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!-",
 "input":"<!-",
-"output":["ParseError", ["Comment", "-"]]},
+"output":["ParseError", ["Comment", "-"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!--",
 "input":"<!--",
@@ -914,47 +948,80 @@
 
 {"description":"<!/",
 "input":"<!/",
-"output":["ParseError", ["Comment", "/"]]},
+"output":["ParseError", ["Comment", "/"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!0",
 "input":"<!0",
-"output":["ParseError", ["Comment", "0"]]},
+"output":["ParseError", ["Comment", "0"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!1",
 "input":"<!1",
-"output":["ParseError", ["Comment", "1"]]},
+"output":["ParseError", ["Comment", "1"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!9",
 "input":"<!9",
-"output":["ParseError", ["Comment", "9"]]},
+"output":["ParseError", ["Comment", "9"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!<",
 "input":"<!<",
-"output":["ParseError", ["Comment", "<"]]},
+"output":["ParseError", ["Comment", "<"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!=",
 "input":"<!=",
-"output":["ParseError", ["Comment", "="]]},
+"output":["ParseError", ["Comment", "="]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!>",
 "input":"<!>",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!?",
 "input":"<!?",
-"output":["ParseError", ["Comment", "?"]]},
+"output":["ParseError", ["Comment", "?"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!@",
 "input":"<!@",
-"output":["ParseError", ["Comment", "@"]]},
+"output":["ParseError", ["Comment", "@"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!A",
 "input":"<!A",
-"output":["ParseError", ["Comment", "A"]]},
+"output":["ParseError", ["Comment", "A"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!B",
 "input":"<!B",
-"output":["ParseError", ["Comment", "B"]]},
+"output":["ParseError", ["Comment", "B"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!DOCTYPE",
 "input":"<!DOCTYPE",
@@ -4370,39 +4437,66 @@
 
 {"description":"<!Y",
 "input":"<!Y",
-"output":["ParseError", ["Comment", "Y"]]},
+"output":["ParseError", ["Comment", "Y"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!Z",
 "input":"<!Z",
-"output":["ParseError", ["Comment", "Z"]]},
+"output":["ParseError", ["Comment", "Z"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!`",
 "input":"<!`",
-"output":["ParseError", ["Comment", "`"]]},
+"output":["ParseError", ["Comment", "`"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!a",
 "input":"<!a",
-"output":["ParseError", ["Comment", "a"]]},
+"output":["ParseError", ["Comment", "a"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!b",
 "input":"<!b",
-"output":["ParseError", ["Comment", "b"]]},
+"output":["ParseError", ["Comment", "b"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!y",
 "input":"<!y",
-"output":["ParseError", ["Comment", "y"]]},
+"output":["ParseError", ["Comment", "y"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!z",
 "input":"<!z",
-"output":["ParseError", ["Comment", "z"]]},
+"output":["ParseError", ["Comment", "z"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!{",
 "input":"<!{",
-"output":["ParseError", ["Comment", "{"]]},
+"output":["ParseError", ["Comment", "{"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<!\\uDBC0\\uDC00",
 "input":"<!\uDBC0\uDC00",
-"output":["ParseError", ["Comment", "\uDBC0\uDC00"]]},
+"output":["ParseError", ["Comment", "\uDBC0\uDC00"]],
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"<\"",
 "input":"<\"",

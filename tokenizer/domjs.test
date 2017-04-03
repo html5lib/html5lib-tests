@@ -102,6 +102,14 @@
             "description":"space EOF after doctype ",
             "input":"<!DOCTYPE html ",
             "output":["ParseError", ["DOCTYPE", "html", null, null , false]]
+        },
+        {
+            "description":"CDATA in HTML content",
+            "input":"<![CDATA[foo]]>",
+            "output":[["Comment", "[CDATA[foo]]"]],
+            "errors":[
+                { "code": "cdata-in-html-content", "line": 1, "col": 9 }
+            ]
         }
 
     ]

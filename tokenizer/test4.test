@@ -234,19 +234,24 @@
 "output":["ParseError", ["Comment", "doc"], "ParseError", ["Character", "\u0000"]],
 "ignoreErrorOrder":true,
 "errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 },
     { "code": "unexpected-null-character", "line": 1, "col": 7 }
 ]},
 
 {"description":"U+0000 in lookahead region",
 "input":"<!doc\u0000",
 "output":["ParseError", ["Comment", "doc\uFFFD"]],
-"ignoreErrorOrder":true},
+"ignoreErrorOrder":true,
+"errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 }
+]},
 
 {"description":"U+0080 in lookahead region",
 "input":"<!doc\u0080",
 "output":["ParseError", "ParseError", ["Comment", "doc\u0080"]],
 "ignoreErrorOrder":true,
 "errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 },
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
@@ -255,6 +260,7 @@
 "output":["ParseError", "ParseError", ["Comment", "doc\uFDD1"]],
 "ignoreErrorOrder":true,
 "errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 },
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
@@ -263,6 +269,7 @@
 "output":["ParseError", "ParseError", ["Comment", "doc\uD83F\uDFFF"]],
 "ignoreErrorOrder":true,
 "errors":[
+    { "code": "malformed-comment", "line": 1, "col": 3 },
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
