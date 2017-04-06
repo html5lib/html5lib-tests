@@ -35,6 +35,25 @@
             ]
         },
         {
+           "description":"NUL in script HTML comment",
+           "doubleEscaped":true,
+           "initialStates":["Script data state"],
+           "input":"<!--test\\u0000--><!--test-\\u0000--><!--test--\\u0000-->",
+           "output":[["Character", "<!--test\\uFFFD--><!--test-\\uFFFD--><!--test--\\uFFFD-->"]],
+           "errors":[
+               { "code": "unexpected-null-character", "line": 1, "col": 9 }
+           ]
+        },
+        {
+           "description":"EOF in script HTML comment",
+           "initialStates":["Script data state"],
+           "input":"<!--test",
+           "output":[["Character", "<!--test"]],
+           "errors":[
+               { "code": "eof-in-script-html-comment", "line": 1, "col": 9 }
+           ]
+        },
+        {
             "description":"leading U+FEFF must pass through",
             "doubleEscaped":true,
             "input":"\\uFEFFfoo\\uFEFFbar",

@@ -280,6 +280,8 @@
 #errors
 (1,28): expected-named-closing-tag-but-got-eof
 (1,28): unexpected-eof-in-text-mode
+#new-errors
+(1:29) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -293,6 +295,8 @@
 #errors
 (1,28): expected-named-closing-tag-but-got-eof
 (1,28): unexpected-eof-in-text-mode
+#new-errors
+(1:29) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -306,6 +310,8 @@
 #errors
 (1,29): expected-named-closing-tag-but-got-eof
 (1,29): unexpected-eof-in-text-mode
+#new-errors
+(1:30) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -319,6 +325,8 @@
 #errors
 (1,29): expected-named-closing-tag-but-got-eof
 (1,29): unexpected-eof-in-text-mode
+#new-errors
+(1:30) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -332,6 +340,8 @@
 #errors
 (1,35): expected-named-closing-tag-but-got-eof
 (1,35): unexpected-eof-in-text-mode
+#new-errors
+(1:36) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -358,6 +368,8 @@
 #errors
 (1,29): expected-named-closing-tag-but-got-eof
 (1,29): unexpected-eof-in-text-mode
+#new-errors
+(1:30) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -371,6 +383,8 @@
 #errors
 (1,34): expected-named-closing-tag-but-got-eof
 (1,34): unexpected-eof-in-text-mode
+#new-errors
+(1:35) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -475,6 +489,8 @@
 #errors
 (1,44): expected-named-closing-tag-but-got-eof
 (1,44): unexpected-eof-in-text-mode
+#new-errors
+(1:45) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -488,6 +504,8 @@
 #errors
 (1,44): expected-named-closing-tag-but-got-eof
 (1,44): unexpected-eof-in-text-mode
+#new-errors
+(1:45) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -501,6 +519,8 @@
 #errors
 (1,44): expected-named-closing-tag-but-got-eof
 (1,44): unexpected-eof-in-text-mode
+#new-errors
+(1:45) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -514,6 +534,8 @@
 #errors
 (1,45): expected-named-closing-tag-but-got-eof
 (1,45): unexpected-eof-in-text-mode
+#new-errors
+(1:46) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -527,6 +549,8 @@
 #errors
 (1,46): expected-named-closing-tag-but-got-eof
 (1,46): unexpected-eof-in-text-mode
+#new-errors
+(1:47) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -540,6 +564,8 @@
 #errors
 (1,46): expected-named-closing-tag-but-got-eof
 (1,46): unexpected-eof-in-text-mode
+#new-errors
+(1:47) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -553,6 +579,8 @@
 #errors
 (1,52): expected-named-closing-tag-but-got-eof
 (1,52): unexpected-eof-in-text-mode
+#new-errors
+(1:53) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -854,6 +882,8 @@
 #errors
 (1,49): expected-named-closing-tag-but-got-eof
 (1,49): unexpected-EOF-in-text-mode
+#new-errors
+(1:50) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -880,6 +910,8 @@
 #errors
 (1,57): expected-named-closing-tag-but-got-eof
 (1,57): unexpected-eof-in-text-mode
+#new-errors
+(1:58) eof-in-script-html-comment
 #document
 | <!DOCTYPE html>
 | <html>
@@ -1510,6 +1542,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,13): expected-named-closing-tag-but-got-eof
 (1,13): unexpected-eof-in-text-mode
+#new-errors
+(1:14) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1523,6 +1557,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,13): expected-named-closing-tag-but-got-eof
 (1,13): unexpected-eof-in-text-mode
+#new-errors
+(1:14) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1536,6 +1572,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,14): expected-named-closing-tag-but-got-eof
 (1,14): unexpected-eof-in-text-mode
+#new-errors
+(1:15) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1549,6 +1587,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,14): expected-named-closing-tag-but-got-eof
 (1,14): unexpected-eof-in-text-mode
+#new-errors
+(1:15) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1562,6 +1602,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,20): expected-named-closing-tag-but-got-eof
 (1,20): unexpected-eof-in-text-mode
+#new-errors
+(1:21) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1588,6 +1630,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,14): expected-named-closing-tag-but-got-eof
 (1,14): unexpected-eof-in-text-mode
+#new-errors
+(1:15) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1601,6 +1645,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,19): expected-named-closing-tag-but-got-eof
 (1,19): unexpected-eof-in-text-mode
+#new-errors
+(1:20) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1705,6 +1751,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,29): expected-named-closing-tag-but-got-eof
 (1,29): unexpected-eof-in-text-mode
+#new-errors
+(1:30) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1718,6 +1766,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,29): expected-named-closing-tag-but-got-eof
 (1,29): unexpected-eof-in-text-mode
+#new-errors
+(1:30) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1731,6 +1781,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,29): expected-named-closing-tag-but-got-eof
 (1,29): unexpected-eof-in-text-mode
+#new-errors
+(1:30) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1744,6 +1796,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,30): expected-named-closing-tag-but-got-eof
 (1,30): unexpected-eof-in-text-mode
+#new-errors
+(1:31) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1757,6 +1811,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,31): expected-named-closing-tag-but-got-eof
 (1,31): unexpected-eof-in-text-mode
+#new-errors
+(1:32) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1770,6 +1826,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,31): expected-named-closing-tag-but-got-eof
 (1,31): unexpected-eof-in-text-mode
+#new-errors
+(1:32) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -1783,6 +1841,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,37): expected-named-closing-tag-but-got-eof
 (1,37): unexpected-eof-in-text-mode
+#new-errors
+(1:38) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -2058,6 +2118,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,34): expected-named-closing-tag-but-got-eof
 (1,34): unexpected-eof-in-text-mode
+#new-errors
+(1:35) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
@@ -2084,6 +2146,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,42): expected-named-closing-tag-but-got-eof
 (1,42): unexpected-eof-in-text-mode
+#new-errors
+(1:43) eof-in-script-html-comment
 #document
 | <html>
 |   <head>
