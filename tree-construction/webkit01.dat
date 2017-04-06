@@ -32,8 +32,9 @@ Test
 #data
 <di
 #errors
-(1,3): eof-in-tag-name
 (1,3): expected-doctype-but-got-eof
+#new-errors
+(1:4) eof-in-tag-name
 #document
 | <html>
 |   <head>

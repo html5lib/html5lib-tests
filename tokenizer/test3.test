@@ -4985,7 +4985,10 @@
 
 {"description":"<a\\u0000>",
 "input":"<a\u0000>",
-"output":["ParseError", ["StartTag", "a\uFFFD", {}]]},
+"output":["ParseError", ["StartTag", "a\uFFFD", {}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 3 }
+]},
 
 {"description":"<a\\u0008>",
 "input":"<a\u0008>",
