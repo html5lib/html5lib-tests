@@ -47,6 +47,16 @@
            ]
         },
         {
+           "description":"NUL in script HTML comment - double escaped",
+           "doubleEscaped":true,
+           "initialStates":["Script data state"],
+           "input":"<!--<script>\\u0000--><!--<script>-\\u0000--><!--<script>--\\u0000-->",
+           "output":[["Character", "<!--<script>\\uFFFD--><!--<script>-\\uFFFD--><!--<script>--\\uFFFD-->"]],
+           "errors":[
+                { "code": "unexpected-null-character", "line": 1, "col": 13 }
+           ]
+        },
+        {
            "description":"EOF in script HTML comment",
            "initialStates":["Script data state"],
            "input":"<!--test",
@@ -71,6 +81,15 @@
            "output":[["Character", "<!--test--"]],
            "errors":[
                { "code": "eof-in-script-html-comment", "line": 1, "col": 11 }
+           ]
+        },
+        {
+           "description":"EOF in script HTML comment - double escaped",
+           "initialStates":["Script data state"],
+           "input":"<!--<script>",
+           "output":[["Character", "<!--<script>"]],
+           "errors":[
+               { "code": "eof-in-script-html-comment", "line": 1, "col": 13 }
            ]
         },
         {
