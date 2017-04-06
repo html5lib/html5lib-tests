@@ -41,7 +41,9 @@
            "input":"<!--test\\u0000--><!--test-\\u0000--><!--test--\\u0000-->",
            "output":[["Character", "<!--test\\uFFFD--><!--test-\\uFFFD--><!--test--\\uFFFD-->"]],
            "errors":[
-               { "code": "unexpected-null-character", "line": 1, "col": 9 }
+               { "code": "unexpected-null-character", "line": 1, "col": 9 },
+               { "code": "unexpected-null-character", "line": 1, "col": 22 }
+
            ]
         },
         {
@@ -51,6 +53,15 @@
            "output":[["Character", "<!--test"]],
            "errors":[
                { "code": "eof-in-script-html-comment", "line": 1, "col": 9 }
+           ]
+        },
+        {
+           "description":"EOF in script HTML comment after dash",
+           "initialStates":["Script data state"],
+           "input":"<!--test-",
+           "output":[["Character", "<!--test-"]],
+           "errors":[
+               { "code": "eof-in-script-html-comment", "line": 1, "col": 10 }
            ]
         },
         {
