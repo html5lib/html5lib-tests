@@ -331,11 +331,10 @@
 
 {"description":"EOF in tag name state ",
 "input":"<a",
-"output":["ParseError"]},
-
-{"description":"EOF in tag name state",
-"input":"<a",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors": [
+    { "code": "eof-in-tag-name", "line": 1, "col": 3 }
+]},
 
 {"description":"EOF in before attribute name state",
 "input":"<a ",
