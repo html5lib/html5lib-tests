@@ -5130,7 +5130,10 @@
 
 {"description":"<a =>",
 "input":"<a =>",
-"output":["ParseError", ["StartTag", "a", {"=":""}]]},
+"output":["ParseError", ["StartTag", "a", {"=":""}]],
+"errors":[
+    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
+]},
 
 {"description":"<a >",
 "input":"<a >",
@@ -5776,7 +5779,10 @@
 
 {"description":"<a a=''=>",
 "input":"<a a=''=>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "=":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "=":""}]],
+"errors":[
+    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''>",
 "input":"<a a=''>",
@@ -6344,7 +6350,10 @@
 
 {"description":"<a/=>",
 "input":"<a/=>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"=":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"=":""}]],
+"errors":[
+    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/>",
 "input":"<a/>",
