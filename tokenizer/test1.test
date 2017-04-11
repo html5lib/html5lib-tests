@@ -115,6 +115,12 @@
  "input":"<!---->",
  "output":[["Comment", ""]]},
 
+{"description":"Nested comment",
+"input":"<!-- <!--test-->",
+"output":[["Comment", " <!--test"]],
+"errors":[
+    { "code": "nested-comment", "line": 1, "col": 10 }
+]},
 
 {"description":"Ampersand EOF",
 "input":"&",
