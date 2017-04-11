@@ -62,6 +62,8 @@
 #errors
 (1,6): eof-in-comment
 (1,6): expected-doctype-but-got-eof
+#new-errors
+(1:7) eof-in-comment
 #document
 | <!-- -x -->
 | <html>

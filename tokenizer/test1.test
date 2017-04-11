@@ -94,7 +94,10 @@
 
 {"description":"Unfinished comment",
 "input":"<!--comment",
-"output":["ParseError", ["Comment", "comment"]]},
+"output":["ParseError", ["Comment", "comment"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 12 }
+]},
 
 {"description":"Start of a comment",
 "input":"<!-",
@@ -104,17 +107,30 @@
 ]},
 
 {"description":"Short comment",
- "input":"<!-->",
- "output":["ParseError", ["Comment", ""]]},
+"input":"<!-->",
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "abrupt-comment", "line": 1, "col": 5 }
+]},
+
 
 {"description":"Short comment two",
- "input":"<!--->",
- "output":["ParseError", ["Comment", ""]]},
+"input":"<!--->",
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "abrupt-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"Short comment three",
  "input":"<!---->",
  "output":[["Comment", ""]]},
 
+{"description":"Nested comment",
+"input":"<!-- <!--test-->",
+"output":[["Comment", " <!--test"]],
+"errors":[
+    { "code": "nested-comment", "line": 1, "col": 10 }
+]},
 
 {"description":"Ampersand EOF",
 "input":"&",

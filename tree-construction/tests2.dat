@@ -431,6 +431,8 @@
 <!DOCTYPE html><!-- X
 #errors
 (1,21): eof-in-comment
+#new-errors
+(1:22) eof-in-comment
 #document
 | <!DOCTYPE html>
 | <!--  X -->
@@ -537,6 +539,8 @@
 <!DOCTYPE html><!-- XXX - XXX
 #errors
 (1,29): eof-in-comment
+#new-errors
+(1:30) eof-in-comment
 #document
 | <!DOCTYPE html>
 | <!--  XXX - XXX -->
@@ -760,6 +764,8 @@ x { content:"</style" } "
 (1,20): expected-space-or-right-bracket-in-doctype
 (1,25): unknown-doctype
 (1,35): unexpected-char-in-comment
+#new-errors
+(1:35) nested-comment
 #document
 | <!DOCTYPE <!doctype>
 | <html>

@@ -217,81 +217,133 @@
 
 {"description":"<!--",
 "input":"<!--",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 5 }
+]},
 
 {"description":"<!--\\u0000",
 "input":"<!--\u0000",
-"output":["ParseError", "ParseError", ["Comment", "\uFFFD"]]},
+"output":["ParseError", "ParseError", ["Comment", "\uFFFD"]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 5 },
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--\\u0009",
 "input":"<!--\u0009",
-"output":["ParseError", ["Comment", "\u0009"]]},
+"output":["ParseError", ["Comment", "\u0009"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--\\u000A",
 "input":"<!--\u000A",
-"output":["ParseError", ["Comment", "\u000A"]]},
+"output":["ParseError", ["Comment", "\u000A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 2, "col": 1 }
+]},
 
 {"description":"<!--\\u000B",
 "input":"<!--\u000B",
 "output":["ParseError", "ParseError", ["Comment", "\u000B"]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 5 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 5 },
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
 ]},
 
 {"description":"<!--\\u000C",
 "input":"<!--\u000C",
-"output":["ParseError", ["Comment", "\u000C"]]},
+"output":["ParseError", ["Comment", "\u000C"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!-- ",
 "input":"<!-- ",
-"output":["ParseError", ["Comment", " "]]},
+"output":["ParseError", ["Comment", " "]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!-- \\u0000",
 "input":"<!-- \u0000",
-"output":["ParseError", "ParseError", ["Comment", " \uFFFD"]]},
+"output":["ParseError", "ParseError", ["Comment", " \uFFFD"]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 6 },
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- \\u0009",
 "input":"<!-- \u0009",
-"output":["ParseError", ["Comment", " \u0009"]]},
+"output":["ParseError", ["Comment", " \u0009"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- \\u000A",
 "input":"<!-- \u000A",
-"output":["ParseError", ["Comment", " \u000A"]]},
+"output":["ParseError", ["Comment", " \u000A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 2, "col": 1 }
+]},
 
 {"description":"<!-- \\u000B",
 "input":"<!-- \u000B",
 "output":["ParseError", "ParseError", ["Comment", " \u000B"]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 },
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
 ]},
 
 {"description":"<!-- \\u000C",
 "input":"<!-- \u000C",
-"output":["ParseError", ["Comment", " \u000C"]]},
+"output":["ParseError", ["Comment", " \u000C"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!--  ",
 "input":"<!--  ",
-"output":["ParseError", ["Comment", "  "]]},
+"output":["ParseError", ["Comment", "  "]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- !",
 "input":"<!-- !",
-"output":["ParseError", ["Comment", " !"]]},
+"output":["ParseError", ["Comment", " !"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- \"",
 "input":"<!-- \"",
-"output":["ParseError", ["Comment", " \""]]},
+"output":["ParseError", ["Comment", " \""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- &",
 "input":"<!-- &",
-"output":["ParseError", ["Comment", " &"]]},
+"output":["ParseError", ["Comment", " &"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- '",
 "input":"<!-- '",
-"output":["ParseError", ["Comment", " '"]]},
+"output":["ParseError", ["Comment", " '"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- ,",
 "input":"<!-- ,",
-"output":["ParseError", ["Comment", " ,"]]},
+"output":["ParseError", ["Comment", " ,"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- -",
 "input":"<!-- -",
@@ -299,50 +351,82 @@
 
 {"description":"<!-- -\\u0000",
 "input":"<!-- -\u0000",
-"output":["ParseError", "ParseError", ["Comment", " -\uFFFD"]]},
+"output":["ParseError", "ParseError", ["Comment", " -\uFFFD"]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 },
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -\\u0009",
 "input":"<!-- -\u0009",
-"output":["ParseError", ["Comment", " -\u0009"]]},
+"output":["ParseError", ["Comment", " -\u0009"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -\\u000A",
 "input":"<!-- -\u000A",
-"output":["ParseError", ["Comment", " -\u000A"]]},
+"output":["ParseError", ["Comment", " -\u000A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 2, "col": 1 }
+]},
 
 {"description":"<!-- -\\u000B",
 "input":"<!-- -\u000B",
 "output":["ParseError", "ParseError", ["Comment", " -\u000B"]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 },
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
 ]},
 
 {"description":"<!-- -\\u000C",
 "input":"<!-- -\u000C",
-"output":["ParseError", ["Comment", " -\u000C"]]},
+"output":["ParseError", ["Comment", " -\u000C"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- - ",
 "input":"<!-- - ",
-"output":["ParseError", ["Comment", " - "]]},
+"output":["ParseError", ["Comment", " - "]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -!",
 "input":"<!-- -!",
-"output":["ParseError", ["Comment", " -!"]]},
+"output":["ParseError", ["Comment", " -!"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -\"",
 "input":"<!-- -\"",
-"output":["ParseError", ["Comment", " -\""]]},
+"output":["ParseError", ["Comment", " -\""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -&",
 "input":"<!-- -&",
-"output":["ParseError", ["Comment", " -&"]]},
+"output":["ParseError", ["Comment", " -&"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -'",
 "input":"<!-- -'",
-"output":["ParseError", ["Comment", " -'"]]},
+"output":["ParseError", ["Comment", " -'"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -,",
 "input":"<!-- -,",
-"output":["ParseError", ["Comment", " -,"]]},
+"output":["ParseError", ["Comment", " -,"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- --",
 "input":"<!-- --",
@@ -350,242 +434,418 @@
 
 {"description":"<!-- -.",
 "input":"<!-- -.",
-"output":["ParseError", ["Comment", " -."]]},
+"output":["ParseError", ["Comment", " -."]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -/",
 "input":"<!-- -/",
-"output":["ParseError", ["Comment", " -/"]]},
+"output":["ParseError", ["Comment", " -/"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -0",
 "input":"<!-- -0",
-"output":["ParseError", ["Comment", " -0"]]},
+"output":["ParseError", ["Comment", " -0"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -1",
 "input":"<!-- -1",
-"output":["ParseError", ["Comment", " -1"]]},
+"output":["ParseError", ["Comment", " -1"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -9",
 "input":"<!-- -9",
-"output":["ParseError", ["Comment", " -9"]]},
+"output":["ParseError", ["Comment", " -9"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -<",
 "input":"<!-- -<",
-"output":["ParseError", ["Comment", " -<"]]},
+"output":["ParseError", ["Comment", " -<"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -=",
 "input":"<!-- -=",
-"output":["ParseError", ["Comment", " -="]]},
+"output":["ParseError", ["Comment", " -="]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- ->",
 "input":"<!-- ->",
-"output":["ParseError", ["Comment", " ->"]]},
+"output":["ParseError", ["Comment", " ->"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -?",
 "input":"<!-- -?",
-"output":["ParseError", ["Comment", " -?"]]},
+"output":["ParseError", ["Comment", " -?"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -@",
 "input":"<!-- -@",
-"output":["ParseError", ["Comment", " -@"]]},
+"output":["ParseError", ["Comment", " -@"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -A",
 "input":"<!-- -A",
-"output":["ParseError", ["Comment", " -A"]]},
+"output":["ParseError", ["Comment", " -A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -B",
 "input":"<!-- -B",
-"output":["ParseError", ["Comment", " -B"]]},
+"output":["ParseError", ["Comment", " -B"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -Y",
 "input":"<!-- -Y",
-"output":["ParseError", ["Comment", " -Y"]]},
+"output":["ParseError", ["Comment", " -Y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -Z",
 "input":"<!-- -Z",
-"output":["ParseError", ["Comment", " -Z"]]},
+"output":["ParseError", ["Comment", " -Z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -`",
 "input":"<!-- -`",
-"output":["ParseError", ["Comment", " -`"]]},
+"output":["ParseError", ["Comment", " -`"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -a",
 "input":"<!-- -a",
-"output":["ParseError", ["Comment", " -a"]]},
+"output":["ParseError", ["Comment", " -a"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -b",
 "input":"<!-- -b",
-"output":["ParseError", ["Comment", " -b"]]},
+"output":["ParseError", ["Comment", " -b"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -y",
 "input":"<!-- -y",
-"output":["ParseError", ["Comment", " -y"]]},
+"output":["ParseError", ["Comment", " -y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -z",
 "input":"<!-- -z",
-"output":["ParseError", ["Comment", " -z"]]},
+"output":["ParseError", ["Comment", " -z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -{",
 "input":"<!-- -{",
-"output":["ParseError", ["Comment", " -{"]]},
+"output":["ParseError", ["Comment", " -{"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-- -\\uDBC0\\uDC00",
 "input":"<!-- -\uDBC0\uDC00",
-"output":["ParseError", ["Comment", " -\uDBC0\uDC00"]]},
+"output":["ParseError", ["Comment", " -\uDBC0\uDC00"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 9 }
+]},
 
 {"description":"<!-- .",
 "input":"<!-- .",
-"output":["ParseError", ["Comment", " ."]]},
+"output":["ParseError", ["Comment", " ."]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- /",
 "input":"<!-- /",
-"output":["ParseError", ["Comment", " /"]]},
+"output":["ParseError", ["Comment", " /"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- 0",
 "input":"<!-- 0",
-"output":["ParseError", ["Comment", " 0"]]},
+"output":["ParseError", ["Comment", " 0"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- 1",
 "input":"<!-- 1",
-"output":["ParseError", ["Comment", " 1"]]},
+"output":["ParseError", ["Comment", " 1"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- 9",
 "input":"<!-- 9",
-"output":["ParseError", ["Comment", " 9"]]},
+"output":["ParseError", ["Comment", " 9"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- <",
 "input":"<!-- <",
-"output":["ParseError", ["Comment", " <"]]},
+"output":["ParseError", ["Comment", " <"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- =",
 "input":"<!-- =",
-"output":["ParseError", ["Comment", " ="]]},
+"output":["ParseError", ["Comment", " ="]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- >",
 "input":"<!-- >",
-"output":["ParseError", ["Comment", " >"]]},
+"output":["ParseError", ["Comment", " >"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- ?",
 "input":"<!-- ?",
-"output":["ParseError", ["Comment", " ?"]]},
+"output":["ParseError", ["Comment", " ?"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- @",
 "input":"<!-- @",
-"output":["ParseError", ["Comment", " @"]]},
+"output":["ParseError", ["Comment", " @"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- A",
 "input":"<!-- A",
-"output":["ParseError", ["Comment", " A"]]},
+"output":["ParseError", ["Comment", " A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- B",
 "input":"<!-- B",
-"output":["ParseError", ["Comment", " B"]]},
+"output":["ParseError", ["Comment", " B"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- Y",
 "input":"<!-- Y",
-"output":["ParseError", ["Comment", " Y"]]},
+"output":["ParseError", ["Comment", " Y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- Z",
 "input":"<!-- Z",
-"output":["ParseError", ["Comment", " Z"]]},
+"output":["ParseError", ["Comment", " Z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- `",
 "input":"<!-- `",
-"output":["ParseError", ["Comment", " `"]]},
+"output":["ParseError", ["Comment", " `"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- a",
 "input":"<!-- a",
-"output":["ParseError", ["Comment", " a"]]},
+"output":["ParseError", ["Comment", " a"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- b",
 "input":"<!-- b",
-"output":["ParseError", ["Comment", " b"]]},
+"output":["ParseError", ["Comment", " b"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- y",
 "input":"<!-- y",
-"output":["ParseError", ["Comment", " y"]]},
+"output":["ParseError", ["Comment", " y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- z",
 "input":"<!-- z",
-"output":["ParseError", ["Comment", " z"]]},
+"output":["ParseError", ["Comment", " z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- {",
 "input":"<!-- {",
-"output":["ParseError", ["Comment", " {"]]},
+"output":["ParseError", ["Comment", " {"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- \\uDBC0\\uDC00",
 "input":"<!-- \uDBC0\uDC00",
-"output":["ParseError", ["Comment", " \uDBC0\uDC00"]]},
+"output":["ParseError", ["Comment", " \uDBC0\uDC00"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!--!",
 "input":"<!--!",
-"output":["ParseError", ["Comment", "!"]]},
+"output":["ParseError", ["Comment", "!"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--\"",
 "input":"<!--\"",
-"output":["ParseError", ["Comment", "\""]]},
+"output":["ParseError", ["Comment", "\""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--&",
 "input":"<!--&",
-"output":["ParseError", ["Comment", "&"]]},
+"output":["ParseError", ["Comment", "&"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--'",
 "input":"<!--'",
-"output":["ParseError", ["Comment", "'"]]},
+"output":["ParseError", ["Comment", "'"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--,",
 "input":"<!--,",
-"output":["ParseError", ["Comment", ","]]},
+"output":["ParseError", ["Comment", ","]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!---",
 "input":"<!---",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!---\\u0000",
 "input":"<!---\u0000",
-"output":["ParseError", "ParseError", ["Comment", "-\uFFFD"]]},
+"output":["ParseError", "ParseError", ["Comment", "-\uFFFD"]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 6 },
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---\\u0009",
 "input":"<!---\u0009",
-"output":["ParseError", ["Comment", "-\u0009"]]},
+"output":["ParseError", ["Comment", "-\u0009"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---\\u000A",
 "input":"<!---\u000A",
-"output":["ParseError", ["Comment", "-\u000A"]]},
+"output":["ParseError", ["Comment", "-\u000A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 2, "col": 1 }
+]},
 
 {"description":"<!---\\u000B",
 "input":"<!---\u000B",
 "output":["ParseError", "ParseError", ["Comment", "-\u000B"]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 },
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
 ]},
 
 {"description":"<!---\\u000C",
 "input":"<!---\u000C",
-"output":["ParseError", ["Comment", "-\u000C"]]},
+"output":["ParseError", ["Comment", "-\u000C"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!--- ",
 "input":"<!--- ",
-"output":["ParseError", ["Comment", "- "]]},
+"output":["ParseError", ["Comment", "- "]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---!",
 "input":"<!---!",
-"output":["ParseError", ["Comment", "-!"]]},
+"output":["ParseError", ["Comment", "-!"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---\"",
 "input":"<!---\"",
-"output":["ParseError", ["Comment", "-\""]]},
+"output":["ParseError", ["Comment", "-\""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---&",
 "input":"<!---&",
-"output":["ParseError", ["Comment", "-&"]]},
+"output":["ParseError", ["Comment", "-&"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---'",
 "input":"<!---'",
-"output":["ParseError", ["Comment", "-'"]]},
+"output":["ParseError", ["Comment", "-'"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---,",
 "input":"<!---,",
-"output":["ParseError", ["Comment", "-,"]]},
+"output":["ParseError", ["Comment", "-,"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!----",
 "input":"<!----",
@@ -593,34 +853,52 @@
 
 {"description":"<!----\\u0000",
 "input":"<!----\u0000",
-"output":["ParseError", "ParseError", ["Comment", "--\uFFFD"]]},
+"output":["ParseError", "ParseError", ["Comment", "--\uFFFD"]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 },
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----\\u0009",
 "input":"<!----\u0009",
-"output":["ParseError", "ParseError", ["Comment", "--\u0009"]]},
+"output":["ParseError", "ParseError", ["Comment", "--\u0009"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----\\u000A",
 "input":"<!----\u000A",
-"output":["ParseError", "ParseError", ["Comment", "--\u000A"]]},
+"output":["ParseError", "ParseError", ["Comment", "--\u000A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 2, "col": 1 }
+]},
 
 {"description":"<!----\\u000B",
 "input":"<!----\u000B",
 "output":["ParseError", "ParseError", "ParseError", ["Comment", "--\u000B"]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 7 },
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
 ]},
 
 {"description":"<!----\\u000C",
 "input":"<!----\u000C",
-"output":["ParseError", "ParseError", ["Comment", "--\u000C"]]},
+"output":["ParseError", "ParseError", ["Comment", "--\u000C"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!---- ",
 "input":"<!---- ",
-"output":["ParseError", "ParseError", ["Comment", "-- "]]},
+"output":["ParseError", "ParseError", ["Comment", "-- "]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!---- -",
 "input":"<!---- -",
 "output":["ParseError", "ParseError", ["Comment", "-- "]]},
+
 
 {"description":"<!---- --",
 "input":"<!---- --",
@@ -648,7 +926,10 @@
 
 {"description":"<!----!a",
 "input":"<!----!a",
-"output":["ParseError", "ParseError", ["Comment", "--!a"]]},
+"output":["ParseError", "ParseError", ["Comment", "--!a"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 9 }
+]},
 
 {"description":"<!----!a-",
 "input":"<!----!a-",
@@ -676,19 +957,31 @@
 
 {"description":"<!----\"",
 "input":"<!----\"",
-"output":["ParseError", "ParseError", ["Comment", "--\""]]},
+"output":["ParseError", "ParseError", ["Comment", "--\""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----&",
 "input":"<!----&",
-"output":["ParseError", "ParseError", ["Comment", "--&"]]},
+"output":["ParseError", "ParseError", ["Comment", "--&"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----'",
 "input":"<!----'",
-"output":["ParseError", "ParseError", ["Comment", "--'"]]},
+"output":["ParseError", "ParseError", ["Comment", "--'"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----,",
 "input":"<!----,",
-"output":["ParseError", "ParseError", ["Comment", "--,"]]},
+"output":["ParseError", "ParseError", ["Comment", "--,"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!-----",
 "input":"<!-----",
@@ -696,31 +989,52 @@
 
 {"description":"<!----.",
 "input":"<!----.",
-"output":["ParseError", "ParseError", ["Comment", "--."]]},
+"output":["ParseError", "ParseError", ["Comment", "--."]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----/",
 "input":"<!----/",
-"output":["ParseError", "ParseError", ["Comment", "--/"]]},
+"output":["ParseError", "ParseError", ["Comment", "--/"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----0",
 "input":"<!----0",
-"output":["ParseError", "ParseError", ["Comment", "--0"]]},
+"output":["ParseError", "ParseError", ["Comment", "--0"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----1",
 "input":"<!----1",
-"output":["ParseError", "ParseError", ["Comment", "--1"]]},
+"output":["ParseError", "ParseError", ["Comment", "--1"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----9",
 "input":"<!----9",
-"output":["ParseError", "ParseError", ["Comment", "--9"]]},
+"output":["ParseError", "ParseError", ["Comment", "--9"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----<",
 "input":"<!----<",
-"output":["ParseError", "ParseError", ["Comment", "--<"]]},
+"output":["ParseError", "ParseError", ["Comment", "--<"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----=",
 "input":"<!----=",
-"output":["ParseError", "ParseError", ["Comment", "--="]]},
+"output":["ParseError", "ParseError", ["Comment", "--="]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!---->",
 "input":"<!---->",
@@ -728,223 +1042,374 @@
 
 {"description":"<!----?",
 "input":"<!----?",
-"output":["ParseError", "ParseError", ["Comment", "--?"]]},
+"output":["ParseError", "ParseError", ["Comment", "--?"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----@",
 "input":"<!----@",
-"output":["ParseError", "ParseError", ["Comment", "--@"]]},
+"output":["ParseError", "ParseError", ["Comment", "--@"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----A",
 "input":"<!----A",
-"output":["ParseError", "ParseError", ["Comment", "--A"]]},
+"output":["ParseError", "ParseError", ["Comment", "--A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----B",
 "input":"<!----B",
-"output":["ParseError", "ParseError", ["Comment", "--B"]]},
+"output":["ParseError", "ParseError", ["Comment", "--B"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----Y",
 "input":"<!----Y",
-"output":["ParseError", "ParseError", ["Comment", "--Y"]]},
+"output":["ParseError", "ParseError", ["Comment", "--Y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----Z",
 "input":"<!----Z",
-"output":["ParseError", "ParseError", ["Comment", "--Z"]]},
+"output":["ParseError", "ParseError", ["Comment", "--Z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----`",
 "input":"<!----`",
-"output":["ParseError", "ParseError", ["Comment", "--`"]]},
+"output":["ParseError", "ParseError", ["Comment", "--`"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----a",
 "input":"<!----a",
-"output":["ParseError", "ParseError", ["Comment", "--a"]]},
+"output":["ParseError", "ParseError", ["Comment", "--a"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----b",
 "input":"<!----b",
-"output":["ParseError", "ParseError", ["Comment", "--b"]]},
+"output":["ParseError", "ParseError", ["Comment", "--b"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----y",
 "input":"<!----y",
-"output":["ParseError", "ParseError", ["Comment", "--y"]]},
+"output":["ParseError", "ParseError", ["Comment", "--y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----z",
 "input":"<!----z",
-"output":["ParseError", "ParseError", ["Comment", "--z"]]},
+"output":["ParseError", "ParseError", ["Comment", "--z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----{",
 "input":"<!----{",
-"output":["ParseError", "ParseError", ["Comment", "--{"]]},
+"output":["ParseError", "ParseError", ["Comment", "--{"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----\\uDBC0\\uDC00",
 "input":"<!----\uDBC0\uDC00",
-"output":["ParseError", "ParseError", ["Comment", "--\uDBC0\uDC00"]]},
+"output":["ParseError", "ParseError", ["Comment", "--\uDBC0\uDC00"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 9 }
+]},
 
 {"description":"<!---.",
 "input":"<!---.",
-"output":["ParseError", ["Comment", "-."]]},
+"output":["ParseError", ["Comment", "-."]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---/",
 "input":"<!---/",
-"output":["ParseError", ["Comment", "-/"]]},
+"output":["ParseError", ["Comment", "-/"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---0",
 "input":"<!---0",
-"output":["ParseError", ["Comment", "-0"]]},
+"output":["ParseError", ["Comment", "-0"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---1",
 "input":"<!---1",
-"output":["ParseError", ["Comment", "-1"]]},
+"output":["ParseError", ["Comment", "-1"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---9",
 "input":"<!---9",
-"output":["ParseError", ["Comment", "-9"]]},
+"output":["ParseError", ["Comment", "-9"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---<",
 "input":"<!---<",
-"output":["ParseError", ["Comment", "-<"]]},
+"output":["ParseError", ["Comment", "-<"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---=",
 "input":"<!---=",
-"output":["ParseError", ["Comment", "-="]]},
-
-{"description":"<!--->",
-"input":"<!--->",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", "-="]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---?",
 "input":"<!---?",
-"output":["ParseError", ["Comment", "-?"]]},
+"output":["ParseError", ["Comment", "-?"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---@",
 "input":"<!---@",
-"output":["ParseError", ["Comment", "-@"]]},
+"output":["ParseError", ["Comment", "-@"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---A",
 "input":"<!---A",
-"output":["ParseError", ["Comment", "-A"]]},
+"output":["ParseError", ["Comment", "-A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---B",
 "input":"<!---B",
-"output":["ParseError", ["Comment", "-B"]]},
+"output":["ParseError", ["Comment", "-B"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---Y",
 "input":"<!---Y",
-"output":["ParseError", ["Comment", "-Y"]]},
+"output":["ParseError", ["Comment", "-Y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---Z",
 "input":"<!---Z",
-"output":["ParseError", ["Comment", "-Z"]]},
+"output":["ParseError", ["Comment", "-Z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---`",
 "input":"<!---`",
-"output":["ParseError", ["Comment", "-`"]]},
+"output":["ParseError", ["Comment", "-`"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---a",
 "input":"<!---a",
-"output":["ParseError", ["Comment", "-a"]]},
+"output":["ParseError", ["Comment", "-a"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---b",
 "input":"<!---b",
-"output":["ParseError", ["Comment", "-b"]]},
+"output":["ParseError", ["Comment", "-b"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---y",
 "input":"<!---y",
-"output":["ParseError", ["Comment", "-y"]]},
+"output":["ParseError", ["Comment", "-y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---z",
 "input":"<!---z",
-"output":["ParseError", ["Comment", "-z"]]},
+"output":["ParseError", ["Comment", "-z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---{",
 "input":"<!---{",
-"output":["ParseError", ["Comment", "-{"]]},
+"output":["ParseError", ["Comment", "-{"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!---\\uDBC0\\uDC00",
 "input":"<!---\uDBC0\uDC00",
-"output":["ParseError", ["Comment", "-\uDBC0\uDC00"]]},
+"output":["ParseError", ["Comment", "-\uDBC0\uDC00"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!--.",
 "input":"<!--.",
-"output":["ParseError", ["Comment", "."]]},
+"output":["ParseError", ["Comment", "."]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--/",
 "input":"<!--/",
-"output":["ParseError", ["Comment", "/"]]},
+"output":["ParseError", ["Comment", "/"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--0",
 "input":"<!--0",
-"output":["ParseError", ["Comment", "0"]]},
+"output":["ParseError", ["Comment", "0"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--1",
 "input":"<!--1",
-"output":["ParseError", ["Comment", "1"]]},
+"output":["ParseError", ["Comment", "1"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--9",
 "input":"<!--9",
-"output":["ParseError", ["Comment", "9"]]},
+"output":["ParseError", ["Comment", "9"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--<",
 "input":"<!--<",
-"output":["ParseError", ["Comment", "<"]]},
+"output":["ParseError", ["Comment", "<"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--=",
 "input":"<!--=",
-"output":["ParseError", ["Comment", "="]]},
-
-{"description":"<!-->",
-"input":"<!-->",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", "="]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--?",
 "input":"<!--?",
-"output":["ParseError", ["Comment", "?"]]},
+"output":["ParseError", ["Comment", "?"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--@",
 "input":"<!--@",
-"output":["ParseError", ["Comment", "@"]]},
+"output":["ParseError", ["Comment", "@"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--A",
 "input":"<!--A",
-"output":["ParseError", ["Comment", "A"]]},
+"output":["ParseError", ["Comment", "A"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--B",
 "input":"<!--B",
-"output":["ParseError", ["Comment", "B"]]},
+"output":["ParseError", ["Comment", "B"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--Y",
 "input":"<!--Y",
-"output":["ParseError", ["Comment", "Y"]]},
+"output":["ParseError", ["Comment", "Y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--Z",
 "input":"<!--Z",
-"output":["ParseError", ["Comment", "Z"]]},
+"output":["ParseError", ["Comment", "Z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--`",
 "input":"<!--`",
-"output":["ParseError", ["Comment", "`"]]},
+"output":["ParseError", ["Comment", "`"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--a",
 "input":"<!--a",
-"output":["ParseError", ["Comment", "a"]]},
+"output":["ParseError", ["Comment", "a"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--b",
 "input":"<!--b",
-"output":["ParseError", ["Comment", "b"]]},
+"output":["ParseError", ["Comment", "b"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--y",
 "input":"<!--y",
-"output":["ParseError", ["Comment", "y"]]},
+"output":["ParseError", ["Comment", "y"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--z",
 "input":"<!--z",
-"output":["ParseError", ["Comment", "z"]]},
+"output":["ParseError", ["Comment", "z"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--{",
 "input":"<!--{",
-"output":["ParseError", ["Comment", "{"]]},
+"output":["ParseError", ["Comment", "{"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!--\\uDBC0\\uDC00",
 "input":"<!--\uDBC0\uDC00",
-"output":["ParseError", ["Comment", "\uDBC0\uDC00"]]},
+"output":["ParseError", ["Comment", "\uDBC0\uDC00"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!/",
 "input":"<!/",

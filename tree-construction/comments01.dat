@@ -29,6 +29,8 @@ FOO<!-- BAR --   >BAZ
 (1,3): expected-doctype-but-got-chars
 (1,15): unexpected-char-in-comment
 (1,21): eof-in-comment
+#new-errors
+(1:22) eof-in-comment
 #document
 | <html>
 |   <head>
@@ -73,6 +75,8 @@ FOO<!-- BAR -- <QUX> -- MUX -- >BAZ
 (1,24): unexpected-char-in-comment
 (1,31): unexpected-char-in-comment
 (1,35): eof-in-comment
+#new-errors
+(1:36) eof-in-comment
 #document
 | <html>
 |   <head>
@@ -97,6 +101,8 @@ FOO<!--->BAZ
 #errors
 (1,3): expected-doctype-but-got-chars
 (1,9): incorrect-comment
+#new-errors
+(1:9) abrupt-comment
 #document
 | <html>
 |   <head>
@@ -110,6 +116,8 @@ FOO<!-->BAZ
 #errors
 (1,3): expected-doctype-but-got-chars
 (1,8): incorrect-comment
+#new-errors
+(1:8) abrupt-comment
 #document
 | <html>
 |   <head>
