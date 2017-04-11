@@ -94,7 +94,10 @@
 
 {"description":"Unfinished comment",
 "input":"<!--comment",
-"output":["ParseError", ["Comment", "comment"]]},
+"output":["ParseError", ["Comment", "comment"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 12 }
+]},
 
 {"description":"Start of a comment",
 "input":"<!-",

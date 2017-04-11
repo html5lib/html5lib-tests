@@ -153,7 +153,10 @@
 
 {"description":"Comment with dash",
 "input":"<!---x",
-"output":["ParseError", ["Comment", "-x"]]},
+"output":["ParseError", ["Comment", "-x"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"Entity + newline",
 "input":"\nx\n&gt;\n",

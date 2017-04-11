@@ -154,7 +154,10 @@
             "description":"--!NUL in comment ",
             "doubleEscaped":true,
             "input":"<!----!\\u0000-->",
-            "output":["ParseError", "ParseError", ["Comment", "--!\\uFFFD"]]
+            "output":["ParseError", "ParseError", ["Comment", "--!\\uFFFD"]],
+            "errors":[
+                { "code": "unexpected-null-character", "line": 1, "col": 8 }
+            ]
         },
         {
             "description":"space EOF after doctype ",
