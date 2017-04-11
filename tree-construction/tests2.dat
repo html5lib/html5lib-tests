@@ -237,6 +237,7 @@
 (1,33): attributes-in-end-tag
 (1,33): unexpected-end-tag-before-html
 #new-errors
+(1:24) invalid-character-in-attribute-name
 (1:33) end-tag-with-attributes
 #document
 | <!DOCTYPE html>

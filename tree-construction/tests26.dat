@@ -269,6 +269,8 @@
 (1,12): unexpected-character-after-solidus-in-tag
 (1,21): unexpected-end-tag
 (2,0): expected-closing-tag-but-got-eof
+#new-errors
+(1:11) invalid-character-in-attribute-name
 #document
 | <html>
 |   <head>

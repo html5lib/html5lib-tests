@@ -618,6 +618,8 @@ console.log("FOO<span>BAR</span>BAZ");
 #errors
 (1,6): invalid-character-in-attribute-name
 (1,15): expected-doctype-but-got-start-tag
+#new-errors
+(1:6) invalid-character-in-attribute-name
 #document
 | <html>
 |   <head>

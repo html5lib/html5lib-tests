@@ -2,7 +2,10 @@
 
 {"description":"< in attribute name",
 "input":"<z/0  <>",
-"output":["ParseError", "ParseError", ["StartTag", "z", {"0": "", "<": ""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "z", {"0": "", "<": ""}]],
+"errors":[
+    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 7 }
+]},
 
 {"description":"< in attribute value",
 "input":"<z x=<>",
@@ -66,19 +69,31 @@
 
 {"description":"Attribute name starting with \"",
 "input":"<foo \"='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"\"": "bar"}]]},
+"output":["ParseError", ["StartTag", "foo", {"\"": "bar"}]],
+"errors":[
+    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 6 }
+]},
 
 {"description":"Attribute name starting with '",
 "input":"<foo '='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"'": "bar"}]]},
+"output":["ParseError", ["StartTag", "foo", {"'": "bar"}]],
+"errors":[
+    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 6 }
+]},
 
 {"description":"Attribute name containing \"",
 "input":"<foo a\"b='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"a\"b": "bar"}]]},
+"output":["ParseError", ["StartTag", "foo", {"a\"b": "bar"}]],
+"errors":[
+    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 7 }
+]},
 
 {"description":"Attribute name containing '",
 "input":"<foo a'b='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"a'b": "bar"}]]},
+"output":["ParseError", ["StartTag", "foo", {"a'b": "bar"}]],
+"errors":[
+    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 7 }
+]},
 
 {"description":"Unquoted attribute value containing '",
 "input":"<foo a=b'c>",
