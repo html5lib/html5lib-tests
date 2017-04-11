@@ -890,10 +890,6 @@
 "input":"<!--=",
 "output":["ParseError", ["Comment", "="]]},
 
-{"description":"<!-->",
-"input":"<!-->",
-"output":["ParseError", ["Comment", ""]]},
-
 {"description":"<!--?",
 "input":"<!--?",
 "output":["ParseError", ["Comment", "?"]]},

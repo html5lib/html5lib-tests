@@ -760,6 +760,8 @@ x { content:"</style" } "
 (1,20): expected-space-or-right-bracket-in-doctype
 (1,25): unknown-doctype
 (1,35): unexpected-char-in-comment
+#new-errors
+(1:35) nested-comment
 #document
 | <!DOCTYPE <!doctype>
 | <html>

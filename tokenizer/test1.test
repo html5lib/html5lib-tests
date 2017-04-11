@@ -104,8 +104,12 @@
 ]},
 
 {"description":"Short comment",
- "input":"<!-->",
- "output":["ParseError", ["Comment", ""]]},
+"input":"<!-->",
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+ { "code": "abrupt-comment", "line": 1, "col": 5 }
+]},
+
 
 {"description":"Short comment two",
  "input":"<!--->",
