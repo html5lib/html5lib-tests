@@ -538,7 +538,10 @@
 
 {"description":"<!---",
 "input":"<!---",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 6 }
+]},
 
 {"description":"<!---\\u0000",
 "input":"<!---\u0000",
@@ -805,10 +808,6 @@
 {"description":"<!---=",
 "input":"<!---=",
 "output":["ParseError", ["Comment", "-="]]},
-
-{"description":"<!--->",
-"input":"<!--->",
-"output":["ParseError", ["Comment", ""]]},
 
 {"description":"<!---?",
 "input":"<!---?",
