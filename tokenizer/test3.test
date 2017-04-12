@@ -347,7 +347,10 @@
 
 {"description":"<!-- -",
 "input":"<!-- -",
-"output":["ParseError", ["Comment", " "]]},
+"output":["ParseError", ["Comment", " "]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 7 }
+]},
 
 {"description":"<!-- -\\u0000",
 "input":"<!-- -\u0000",
@@ -897,7 +900,10 @@
 
 {"description":"<!---- -",
 "input":"<!---- -",
-"output":["ParseError", "ParseError", ["Comment", "-- "]]},
+"output":["ParseError", "ParseError", ["Comment", "-- "]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 9 }
+]},
 
 
 {"description":"<!---- --",
@@ -933,7 +939,10 @@
 
 {"description":"<!----!a-",
 "input":"<!----!a-",
-"output":["ParseError", "ParseError", ["Comment", "--!a"]]},
+"output":["ParseError", "ParseError", ["Comment", "--!a"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 10 }
+]},
 
 {"description":"<!----!a--",
 "input":"<!----!a--",
@@ -945,7 +954,10 @@
 
 {"description":"<!----!-",
 "input":"<!----!-",
-"output":["ParseError", "ParseError", ["Comment", "--!"]]},
+"output":["ParseError", "ParseError", ["Comment", "--!"]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 9 }
+]},
 
 {"description":"<!----!--",
 "input":"<!----!--",
