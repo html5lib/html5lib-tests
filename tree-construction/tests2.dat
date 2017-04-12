@@ -736,6 +736,8 @@ x { content:"</style" } "
 <!DOCTYPE html><!--x--
 #errors
 (1,22): eof-in-comment-double-dash
+#new-errors
+(1:23) eof-in-comment
 #document
 | <!DOCTYPE html>
 | <!-- x -->
