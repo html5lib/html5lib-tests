@@ -933,11 +933,17 @@
 
 {"description":"<!----!",
 "input":"<!----!",
-"output":["ParseError", "ParseError", ["Comment", ""]]},
+"output":["ParseError", "ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "eof-in-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----!>",
 "input":"<!----!>",
-"output":["ParseError", ["Comment", ""]]},
+"output":["ParseError", ["Comment", ""]],
+"errors":[
+    { "code": "incorrectly-closed-comment", "line": 1, "col": 8 }
+]},
 
 {"description":"<!----!a",
 "input":"<!----!a",
