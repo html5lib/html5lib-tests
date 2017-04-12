@@ -224,6 +224,8 @@
 #errors
 (1,8): eof-in-attribute-name
 (1,8): expected-doctype-but-got-eof
+#new-errors
+(1:9) eof-after-attribute-name
 #document
 | <html>
 |   <head>

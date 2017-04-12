@@ -125,7 +125,10 @@
 
 {"description":"CR EOF in tag name",
 "input":"<z\r",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "eof-after-attribute-name", "line": 2, "col": 1 }
+]},
 
 {"description":"Slash EOF in tag name",
 "input":"<z/",
@@ -365,15 +368,24 @@
 
 {"description":"EOF in before attribute name state",
 "input":"<a ",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "eof-after-attribute-name", "line": 1, "col": 4 }
+]},
 
 {"description":"EOF in attribute name state",
 "input":"<a a",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "eof-after-attribute-name", "line": 1, "col": 5 }
+]},
 
 {"description":"EOF in after attribute name state",
 "input":"<a a ",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "eof-after-attribute-name", "line": 1, "col": 6 }
+]},
 
 {"description":"EOF in before attribute value state",
 "input":"<a a =",
