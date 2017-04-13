@@ -26,7 +26,8 @@
 "input":"<z ==>",
 "output":["ParseError", "ParseError", ["StartTag", "z", {"=": ""}]],
 "errors":[
-    { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 },
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 }
 ]},
 
 {"description":"=== attribute",
