@@ -4,6 +4,7 @@
 "input":"<z/0  <>",
 "output":["ParseError", "ParseError", ["StartTag", "z", {"0": "", "<": ""}]],
 "errors":[
+    { "code": "self-closing-start-tag", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 7 }
 ]},
 
@@ -155,7 +156,10 @@
 
 {"description":"Slash EOF in tag name",
 "input":"<z/",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "eof-in-tag", "line": 1, "col": 4 }
+]},
 
 {"description":"Zero hex numeric entity",
 "input":"&#x0",

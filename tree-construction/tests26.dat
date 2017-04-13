@@ -271,6 +271,7 @@
 (2,0): expected-closing-tag-but-got-eof
 #new-errors
 (1:11) unexpected-character-in-attribute-name
+(1:13) self-closing-start-tag
 #document
 | <html>
 |   <head>
