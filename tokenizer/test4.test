@@ -401,7 +401,10 @@
 
 {"description":"EOF in attribute value (single quoted) state",
 "input":"<a a ='a",
-"output":["ParseError"]},
+"output":["ParseError"],
+"errors":[
+    { "code": "eof-in-attribute-value", "line": 1, "col": 9 }
+]},
 
 {"description":"EOF in attribute value (unquoted) state",
 "input":"<a a =a",
