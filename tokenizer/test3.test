@@ -6117,7 +6117,10 @@
 
 {"description":"<a a=\"\\u0000\">",
 "input":"<a a=\"\u0000\">",
-"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=\"\\u0009\">",
 "input":"<a a=\"\u0009\">",
