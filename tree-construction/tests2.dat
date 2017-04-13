@@ -224,8 +224,6 @@
 #errors
 (1,8): eof-in-attribute-name
 (1,8): expected-doctype-but-got-eof
-#new-errors
-(1:9) eof-in-tag
 #document
 | <html>
 |   <head>
@@ -234,12 +232,11 @@
 #data
 <!DOCTYPE html></b test<b &=&amp>X
 #errors
-(1,24): unexpected-character-in-attribute-name
+(1,24): invalid-character-in-attribute-name
 (1,32): named-entity-without-semicolon
 (1,33): attributes-in-end-tag
 (1,33): unexpected-end-tag-before-html
 #new-errors
-(1:24) unexpected-character-in-attribute-name
 (1:33) end-tag-with-attributes
 #document
 | <!DOCTYPE html>
