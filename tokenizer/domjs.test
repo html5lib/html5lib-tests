@@ -171,6 +171,15 @@
             "errors":[
                 { "code": "cdata-in-html-content", "line": 1, "col": 9 }
             ]
+        },
+        {
+            "description":"CDATA content",
+            "input":"foo&bar",
+            "initialStates":["CDATA section state"],
+            "output":[["Character", "foo&bar"]],
+            "errors":[
+                { "code": "eof-in-cdata", "line": 1, "col": 8 }
+            ]
         }
 
     ]

@@ -116,12 +116,15 @@
 "input":"</",
 "output":["ParseError", ["Character", "</"]],
 "errors":[
-    { "code": "eof-before-end-tag-name", "line": 1, "col": 3 }
+    { "code": "eof-before-tag-name", "line": 1, "col": 3 }
 ]},
 
 {"description":"Illegal end tag name",
 "input":"</1>",
-"output":["ParseError", ["Comment", "1"]]},
+"output":["ParseError", ["Comment", "1"]],
+"errors":[
+    { "code": "invalid-first-character-of-tag-name", "line": 1, "col": 3 }
+]},
 
 {"description":"Simili processing instruction",
 "input":"<?namespace>",
@@ -141,7 +144,7 @@
 "input":"foo < bar",
 "output":[["Character", "foo "], "ParseError", ["Character", "< bar"]],
 "errors":[
-    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 6 }
+    { "code": "invalid-first-character-of-tag-name", "line": 1, "col": 6 }
 ]},
 
 {"description":"Null Byte Replacement",

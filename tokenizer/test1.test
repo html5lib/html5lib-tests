@@ -42,7 +42,7 @@
 "input":"<>",
 "output":["ParseError", ["Character", "<>"]],
 "errors":[
-    { "code": "unexpected-first-character-of-start-tag-name", "line": 1, "col": 2 }
+    { "code": "invalid-first-character-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"Start Tag w/attribute",
