@@ -6049,7 +6049,10 @@
 
 {"description":"<a a=\\u0000>",
 "input":"<a a=\u0000>",
-"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=\\u0008>",
 "input":"<a a=\u0008>",
@@ -6597,11 +6600,17 @@
 
 {"description":"<a a=<>",
 "input":"<a a=<>",
-"output":["ParseError", ["StartTag", "a", {"a":"<"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"<"}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a==>",
 "input":"<a a==>",
-"output":["ParseError", ["StartTag", "a", {"a":"="}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"="}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=>",
 "input":"<a a=>",
@@ -6636,7 +6645,10 @@
 
 {"description":"<a a=`>",
 "input":"<a a=`>",
-"output":["ParseError", ["StartTag", "a", {"a":"`"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"`"}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=a>",
 "input":"<a a=a>",
@@ -6644,7 +6656,10 @@
 
 {"description":"<a a=a\\u0000>",
 "input":"<a a=a\u0000>",
-"output":["ParseError", ["StartTag", "a", {"a":"a\uFFFD"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a\uFFFD"}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a\\u0008>",
 "input":"<a a=a\u0008>",
@@ -6693,7 +6708,10 @@
 
 {"description":"<a a=a\">",
 "input":"<a a=a\">",
-"output":["ParseError", ["StartTag", "a", {"a":"a\""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a\""}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a#>",
 "input":"<a a=a#>",
@@ -6709,7 +6727,10 @@
 
 {"description":"<a a=a'>",
 "input":"<a a=a'>",
-"output":["ParseError", ["StartTag", "a", {"a":"a'"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a'"}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a(>",
 "input":"<a a=a(>",
@@ -6737,11 +6758,17 @@
 
 {"description":"<a a=a<>",
 "input":"<a a=a<>",
-"output":["ParseError", ["StartTag", "a", {"a":"a<"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a<"}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a=>",
 "input":"<a a=a=>",
-"output":["ParseError", ["StartTag", "a", {"a":"a="}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a="}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a>",
 "input":"<a a=a>",
@@ -6773,7 +6800,10 @@
 
 {"description":"<a a=a`>",
 "input":"<a a=a`>",
-"output":["ParseError", ["StartTag", "a", {"a":"a`"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a`"}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=aa>",
 "input":"<a a=aa>",

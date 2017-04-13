@@ -222,6 +222,9 @@
 
 {"description":"Open angled bracket in unquoted attribute value state",
  "input":"<a a=f<>",
- "output":["ParseError", ["StartTag", "a", {"a":"f<"}]]}
+ "output":["ParseError", ["StartTag", "a", {"a":"f<"}]],
+ "errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+]}
 
 ]}

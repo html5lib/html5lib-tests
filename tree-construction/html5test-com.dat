@@ -31,6 +31,9 @@
 (1,14): unexpected-character-in-unquoted-attribute-value
 (1,15): expected-doctype-but-got-start-tag
 (1,15): expected-closing-tag-but-got-eof
+#new-errors
+(1:10) unexpected-character-in-attribute-value
+(1:14) unexpected-character-in-attribute-value
 #document
 | <html>
 |   <head>
