@@ -22,10 +22,7 @@
 "initialStates":["RCDATA state", "RAWTEXT state"],
 "lastStartTag":"xmp",
 "input":"foo</xmp ",
-"output":[["Character", "foo"], "ParseError"],
-"errors":[
-    { "code": "eof-in-tag", "line": 1, "col": 10 }
-]},
+"output":[["Character", "foo"], "ParseError"]},
 
 {"description":"End tag closing RCDATA or RAWTEXT (ending with EOF)",
 "initialStates":["RCDATA state", "RAWTEXT state"],

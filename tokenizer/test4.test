@@ -2,10 +2,7 @@
 
 {"description":"< in attribute name",
 "input":"<z/0  <>",
-"output":["ParseError", "ParseError", ["StartTag", "z", {"0": "", "<": ""}]],
-"errors":[
-    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 7 }
-]},
+"output":["ParseError", "ParseError", ["StartTag", "z", {"0": "", "<": ""}]]},
 
 {"description":"< in attribute value",
 "input":"<z x=<>",
@@ -17,31 +14,19 @@
 
 {"description":"= attribute",
 "input":"<z =>",
-"output":["ParseError", ["StartTag", "z", {"=": ""}]],
-"errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
-]},
+"output":["ParseError", ["StartTag", "z", {"=": ""}]]},
 
 {"description":"== attribute",
 "input":"<z ==>",
-"output":["ParseError", "ParseError", ["StartTag", "z", {"=": ""}]],
-"errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
-]},
+"output":["ParseError", "ParseError", ["StartTag", "z", {"=": ""}]]},
 
 {"description":"=== attribute",
 "input":"<z ===>",
-"output":["ParseError", "ParseError", ["StartTag", "z", {"=": "="}]],
-"errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
-]},
+"output":["ParseError", "ParseError", ["StartTag", "z", {"=": "="}]]},
 
 {"description":"==== attribute",
 "input":"<z ====>",
-"output":["ParseError", "ParseError", "ParseError", ["StartTag", "z", {"=": "=="}]],
-"errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
-]},
+"output":["ParseError", "ParseError", "ParseError", ["StartTag", "z", {"=": "=="}]]},
 
 {"description":"\" after ampersand in double-quoted attribute value",
 "input":"<z z=\"&\">",
@@ -69,31 +54,19 @@
 
 {"description":"Attribute name starting with \"",
 "input":"<foo \"='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"\"": "bar"}]],
-"errors":[
-    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
-]},
+"output":["ParseError", ["StartTag", "foo", {"\"": "bar"}]]},
 
 {"description":"Attribute name starting with '",
 "input":"<foo '='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"'": "bar"}]],
-"errors":[
-    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
-]},
+"output":["ParseError", ["StartTag", "foo", {"'": "bar"}]]},
 
 {"description":"Attribute name containing \"",
 "input":"<foo a\"b='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"a\"b": "bar"}]],
-"errors":[
-    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 7 }
-]},
+"output":["ParseError", ["StartTag", "foo", {"a\"b": "bar"}]]},
 
 {"description":"Attribute name containing '",
 "input":"<foo a'b='bar'>",
-"output":["ParseError", ["StartTag", "foo", {"a'b": "bar"}]],
-"errors":[
-    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 7 }
-]},
+"output":["ParseError", ["StartTag", "foo", {"a'b": "bar"}]]},
 
 {"description":"Unquoted attribute value containing '",
 "input":"<foo a=b'c>",
@@ -125,10 +98,7 @@
 
 {"description":"CR EOF in tag name",
 "input":"<z\r",
-"output":["ParseError"],
-"errors":[
-    { "code": "eof-in-tag", "line": 2, "col": 1 }
-]},
+"output":["ParseError"]},
 
 {"description":"Slash EOF in tag name",
 "input":"<z/",
@@ -363,29 +333,20 @@
 "input":"<a",
 "output":["ParseError"],
 "errors": [
-    { "code": "eof-in-tag", "line": 1, "col": 3 }
+    { "code": "eof-in-tag-name", "line": 1, "col": 3 }
 ]},
 
 {"description":"EOF in before attribute name state",
 "input":"<a ",
-"output":["ParseError"],
-"errors":[
-    { "code": "eof-in-tag", "line": 1, "col": 4 }
-]},
+"output":["ParseError"]},
 
 {"description":"EOF in attribute name state",
 "input":"<a a",
-"output":["ParseError"],
-"errors":[
-    { "code": "eof-in-tag", "line": 1, "col": 5 }
-]},
+"output":["ParseError"]},
 
 {"description":"EOF in after attribute name state",
 "input":"<a a ",
-"output":["ParseError"],
-"errors":[
-    { "code": "eof-in-tag", "line": 1, "col": 6 }
-]},
+"output":["ParseError"]},
 
 {"description":"EOF in before attribute value state",
 "input":"<a a =",

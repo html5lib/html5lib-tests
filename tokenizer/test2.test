@@ -172,17 +172,11 @@
 
 {"description":"Double-quote after attribute name",
 "input":"<h a \">",
-"output":["ParseError", ["StartTag", "h", {"a":"", "\"":""}]],
-"errors":[
-    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
-]},
+"output":["ParseError", ["StartTag", "h", {"a":"", "\"":""}]]},
 
 {"description":"Single-quote after attribute name",
 "input":"<h a '>",
-"output":["ParseError", ["StartTag", "h", {"a":"", "'":""}]],
-"errors":[
-    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
-]},
+"output":["ParseError", ["StartTag", "h", {"a":"", "'":""}]]},
 
 {"description":"Empty end tag with following characters",
 "input":"a</>bc",
