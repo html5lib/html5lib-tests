@@ -122,11 +122,17 @@
 
 {"description":"Double-quoted attribute value not followed by whitespace",
 "input":"<foo a=\"b\"c>",
-"output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]]},
+"output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 11 }
+]},
 
 {"description":"Single-quoted attribute value not followed by whitespace",
 "input":"<foo a='b'c>",
-"output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]]},
+"output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]],
+"errors":[
+    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 11 }
+]},
 
 {"description":"Quoted attribute followed by permitted /",
 "input":"<br a='b'/>",
@@ -437,6 +443,9 @@
 
 {"description":"EOF in after attribute value state",
 "input":"<a a ='a'",
-"output":["ParseError"]}
+"output":["ParseError"],
+"errors":[
+    { "code": "eof-in-attribute-value", "line": 1, "col": 10 }
+]}
 
 ]}
