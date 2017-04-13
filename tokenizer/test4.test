@@ -19,28 +19,28 @@
 "input":"<z =>",
 "output":["ParseError", ["StartTag", "z", {"=": ""}]],
 "errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"== attribute",
 "input":"<z ==>",
 "output":["ParseError", "ParseError", ["StartTag", "z", {"=": ""}]],
 "errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"=== attribute",
 "input":"<z ===>",
 "output":["ParseError", "ParseError", ["StartTag", "z", {"=": "="}]],
 "errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"==== attribute",
 "input":"<z ====>",
 "output":["ParseError", "ParseError", "ParseError", ["StartTag", "z", {"=": "=="}]],
 "errors":[
-    { "code": "unexpected-equal-sign-before-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"\" after ampersand in double-quoted attribute value",
