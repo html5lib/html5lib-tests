@@ -123,7 +123,7 @@
 (1,32): expected-attribute-name-but-got-eof
 (1,32): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:33) eof-after-attribute-name
+(1:33) eof-in-tag
 #document
 | <!DOCTYPE html>
 | <html>
@@ -209,7 +209,7 @@
 (1,32): expected-attribute-name-but-got-eof
 (1,32): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:33) eof-after-attribute-name
+(1:33) eof-in-tag
 #document
 | <!DOCTYPE html>
 | <html>
@@ -362,7 +362,7 @@
 (1,36): expected-attribute-name-but-got-eof
 (1,36): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:37) eof-after-attribute-name
+(1:37) eof-in-tag
 #document
 | <!DOCTYPE html>
 | <html>
@@ -617,7 +617,7 @@
 (1,53): expected-attribute-name-but-got-eof
 (1,53): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:54) eof-after-attribute-name
+(1:54) eof-in-tag
 #document
 | <!DOCTYPE html>
 | <html>
@@ -790,7 +790,7 @@
 (1,47): expected-attribute-name-but-got-eof
 (1,47): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:48) eof-after-attribute-name
+(1:48) eof-in-tag
 #document
 | <!DOCTYPE html>
 | <html>
@@ -1419,7 +1419,7 @@
 (1,17): expected-attribute-name-but-got-eof
 (1,17): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:18) eof-after-attribute-name
+(1:18) eof-in-tag
 #document
 | <html>
 |   <head>
@@ -1505,7 +1505,7 @@
 (1,17): expected-attribute-name-but-got-eof
 (1,17): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:18) eof-after-attribute-name
+(1:18) eof-in-tag
 #document
 | <html>
 |   <head>
@@ -1658,7 +1658,7 @@
 (1,21): expected-attribute-name-but-got-eof
 (1,21): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:22) eof-after-attribute-name
+(1:22) eof-in-tag
 #document
 | <html>
 |   <head>
@@ -1913,7 +1913,7 @@
 (1,38): expected-attribute-name-but-got-eof
 (1,38): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:39) eof-after-attribute-name
+(1:39) eof-in-tag
 #document
 | <html>
 |   <head>
@@ -2056,7 +2056,7 @@
 (1,32): expected-attribute-name-but-got-eof
 (1,32): expected-named-closing-tag-but-got-eof
 #new-errors
-(1:33) eof-after-attribute-name
+(1:33) eof-in-tag
 #document
 | <html>
 |   <head>

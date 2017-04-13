@@ -171,14 +171,14 @@
 "input":"<h a \">",
 "output":["ParseError", ["StartTag", "h", {"a":"", "\"":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 6 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
 ]},
 
 {"description":"Single-quote after attribute name",
 "input":"<h a '>",
 "output":["ParseError", ["StartTag", "h", {"a":"", "'":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 6 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
 ]},
 
 {"description":"Empty end tag with following characters",

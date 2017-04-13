@@ -5087,7 +5087,7 @@
 "input":"<a \">",
 "output":["ParseError", ["StartTag", "a", {"\"":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a #>",
@@ -5102,7 +5102,7 @@
 "input":"<a '>",
 "output":["ParseError", ["StartTag", "a", {"'":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a (>",
@@ -5137,7 +5137,7 @@
 "input":"<a <>",
 "output":["ParseError", ["StartTag", "a", {"<":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a =>",
@@ -5291,7 +5291,7 @@
 "input":"<a a \">",
 "output":["ParseError", ["StartTag", "a", {"a":"", "\"":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 6 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
 ]},
 
 {"description":"<a a #>",
@@ -5306,7 +5306,7 @@
 "input":"<a a '>",
 "output":["ParseError", ["StartTag", "a", {"a":"", "'":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 6 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
 ]},
 
 {"description":"<a a (>",
@@ -5341,7 +5341,7 @@
 "input":"<a a <>",
 "output":["ParseError", ["StartTag", "a", {"a":"", "<":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 6 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 6 }
 ]},
 
 {"description":"<a a =>",
@@ -5416,7 +5416,7 @@
 "input":"<a a\">",
 "output":["ParseError", ["StartTag", "a", {"a\"":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 5 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 5 }
 ]},
 
 {"description":"<a a#>",
@@ -5431,7 +5431,7 @@
 "input":"<a a'>",
 "output":["ParseError", ["StartTag", "a", {"a'":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 5 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 5 }
 ]},
 
 {"description":"<a a(>",
@@ -5466,7 +5466,7 @@
 "input":"<a a<>",
 "output":["ParseError", ["StartTag", "a", {"a<":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 5 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 5 }
 ]},
 
 {"description":"<a a=>",
@@ -5780,7 +5780,7 @@
 "input":"<a a=''\">",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\"":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 8 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a=''&>",
@@ -5791,7 +5791,7 @@
 "input":"<a a='''>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "'":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 8 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a=''->",
@@ -5822,7 +5822,7 @@
 "input":"<a a=''<>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "<":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 8 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a=''=>",
@@ -6367,7 +6367,7 @@
 "input":"<a/\">",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"\"":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/&>",
@@ -6378,7 +6378,7 @@
 "input":"<a/'>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"'":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/->",
@@ -6405,7 +6405,7 @@
 "input":"<a/<>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"<":""}]],
 "errors":[
-    { "code": "invalid-character-in-attribute-name", "line": 1, "col": 4 }
+    { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/=>",
