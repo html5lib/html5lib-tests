@@ -4,22 +4,22 @@
 "input":"<z/0  <>",
 "output":["ParseError", "ParseError", ["StartTag", "z", {"0": "", "<": ""}]],
 "errors":[
-    { "code": "self-closing-start-tag", "line": 1, "col": 4 },
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 7 }
 ]},
 
-{"description":"< in attribute value",
+{"description":"",
 "input":"<z x=<>",
 "output":["ParseError", ["StartTag", "z", {"x": "<"}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 6 }
 ]},
 
 {"description":"= in unquoted attribute value",
 "input":"<z z=z=z>",
 "output":["ParseError", ["StartTag", "z", {"z": "z=z"}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
 ]},
 
 {"description":"= attribute",
@@ -34,7 +34,7 @@
 "output":["ParseError", "ParseError", ["StartTag", "z", {"=": ""}]],
 "errors":[
     { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 },
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 }
+    { "code": "missing-attribute-value", "line": 1, "col": 6 }
 ]},
 
 {"description":"=== attribute",
@@ -42,7 +42,7 @@
 "output":["ParseError", "ParseError", ["StartTag", "z", {"=": "="}]],
 "errors":[
     { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 },
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 6 }
 ]},
 
 {"description":"==== attribute",
@@ -50,8 +50,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["StartTag", "z", {"=": "=="}]],
 "errors":[
     { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 },
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 6 },
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 6 },
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
 ]},
 
 {"description":"\" after ampersand in double-quoted attribute value",
@@ -110,7 +110,7 @@
 "input":"<foo a=b'c>",
 "output":["ParseError", ["StartTag", "foo", {"a": "b'c"}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 9 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 9 }
 ]},
 
 
@@ -118,21 +118,21 @@
 "input":"<foo a=b\"c>",
 "output":["ParseError", ["StartTag", "foo", {"a": "b\"c"}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 9 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 9 }
 ]},
 
 {"description":"Double-quoted attribute value not followed by whitespace",
 "input":"<foo a=\"b\"c>",
 "output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 11 }
+    { "code": "missing-whitespace-after-attribute-value", "line": 1, "col": 11 }
 ]},
 
 {"description":"Single-quoted attribute value not followed by whitespace",
 "input":"<foo a='b'c>",
 "output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 11 }
+    { "code": "missing-whitespace-after-attribute-value", "line": 1, "col": 11 }
 ]},
 
 {"description":"Quoted attribute followed by permitted /",
@@ -386,7 +386,7 @@
 "input":"<a a=aa`>",
 "output":["ParseError", ["StartTag", "a", {"a":"aa`"}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 8 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 8 }
 ]},
 
 {"description":"EOF in tag name state ",
@@ -421,35 +421,35 @@
 "input":"<a a =",
 "output":["ParseError"],
 "errors":[
-    { "code": "eof-in-attribute-value", "line": 1, "col": 7 }
+    { "code": "eof-in-tag", "line": 1, "col": 7 }
 ]},
 
 {"description":"EOF in attribute value (double quoted) state",
 "input":"<a a =\"a",
 "output":["ParseError"],
 "errors":[
-    { "code": "eof-in-attribute-value", "line": 1, "col": 9 }
+    { "code": "eof-in-tag", "line": 1, "col": 9 }
 ]},
 
 {"description":"EOF in attribute value (single quoted) state",
 "input":"<a a ='a",
 "output":["ParseError"],
 "errors":[
-    { "code": "eof-in-attribute-value", "line": 1, "col": 9 }
+    { "code": "eof-in-tag", "line": 1, "col": 9 }
 ]},
 
 {"description":"EOF in attribute value (unquoted) state",
 "input":"<a a =a",
 "output":["ParseError"],
 "errors":[
-    { "code": "eof-in-attribute-value", "line": 1, "col": 8 }
+    { "code": "eof-in-tag", "line": 1, "col": 8 }
 ]},
 
 {"description":"EOF in after attribute value state",
 "input":"<a a ='a'",
 "output":["ParseError"],
 "errors":[
-    { "code": "eof-in-attribute-value", "line": 1, "col": 10 }
+    { "code": "eof-in-tag", "line": 1, "col": 10 }
 ]}
 
 ]}

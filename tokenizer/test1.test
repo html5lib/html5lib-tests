@@ -76,7 +76,7 @@
 "input":"<h a='b'c='d'>",
 "output":["ParseError", ["StartTag", "h", {"a":"b", "c":"d"}]],
 "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 9 }
+    { "code": "missing-whitespace-after-attribute-value", "line": 1, "col": 9 }
 ]},
 
 {"description":"Repeated attr",
@@ -226,7 +226,7 @@
  "input":"<a a=f<>",
  "output":["ParseError", ["StartTag", "a", {"a":"f<"}]],
  "errors":[
-    { "code": "unexpected-character-in-attribute-value", "line": 1, "col": 7 }
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
 ]}
 
 ]}

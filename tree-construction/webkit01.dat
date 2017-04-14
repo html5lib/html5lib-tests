@@ -192,9 +192,9 @@ console.log("FOO<span>BAR</span>BAZ");
 (1,24): expected-doctype-but-got-start-tag
 (1,24): expected-closing-tag-but-got-eof
 #new-errors
-(1:8) self-closing-start-tag
-(1:9) self-closing-start-tag
-(1:17) self-closing-start-tag
+(1:8) abruption-of-tag-self-closure
+(1:9) abruption-of-tag-self-closure
+(1:17) abruption-of-tag-self-closure
 #document
 | <html>
 |   <head>

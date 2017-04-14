@@ -725,9 +725,9 @@ x { content:"</style" } "
 (1,21): unexpected-character-after-solidus-in-tag
 (1,23): unexpected-character-after-solidus-in-tag
 #new-errors
-(1:20) self-closing-start-tag
-(1:22) self-closing-start-tag
-(1:24) self-closing-start-tag
+(1:20) abruption-of-tag-self-closure
+(1:22) abruption-of-tag-self-closure
+(1:24) abruption-of-tag-self-closure
 #document
 | <!DOCTYPE html>
 | <html>
