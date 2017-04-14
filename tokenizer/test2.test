@@ -110,11 +110,18 @@
 
 {"description":"Entity without a name",
 "input":"&;",
-"output":[["Character", "&;"]]},
+"output":[["Character", "&;"]],
+"errors": [
+    {"code" : "invalid-character-reference-name", "line": 1, "col": 1}
+]},
 
 {"description":"Unescaped ampersand in attribute value",
 "input":"<h a='&'>",
-"output":[["StartTag", "h", { "a":"&" }]]},
+"output":[["StartTag", "h", { "a":"&" }]],
+"errors": [
+    {"code" : "invalid-character-reference-name", "line": 1, "col": 7}
+]},
+
 
 {"description":"StartTag containing <",
 "input":"<a<b>",

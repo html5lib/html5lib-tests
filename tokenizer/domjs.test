@@ -128,7 +128,10 @@
             "description":"Bad charref in in RCDATA",
             "initialStates":["RCDATA state"],
             "input":"&NotEqualTild;",
-            "output":["ParseError", ["Character", "&NotEqualTild;"]]
+            "output":["ParseError", ["Character", "&NotEqualTild;"]],
+            "errors": [
+                {"code" : "invalid-character-reference-name", "line": 1, "col": 1}
+            ]
         },
         {
             "description":"lowercase endtags in RCDATA and RAWTEXT",

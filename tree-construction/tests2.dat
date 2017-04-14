@@ -240,6 +240,7 @@
 (1,33): unexpected-end-tag-before-html
 #new-errors
 (1:24) unexpected-character-in-attribute-name
+(1:32) unexpected-character-after-reference-name
 (1:33) end-tag-with-attributes
 #document
 | <!DOCTYPE html>
@@ -330,6 +331,8 @@
 &x-test
 #errors
 (1,2): expected-doctype-but-got-chars
+#new-errors
+(1:1) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -409,6 +412,8 @@
 #errors
 (1,4): named-entity-without-semicolon
 (1,4): expected-doctype-but-got-chars
+#new-errors
+(1:4) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -420,6 +425,8 @@
 #errors
 (1,3): expected-named-entity
 (1,3): expected-doctype-but-got-chars
+#new-errors
+(1:1) invalid-character-reference-name
 #document
 | <html>
 |   <head>

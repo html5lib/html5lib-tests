@@ -13,6 +13,8 @@
 <div bar="ZZ&"></div>
 #errors
 (1,15): expected-doctype-but-got-start-tag
+#new-errors
+(1:13) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -24,6 +26,8 @@
 <div bar='ZZ&'></div>
 #errors
 (1,15): expected-doctype-but-got-start-tag
+#new-errors
+(1:13) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -35,6 +39,8 @@
 <div bar=ZZ&></div>
 #errors
 (1,13): expected-doctype-but-got-start-tag
+#new-errors
+(1:12) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -103,6 +109,8 @@
 #errors
 (1,15): named-entity-without-semicolon
 (1,20): expected-doctype-but-got-start-tag
+#new-errors
+(1:15) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -115,6 +123,8 @@
 #errors
 (1,15): named-entity-without-semicolon
 (1,17): expected-doctype-but-got-start-tag
+#new-errors
+(1:15) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -127,6 +137,8 @@
 #errors
 (1,15): named-entity-without-semicolon
 (1,17): expected-doctype-but-got-start-tag
+#new-errors
+(1:15) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -139,6 +151,8 @@
 #errors
 (1,14): named-entity-without-semicolon
 (1,15): expected-doctype-but-got-start-tag
+#new-errors
+(1:14) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -151,6 +165,8 @@
 #errors
 (1,18): named-entity-without-semicolon
 (1,26): expected-doctype-but-got-start-tag
+#new-errors
+(1:18) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -162,6 +178,8 @@
 <div bar="ZZ&prod_id=23"></div>
 #errors
 (1,25): expected-doctype-but-got-start-tag
+#new-errors
+(1:13) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -207,6 +225,8 @@
 <div bar="ZZ&prod=23"></div>
 #errors
 (1,22): expected-doctype-but-got-start-tag
+#new-errors
+(1:13) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -219,6 +239,8 @@
 #errors
 (1,5): expected-doctype-but-got-start-tag
 (1,13): named-entity-without-semicolon
+#new-errors
+(1:13) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -230,6 +252,8 @@
 <div>ZZ&prod_id=23</div>
 #errors
 (1,5): expected-doctype-but-got-start-tag
+#new-errors
+(1:8) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -264,6 +288,8 @@
 #errors
 (1,5): expected-doctype-but-got-start-tag
 (1,13): named-entity-without-semicolon
+#new-errors
+(1:13) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
@@ -275,6 +301,8 @@
 <div>ZZ&prod=23</div>
 #errors
 (1,5): expected-doctype-but-got-start-tag
+#new-errors
+(1:8) invalid-character-reference-name
 #document
 | <html>
 |   <head>
@@ -285,6 +313,8 @@
 #data
 <div>ZZ&AElig=</div>
 #errors
+#new-errors
+(1:13) unexpected-character-after-reference-name
 #document
 | <html>
 |   <head>
