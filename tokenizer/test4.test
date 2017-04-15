@@ -125,14 +125,14 @@
 "input":"<foo a=\"b\"c>",
 "output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]],
 "errors":[
-    { "code": "missing-whitespace-after-attribute-value", "line": 1, "col": 11 }
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 11 }
 ]},
 
 {"description":"Single-quoted attribute value not followed by whitespace",
 "input":"<foo a='b'c>",
 "output":["ParseError", ["StartTag", "foo", {"a": "b", "c": ""}]],
 "errors":[
-    { "code": "missing-whitespace-after-attribute-value", "line": 1, "col": 11 }
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 11 }
 ]},
 
 {"description":"Quoted attribute followed by permitted /",

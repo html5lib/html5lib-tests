@@ -76,7 +76,7 @@
 "input":"<h a='b'c='d'>",
 "output":["ParseError", ["StartTag", "h", {"a":"b", "c":"d"}]],
 "errors":[
-    { "code": "missing-whitespace-after-attribute-value", "line": 1, "col": 9 }
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 9 }
 ]},
 
 {"description":"Repeated attr",

@@ -28,7 +28,7 @@
 <div foo=`bar`>
 #errors
 (1,10): equals-in-unquoted-attribute-value
-(1,14): missing-whitespace-after-attribute-value
+(1,14): missing-whitespace-between-attributes
 (1,15): expected-doctype-but-got-start-tag
 (1,15): expected-closing-tag-but-got-eof
 #new-errors
