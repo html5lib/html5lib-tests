@@ -155,7 +155,7 @@
 "input":"&f",
 "output":[["Character", "&f"]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 1}
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
 ]},
 
 {"description":"Ampersand, number sign",
@@ -184,28 +184,28 @@
 "input":"I'm &notit",
 "output":[["Character","I'm "], "ParseError", ["Character", "\u00ACit"]],
 "errors": [
-    {"code" : "unexpected-character-after-reference-name", "line": 1, "col": 8 }
+    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 8 }
 ]},
 
 {"description":"Entity without trailing semicolon (2)",
 "input":"I'm &notin",
 "output":[["Character","I'm "], "ParseError", ["Character", "\u00ACin"]],
 "errors": [
-    {"code" : "unexpected-character-after-reference-name", "line": 1, "col": 8 }
+    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 8 }
 ]},
 
 {"description":"Partial entity match at end of file",
 "input":"I'm &no",
 "output":[["Character","I'm &no"]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 5}
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 5}
 ]},
 
 {"description":"Non-ASCII character reference name",
 "input":"&\u00AC;",
 "output":[["Character", "&\u00AC;"]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 1}
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
 ]},
 
 {"description":"ASCII decimal entity",
@@ -236,7 +236,7 @@
 "input":"<h a='&COPY'>",
 "output":["ParseError", ["StartTag", "h", {"a":"\u00A9"}]],
 "errors": [
-    {"code" : "unexpected-character-after-reference-name", "line": 1, "col": 11 }
+    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 11 }
 ]},
 
 {"description":"Unquoted attribute ending in ampersand",
@@ -247,7 +247,7 @@
 "input":"<a a=a&>foo",
 "output":[["StartTag", "a", {"a":"a&"}], ["Character", "foo"]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 7}
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7}
 ]},
 
 {"description":"plaintext element",

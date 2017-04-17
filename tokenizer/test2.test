@@ -112,14 +112,14 @@
 "input":"&;",
 "output":[["Character", "&;"]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 1}
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
 ]},
 
 {"description":"Unescaped ampersand in attribute value",
 "input":"<h a='&'>",
 "output":[["StartTag", "h", { "a":"&" }]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 7}
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7}
 ]},
 
 

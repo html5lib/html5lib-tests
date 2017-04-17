@@ -7846,7 +7846,7 @@
 "input":"<a a=\"&\">",
 "output":[["StartTag", "a", {"a":"&"}]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 7}
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7}
 ]},
 
 {"description":"<a a=\"'\">",
@@ -7949,7 +7949,7 @@
 "input":"<a a=&>",
 "output":[["StartTag", "a", {"a":"&"}]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 6 }
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 6 }
 ]},
 
 {"description":"<a a=''>",
@@ -8002,7 +8002,7 @@
 "input":"<a a='&'>",
 "output":[["StartTag", "a", {"a":"&"}]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 7 }
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
 ]},
 
 {"description":"<a a=''>",
@@ -8480,7 +8480,7 @@
 "input":"<a a=a&>",
 "output":[["StartTag", "a", {"a":"a&"}]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 7 }
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
 ]},
 
 {"description":"<a a=a'>",

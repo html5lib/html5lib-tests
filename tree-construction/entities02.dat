@@ -14,7 +14,7 @@
 #errors
 (1,15): expected-doctype-but-got-start-tag
 #new-errors
-(1:13) invalid-character-reference-name
+(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -27,7 +27,7 @@
 #errors
 (1,15): expected-doctype-but-got-start-tag
 #new-errors
-(1:13) invalid-character-reference-name
+(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -40,7 +40,7 @@
 #errors
 (1,13): expected-doctype-but-got-start-tag
 #new-errors
-(1:12) invalid-character-reference-name
+(1:12) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -110,7 +110,7 @@
 (1,15): named-entity-without-semicolon
 (1,20): expected-doctype-but-got-start-tag
 #new-errors
-(1:15) unexpected-character-after-reference-name
+(1:15) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -124,7 +124,7 @@
 (1,15): named-entity-without-semicolon
 (1,17): expected-doctype-but-got-start-tag
 #new-errors
-(1:15) unexpected-character-after-reference-name
+(1:15) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -138,7 +138,7 @@
 (1,15): named-entity-without-semicolon
 (1,17): expected-doctype-but-got-start-tag
 #new-errors
-(1:15) unexpected-character-after-reference-name
+(1:15) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -152,7 +152,7 @@
 (1,14): named-entity-without-semicolon
 (1,15): expected-doctype-but-got-start-tag
 #new-errors
-(1:14) unexpected-character-after-reference-name
+(1:14) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -166,7 +166,7 @@
 (1,18): named-entity-without-semicolon
 (1,26): expected-doctype-but-got-start-tag
 #new-errors
-(1:18) unexpected-character-after-reference-name
+(1:18) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -179,7 +179,7 @@
 #errors
 (1,25): expected-doctype-but-got-start-tag
 #new-errors
-(1:13) invalid-character-reference-name
+(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -226,7 +226,7 @@
 #errors
 (1,22): expected-doctype-but-got-start-tag
 #new-errors
-(1:13) invalid-character-reference-name
+(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -240,7 +240,7 @@
 (1,5): expected-doctype-but-got-start-tag
 (1,13): named-entity-without-semicolon
 #new-errors
-(1:13) unexpected-character-after-reference-name
+(1:13) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -253,7 +253,7 @@
 #errors
 (1,5): expected-doctype-but-got-start-tag
 #new-errors
-(1:8) invalid-character-reference-name
+(1:8) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -289,7 +289,7 @@
 (1,5): expected-doctype-but-got-start-tag
 (1,13): named-entity-without-semicolon
 #new-errors
-(1:13) unexpected-character-after-reference-name
+(1:13) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -302,7 +302,7 @@
 #errors
 (1,5): expected-doctype-but-got-start-tag
 #new-errors
-(1:8) invalid-character-reference-name
+(1:8) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -314,7 +314,7 @@
 <div>ZZ&AElig=</div>
 #errors
 #new-errors
-(1:13) unexpected-character-after-reference-name
+(1:13) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>

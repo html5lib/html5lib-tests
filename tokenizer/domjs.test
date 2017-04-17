@@ -130,7 +130,7 @@
             "input":"&NotEqualTild;",
             "output":["ParseError", ["Character", "&NotEqualTild;"]],
             "errors": [
-                {"code" : "invalid-character-reference-name", "line": 1, "col": 1}
+                {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
             ]
         },
         {

@@ -8,7 +8,7 @@
 "input":"<h a='&lang='>",
 "output": [["StartTag", "h", {"a": "&lang="}]],
 "errors": [
-    {"code" : "invalid-character-reference-name", "line": 1, "col": 7 }
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
 ]},
 
 {"description": "CR as numeric entity",
