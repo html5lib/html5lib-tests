@@ -55,6 +55,8 @@ FOO<script></script/ >BAR
 #errors
 (1,3): expected-doctype-but-got-chars
 (1,20): unexpected-character-after-solidus-in-tag
+#new-errors
+(1:21) abruption-of-tag-self-closure
 #document
 | <html>
 |   <head>

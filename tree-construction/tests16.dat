@@ -631,6 +631,8 @@
 #errors
 (1,53): unexpected-EOF-after-solidus-in-tag
 (1,53): expected-named-closing-tag-but-got-eof
+#new-errors
+(1:54) eof-in-tag
 #document
 | <!DOCTYPE html>
 | <html>
@@ -804,6 +806,8 @@
 #errors
 (1,47): unexpected-EOF-after-solidus-in-tag
 (1,47): expected-named-closing-tag-but-got-eof
+#new-errors
+(1:48) eof-in-tag
 #document
 | <!DOCTYPE html>
 | <html>
@@ -1927,6 +1931,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,38): unexpected-EOF-after-solidus-in-tag
 (1,38): expected-named-closing-tag-but-got-eof
+#new-errors
+(1:39) eof-in-tag
 #document
 | <html>
 |   <head>
@@ -2070,6 +2076,8 @@
 (1,8): expected-doctype-but-got-start-tag
 (1,32): unexpected-EOF-after-solidus-in-tag
 (1,32): expected-named-closing-tag-but-got-eof
+#new-errors
+(1:33) eof-in-tag
 #document
 | <html>
 |   <head>

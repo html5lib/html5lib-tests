@@ -5914,7 +5914,10 @@
 
 {"description":"<a a =>",
 "input":"<a a =>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a >",
 "input":"<a a >",
@@ -6039,11 +6042,17 @@
 
 {"description":"<a a=>",
 "input":"<a a=>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=\\u0000>",
 "input":"<a a=\u0000>",
-"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=\\u0008>",
 "input":"<a a=\u0008>",
@@ -6054,11 +6063,17 @@
 
 {"description":"<a a=\\u0009>",
 "input":"<a a=\u0009>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=\\u000A>",
 "input":"<a a=\u000A>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 2, "col": 1 }
+]},
 
 {"description":"<a a=\\u000B>",
 "input":"<a a=\u000B>",
@@ -6069,11 +6084,17 @@
 
 {"description":"<a a=\\u000C>",
 "input":"<a a=\u000C>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=\\u000D>",
 "input":"<a a=\u000D>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 2, "col": 1 }
+]},
 
 {"description":"<a a=\\u001F>",
 "input":"<a a=\u001F>",
@@ -6084,7 +6105,10 @@
 
 {"description":"<a a= >",
 "input":"<a a= >",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=!>",
 "input":"<a a=!>",
@@ -6096,7 +6120,10 @@
 
 {"description":"<a a=\"\\u0000\">",
 "input":"<a a=\"\u0000\">",
-"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=\"\\u0009\">",
 "input":"<a a=\"\u0009\">",
@@ -6247,7 +6274,10 @@
 
 {"description":"<a a='\\u0000'>",
 "input":"<a a='\u0000'>",
-"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"\uFFFD"}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a='\\u0009'>",
 "input":"<a a='\u0009'>",
@@ -6296,6 +6326,7 @@
 "input":"<a a=''\u0000>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\uFFFD":""}]],
 "errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 },
     { "code": "unexpected-null-character", "line": 1, "col": 8 }
 ]},
 
@@ -6303,7 +6334,8 @@
 "input":"<a a=''\u0008>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u0008":""}]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 },
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a=''\\u0009>",
@@ -6318,7 +6350,8 @@
 "input":"<a a=''\u000B>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u000B":""}]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 },
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a=''\\u000C>",
@@ -6333,7 +6366,8 @@
 "input":"<a a=''\u001F>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\u001F":""}]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 8 },
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a='' >",
@@ -6342,33 +6376,47 @@
 
 {"description":"<a a=''!>",
 "input":"<a a=''!>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "!":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "!":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''\">",
 "input":"<a a=''\">",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "\"":""}]],
 "errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a=''&>",
 "input":"<a a=''&>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "&":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "&":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a='''>",
 "input":"<a a='''>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "'":""}]],
 "errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 8 }
 ]},
 
 {"description":"<a a=''->",
 "input":"<a a=''->",
-"output":["ParseError", ["StartTag", "a", {"a":"", "-":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "-":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''.>",
 "input":"<a a=''.>",
-"output":["ParseError", ["StartTag", "a", {"a":"", ".":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", ".":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''/>",
 "input":"<a a=''/>",
@@ -6376,20 +6424,30 @@
 
 {"description":"<a a=''0>",
 "input":"<a a=''0>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "0":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "0":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''1>",
 "input":"<a a=''1>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "1":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "1":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''9>",
 "input":"<a a=''9>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "9":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "9":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''<>",
 "input":"<a a=''<>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "<":""}]],
 "errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 8 }
 ]},
 
@@ -6397,6 +6455,7 @@
 "input":"<a a=''=>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"a":"", "=":""}]],
 "errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 },
     { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 8 }
 ]},
 
@@ -6406,55 +6465,94 @@
 
 {"description":"<a a=''?>",
 "input":"<a a=''?>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "?":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "?":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''@>",
 "input":"<a a=''@>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "@":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "@":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''A>",
 "input":"<a a=''A>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''B>",
 "input":"<a a=''B>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "b":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "b":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''Y>",
 "input":"<a a=''Y>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "y":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "y":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''Z>",
 "input":"<a a=''Z>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "z":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "z":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''`>",
 "input":"<a a=''`>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "`":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "`":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''a>",
 "input":"<a a=''a>",
-"output":["ParseError", "ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", "ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''b>",
 "input":"<a a=''b>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "b":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "b":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''y>",
 "input":"<a a=''y>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "y":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "y":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''z>",
 "input":"<a a=''z>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "z":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "z":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''{>",
 "input":"<a a=''{>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "{":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "{":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a=''\\uDBC0\\uDC00>",
 "input":"<a a=''\uDBC0\uDC00>",
-"output":["ParseError", ["StartTag", "a", {"a":"", "\uDBC0\uDC00":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"", "\uDBC0\uDC00":""}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+]},
 
 {"description":"<a a='('>",
 "input":"<a a='('>",
@@ -6570,15 +6668,24 @@
 
 {"description":"<a a=<>",
 "input":"<a a=<>",
-"output":["ParseError", ["StartTag", "a", {"a":"<"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"<"}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a==>",
 "input":"<a a==>",
-"output":["ParseError", ["StartTag", "a", {"a":"="}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"="}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=>",
 "input":"<a a=>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "missing-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=?>",
 "input":"<a a=?>",
@@ -6606,7 +6713,10 @@
 
 {"description":"<a a=`>",
 "input":"<a a=`>",
-"output":["ParseError", ["StartTag", "a", {"a":"`"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"`"}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 6 }
+]},
 
 {"description":"<a a=a>",
 "input":"<a a=a>",
@@ -6614,7 +6724,10 @@
 
 {"description":"<a a=a\\u0000>",
 "input":"<a a=a\u0000>",
-"output":["ParseError", ["StartTag", "a", {"a":"a\uFFFD"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a\uFFFD"}]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a\\u0008>",
 "input":"<a a=a\u0008>",
@@ -6663,7 +6776,10 @@
 
 {"description":"<a a=a\">",
 "input":"<a a=a\">",
-"output":["ParseError", ["StartTag", "a", {"a":"a\""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a\""}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a#>",
 "input":"<a a=a#>",
@@ -6679,7 +6795,10 @@
 
 {"description":"<a a=a'>",
 "input":"<a a=a'>",
-"output":["ParseError", ["StartTag", "a", {"a":"a'"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a'"}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a(>",
 "input":"<a a=a(>",
@@ -6707,11 +6826,17 @@
 
 {"description":"<a a=a<>",
 "input":"<a a=a<>",
-"output":["ParseError", ["StartTag", "a", {"a":"a<"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a<"}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a=>",
 "input":"<a a=a=>",
-"output":["ParseError", ["StartTag", "a", {"a":"a="}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a="}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=a>",
 "input":"<a a=a>",
@@ -6743,7 +6868,10 @@
 
 {"description":"<a a=a`>",
 "input":"<a a=a`>",
-"output":["ParseError", ["StartTag", "a", {"a":"a`"}]]},
+"output":["ParseError", ["StartTag", "a", {"a":"a`"}]],
+"errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a=aa>",
 "input":"<a a=aa>",
@@ -6901,78 +7029,116 @@
 "input":"<a/\u0000>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"\uFFFD":""}]],
 "errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
     { "code": "unexpected-null-character", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/\\u0009>",
 "input":"<a/\u0009>",
-"output":["ParseError", ["StartTag", "a", {}]]},
+"output":["ParseError", ["StartTag", "a", {}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/\\u000A>",
 "input":"<a/\u000A>",
-"output":["ParseError", ["StartTag", "a", {}]]},
+"output":["ParseError", ["StartTag", "a", {}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/\\u000B>",
 "input":"<a/\u000B>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"\u000B":""}]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 4 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 4 },
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/\\u000C>",
 "input":"<a/\u000C>",
-"output":["ParseError", ["StartTag", "a", {}]]},
+"output":["ParseError", ["StartTag", "a", {}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/ >",
 "input":"<a/ >",
-"output":["ParseError", ["StartTag", "a", {}]]},
+"output":["ParseError", ["StartTag", "a", {}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/!>",
 "input":"<a/!>",
-"output":["ParseError", ["StartTag", "a", {"!":""}]]},
+"output":["ParseError", ["StartTag", "a", {"!":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/\">",
 "input":"<a/\">",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"\"":""}]],
 "errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/&>",
 "input":"<a/&>",
-"output":["ParseError", ["StartTag", "a", {"&":""}]]},
+"output":["ParseError", ["StartTag", "a", {"&":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/'>",
 "input":"<a/'>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"'":""}]],
 "errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/->",
 "input":"<a/->",
-"output":["ParseError", ["StartTag", "a", {"-":""}]]},
+"output":["ParseError", ["StartTag", "a", {"-":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a//>",
 "input":"<a//>",
-"output":["ParseError", ["StartTag", "a", {}, true]]},
+"output":["ParseError", ["StartTag", "a", {}, true]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/0>",
 "input":"<a/0>",
-"output":["ParseError", ["StartTag", "a", {"0":""}]]},
+"output":["ParseError", ["StartTag", "a", {"0":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/1>",
 "input":"<a/1>",
-"output":["ParseError", ["StartTag", "a", {"1":""}]]},
+"output":["ParseError", ["StartTag", "a", {"1":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/9>",
 "input":"<a/9>",
-"output":["ParseError", ["StartTag", "a", {"9":""}]]},
+"output":["ParseError", ["StartTag", "a", {"9":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/<>",
 "input":"<a/<>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"<":""}]],
 "errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
@@ -6980,6 +7146,7 @@
 "input":"<a/=>",
 "output":["ParseError", "ParseError", ["StartTag", "a", {"=":""}]],
 "errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
     { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 }
 ]},
 
@@ -6989,55 +7156,94 @@
 
 {"description":"<a/?>",
 "input":"<a/?>",
-"output":["ParseError", ["StartTag", "a", {"?":""}]]},
+"output":["ParseError", ["StartTag", "a", {"?":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/@>",
 "input":"<a/@>",
-"output":["ParseError", ["StartTag", "a", {"@":""}]]},
+"output":["ParseError", ["StartTag", "a", {"@":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/A>",
 "input":"<a/A>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/B>",
 "input":"<a/B>",
-"output":["ParseError", ["StartTag", "a", {"b":""}]]},
+"output":["ParseError", ["StartTag", "a", {"b":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/Y>",
 "input":"<a/Y>",
-"output":["ParseError", ["StartTag", "a", {"y":""}]]},
+"output":["ParseError", ["StartTag", "a", {"y":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/Z>",
 "input":"<a/Z>",
-"output":["ParseError", ["StartTag", "a", {"z":""}]]},
+"output":["ParseError", ["StartTag", "a", {"z":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/`>",
 "input":"<a/`>",
-"output":["ParseError", ["StartTag", "a", {"`":""}]]},
+"output":["ParseError", ["StartTag", "a", {"`":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/a>",
 "input":"<a/a>",
-"output":["ParseError", ["StartTag", "a", {"a":""}]]},
+"output":["ParseError", ["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/b>",
 "input":"<a/b>",
-"output":["ParseError", ["StartTag", "a", {"b":""}]]},
+"output":["ParseError", ["StartTag", "a", {"b":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/y>",
 "input":"<a/y>",
-"output":["ParseError", ["StartTag", "a", {"y":""}]]},
+"output":["ParseError", ["StartTag", "a", {"y":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/z>",
 "input":"<a/z>",
-"output":["ParseError", ["StartTag", "a", {"z":""}]]},
+"output":["ParseError", ["StartTag", "a", {"z":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/{>",
 "input":"<a/{>",
-"output":["ParseError", ["StartTag", "a", {"{":""}]]},
+"output":["ParseError", ["StartTag", "a", {"{":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a/\\uDBC0\\uDC00>",
 "input":"<a/\uDBC0\uDC00>",
-"output":["ParseError", ["StartTag", "a", {"\uDBC0\uDC00":""}]]},
+"output":["ParseError", ["StartTag", "a", {"\uDBC0\uDC00":""}]],
+"errors":[
+    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+]},
 
 {"description":"<a0>",
 "input":"<a0>",

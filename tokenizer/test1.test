@@ -74,7 +74,10 @@
 
 {"description":"Multiple atts no space",
 "input":"<h a='b'c='d'>",
-"output":["ParseError", ["StartTag", "h", {"a":"b", "c":"d"}]]},
+"output":["ParseError", ["StartTag", "h", {"a":"b", "c":"d"}]],
+"errors":[
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 9 }
+]},
 
 {"description":"Repeated attr",
  "input":"<h a='b' a='d'>",
@@ -215,13 +218,15 @@
 {"description":"Unquoted attribute at end of tag with final character of &, with tag followed by characters",
 "input":"<a a=a&>foo",
 "output":[["StartTag", "a", {"a":"a&"}], ["Character", "foo"]]},
-
 {"description":"plaintext element",
  "input":"<plaintext>foobar",
  "output":[["StartTag","plaintext",{}], ["Character","foobar"]]},
 
 {"description":"Open angled bracket in unquoted attribute value state",
  "input":"<a a=f<>",
- "output":["ParseError", ["StartTag", "a", {"a":"f<"}]]}
+ "output":["ParseError", ["StartTag", "a", {"a":"f<"}]],
+ "errors":[
+    { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
+]}
 
 ]}

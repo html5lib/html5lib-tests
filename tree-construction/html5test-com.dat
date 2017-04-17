@@ -28,9 +28,12 @@
 <div foo=`bar`>
 #errors
 (1,10): equals-in-unquoted-attribute-value
-(1,14): unexpected-character-in-unquoted-attribute-value
+(1,14): missing-whitespace-between-attributes
 (1,15): expected-doctype-but-got-start-tag
 (1,15): expected-closing-tag-but-got-eof
+#new-errors
+(1:10) unexpected-character-in-unquoted-attribute-value
+(1:14) unexpected-character-in-unquoted-attribute-value
 #document
 | <html>
 |   <head>
