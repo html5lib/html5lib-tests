@@ -170,7 +170,10 @@
 
 {"description":"Zero decimal numeric entity",
 "input":"&#0",
-"output":["ParseError", "ParseError", ["Character", "\uFFFD"]]},
+"output":["ParseError", "ParseError", ["Character", "\uFFFD"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 4 }
+]},
 
 {"description":"Zero-prefixed hex numeric entity",
 "input":"&#x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000041;",

@@ -2,27 +2,45 @@
 
 {"description": "Invalid unterminated numeric entity character overflow before EOF",
 "input": "&#11111111111",
-"output": ["ParseError", "ParseError", ["Character", "\uFFFD"]]},
+"output": ["ParseError", "ParseError", ["Character", "\uFFFD"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 14 }
+]},
 
 {"description": "Invalid unterminated numeric entity character overflow before EOF",
 "input": "&#1111111111",
-"output": ["ParseError", "ParseError", ["Character", "\uFFFD"]]},
+"output": ["ParseError", "ParseError", ["Character", "\uFFFD"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 13 }
+]},
 
 {"description": "Invalid unterminated numeric entity character overflow before EOF",
 "input": "&#111111111111",
-"output": ["ParseError", "ParseError", ["Character", "\uFFFD"]]},
+"output": ["ParseError", "ParseError", ["Character", "\uFFFD"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 15 }
+]},
 
 {"description": "Invalid unterminated numeric entity character overflow",
 "input": "&#11111111111x",
-"output": ["ParseError", "ParseError", ["Character", "\uFFFDx"]]},
+"output": ["ParseError", "ParseError", ["Character", "\uFFFDx"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 14 }
+]},
 
 {"description": "Invalid unterminated numeric entity character overflow",
 "input": "&#1111111111x",
-"output": ["ParseError", "ParseError", ["Character", "\uFFFDx"]]},
+"output": ["ParseError", "ParseError", ["Character", "\uFFFDx"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 13 }
+]},
 
 {"description": "Invalid unterminated numeric entity character overflow",
 "input": "&#111111111111x",
-"output": ["ParseError", "ParseError", ["Character", "\uFFFDx"]]},
+"output": ["ParseError", "ParseError", ["Character", "\uFFFDx"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 15 }
+]},
 
 {"description": "Invalid numeric entity character overflow",
 "input": "&#11111111111;",

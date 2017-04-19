@@ -266,18 +266,30 @@
 
 {"description": "Decimal numeric entity followed by hex character a.",
 "input":"&#97a",
-"output": ["ParseError", ["Character", "aa"]]},
+"output": ["ParseError", ["Character", "aa"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 5 }
+]},
 
 {"description": "Decimal numeric entity followed by hex character A.",
 "input":"&#97A",
-"output": ["ParseError", ["Character", "aA"]]},
+"output": ["ParseError", ["Character", "aA"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 5 }
+]},
 
 {"description": "Decimal numeric entity followed by hex character f.",
 "input":"&#97f",
-"output": ["ParseError", ["Character", "af"]]},
+"output": ["ParseError", ["Character", "af"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 5 }
+]},
 
 {"description": "Decimal numeric entity followed by hex character A.",
 "input":"&#97F",
-"output": ["ParseError", ["Character", "aF"]]}
+"output": ["ParseError", ["Character", "aF"]],
+"errors":[
+    { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 5 }
+]}
 
 ]}
