@@ -154,6 +154,8 @@ FOO&#xBAR
 #errors
 (1,3): expected-doctype-but-got-chars
 (1,7): expected-numeric-entity
+#new-errors
+(1:9) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -202,6 +204,8 @@ FOO&#x41BAR
 #errors
 (1,3): expected-doctype-but-got-chars
 (1,10): numeric-entity-without-semicolon
+#new-errors
+(1:11) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -213,6 +217,8 @@ FOO&#x41ZOO
 #errors
 (1,3): expected-doctype-but-got-chars
 (1,8): numeric-entity-without-semicolon
+#new-errors
+(1:9) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
