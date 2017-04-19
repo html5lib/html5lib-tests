@@ -288,6 +288,8 @@
 #errors
 (1,3): expected-numeric-entity
 (1,3): expected-doctype-but-got-chars
+#new-errors
+(1:4) absence-of-digits-in-numeric-character-reference
 #document
 | <html>
 |   <head>
@@ -299,6 +301,8 @@
 #errors
 (1,3): expected-numeric-entity
 (1,3): expected-doctype-but-got-chars
+#new-errors
+(1:4) absence-of-digits-in-numeric-character-reference
 #document
 | <html>
 |   <head>

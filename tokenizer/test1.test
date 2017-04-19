@@ -157,7 +157,10 @@
 
 {"description":"Unfinished numeric entity",
 "input":"&#x",
-"output":["ParseError", ["Character", "&#x"]]},
+"output":["ParseError", ["Character", "&#x"]],
+"errors":[
+    { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 4 }
+]},
 
 {"description":"Entity with trailing semicolon (1)",
 "input":"I'm &not;it",

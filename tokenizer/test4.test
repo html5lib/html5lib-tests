@@ -179,7 +179,18 @@
 
 {"description":"Empty hex numeric entities",
 "input":"&#x &#X ",
-"output":["ParseError", ["Character", "&#x "], "ParseError", ["Character", "&#X "]]},
+"output":["ParseError", ["Character", "&#x "], "ParseError", ["Character", "&#X "]],
+"errors":[
+    { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 4 },
+    { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 8 }
+]},
+
+{"description":"Invalid digit in hex numeric entity",
+"input":"&#xZ",
+"output":[["Character", "&#xZ"]],
+"errors":[
+    { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 4 }
+]},
 
 {"description":"Empty decimal numeric entities",
 "input":"&# &#; ",
