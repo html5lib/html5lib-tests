@@ -194,7 +194,18 @@
 
 {"description":"Empty decimal numeric entities",
 "input":"&# &#; ",
-"output":["ParseError", ["Character", "&# "], "ParseError", ["Character", "&#; "]]},
+"output":["ParseError", ["Character", "&# "], "ParseError", ["Character", "&#; "]],
+"errors":[
+    { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 3 },
+    { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 6 }
+]},
+
+{"description":"Invalid digit in decimal numeric entity",
+"input":"&#A",
+"output":[["Character", "&#A"]],
+"errors":[
+    { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 3 }
+]},
 
 {"description":"Non-BMP numeric entity",
 "input":"&#x10000;",
