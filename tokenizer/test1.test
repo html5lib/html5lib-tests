@@ -4,6 +4,7 @@
 "input":"<!DOCTYPE html>",
 "output":[["DOCTYPE", "html", null, null, true]]},
 
+
 {"description":"Correct Doctype uppercase",
 "input":"<!DOCTYPE HTML>",
 "output":[["DOCTYPE", "html", null, null, true]]},
@@ -14,7 +15,10 @@
 
 {"description":"Correct Doctype case with EOF",
 "input":"<!DOCTYPE HtMl", 
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 15 }
+]},
 
 {"description":"Truncated doctype start",
 "input":"<!DOC>", 

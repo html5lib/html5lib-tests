@@ -1536,7 +1536,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\uFFFD", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "unexpected-null-character", "line": 1, "col": 10 }
+    { "code": "unexpected-null-character", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE\\u0008",
@@ -1544,7 +1545,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u0008", null, null, false]],
 "errors":[
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 10 },
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE\\u0009",
@@ -1566,7 +1568,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u000B", null, null, false]],
 "errors":[
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 10 },
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE\\u000C",
@@ -1588,7 +1591,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\u001F", null, null, false]],
 "errors":[
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 10 },
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE ",
@@ -1602,14 +1606,16 @@
 "input":"<!DOCTYPE \u0000",
 "output":["ParseError", "ParseError", ["DOCTYPE", "\uFFFD", null, null, false]],
 "errors":[
-   { "code": "unexpected-null-character", "line": 1, "col": 11 }
+   { "code": "unexpected-null-character", "line": 1, "col": 11 },
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPE \\u0008",
 "input":"<!DOCTYPE \u0008",
 "output":["ParseError", "ParseError", ["DOCTYPE", "\u0008", null, null, false]],
 "errors":[
-   { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+   { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 },
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPE \\u0009",
@@ -1630,7 +1636,8 @@
 "input":"<!DOCTYPE \u000B",
 "output":["ParseError", "ParseError", ["DOCTYPE", "\u000B", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPE \\u000C",
@@ -1651,7 +1658,8 @@
 "input":"<!DOCTYPE \u001F",
 "output":["ParseError", "ParseError", ["DOCTYPE", "\u001F", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPE  ",
@@ -1663,47 +1671,80 @@
 
 {"description":"<!DOCTYPE !",
 "input":"<!DOCTYPE !",
-"output":["ParseError", ["DOCTYPE", "!", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "!", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE \"",
 "input":"<!DOCTYPE \"",
-"output":["ParseError", ["DOCTYPE", "\"", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "\"", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE &",
 "input":"<!DOCTYPE &",
-"output":["ParseError", ["DOCTYPE", "&", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "&", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE '",
 "input":"<!DOCTYPE '",
-"output":["ParseError", ["DOCTYPE", "'", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "'", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE -",
 "input":"<!DOCTYPE -",
-"output":["ParseError", ["DOCTYPE", "-", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "-", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE /",
 "input":"<!DOCTYPE /",
-"output":["ParseError", ["DOCTYPE", "/", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "/", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE 0",
 "input":"<!DOCTYPE 0",
-"output":["ParseError", ["DOCTYPE", "0", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "0", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE 1",
 "input":"<!DOCTYPE 1",
-"output":["ParseError", ["DOCTYPE", "1", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "1", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE 9",
 "input":"<!DOCTYPE 9",
-"output":["ParseError", ["DOCTYPE", "9", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "9", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE <",
 "input":"<!DOCTYPE <",
-"output":["ParseError", ["DOCTYPE", "<", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "<", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE =",
 "input":"<!DOCTYPE =",
-"output":["ParseError", ["DOCTYPE", "=", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "=", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE >",
 "input":"<!DOCTYPE >",
@@ -1714,49 +1755,81 @@
 
 {"description":"<!DOCTYPE ?",
 "input":"<!DOCTYPE ?",
-"output":["ParseError", ["DOCTYPE", "?", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "?", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE @",
 "input":"<!DOCTYPE @",
-"output":["ParseError", ["DOCTYPE", "@", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "@", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE A",
 "input":"<!DOCTYPE A",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE B",
 "input":"<!DOCTYPE B",
-"output":["ParseError", ["DOCTYPE", "b", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "b", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE Y",
 "input":"<!DOCTYPE Y",
-"output":["ParseError", ["DOCTYPE", "y", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "y", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE Z",
 "input":"<!DOCTYPE Z",
-"output":["ParseError", ["DOCTYPE", "z", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "z", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE [",
 "input":"<!DOCTYPE [",
-"output":["ParseError", ["DOCTYPE", "[", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "[", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE `",
 "input":"<!DOCTYPE `",
-"output":["ParseError", ["DOCTYPE", "`", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "`", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE a",
 "input":"<!DOCTYPE a",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE a\\u0000",
 "input":"<!DOCTYPE a\u0000",
-"output":["ParseError", "ParseError", ["DOCTYPE", "a\uFFFD", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "a\uFFFD", null, null, false]],
+"errors":[
+    { "code": "unexpected-null-character", "line": 1, "col": 12 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a\\u0008",
 "input":"<!DOCTYPE a\u0008",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a\u0008", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPE a\\u0009",
@@ -1771,7 +1844,8 @@
 "input":"<!DOCTYPE a\u000B",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a\u000B", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPE a\\u000C",
@@ -1786,7 +1860,8 @@
 "input":"<!DOCTYPE a\u001F",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a\u001F", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPE a ",
@@ -3203,47 +3278,80 @@
 
 {"description":"<!DOCTYPE a!",
 "input":"<!DOCTYPE a!",
-"output":["ParseError", ["DOCTYPE", "a!", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a!", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a\"",
 "input":"<!DOCTYPE a\"",
-"output":["ParseError", ["DOCTYPE", "a\"", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a\"", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a&",
 "input":"<!DOCTYPE a&",
-"output":["ParseError", ["DOCTYPE", "a&", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a&", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a'",
 "input":"<!DOCTYPE a'",
-"output":["ParseError", ["DOCTYPE", "a'", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a'", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a-",
 "input":"<!DOCTYPE a-",
-"output":["ParseError", ["DOCTYPE", "a-", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a-", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a/",
 "input":"<!DOCTYPE a/",
-"output":["ParseError", ["DOCTYPE", "a/", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a/", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a0",
 "input":"<!DOCTYPE a0",
-"output":["ParseError", ["DOCTYPE", "a0", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a0", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a1",
 "input":"<!DOCTYPE a1",
-"output":["ParseError", ["DOCTYPE", "a1", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a1", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a9",
 "input":"<!DOCTYPE a9",
-"output":["ParseError", ["DOCTYPE", "a9", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a9", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a<",
 "input":"<!DOCTYPE a<",
-"output":["ParseError", ["DOCTYPE", "a<", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a<", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a=",
 "input":"<!DOCTYPE a=",
-"output":["ParseError", ["DOCTYPE", "a=", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a=", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a>",
 "input":"<!DOCTYPE a>",
@@ -3251,155 +3359,223 @@
 
 {"description":"<!DOCTYPE a?",
 "input":"<!DOCTYPE a?",
-"output":["ParseError", ["DOCTYPE", "a?", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a?", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a@",
 "input":"<!DOCTYPE a@",
-"output":["ParseError", ["DOCTYPE", "a@", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a@", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE aA",
 "input":"<!DOCTYPE aA",
-"output":["ParseError", ["DOCTYPE", "aa", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "aa", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE aB",
 "input":"<!DOCTYPE aB",
-"output":["ParseError", ["DOCTYPE", "ab", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "ab", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE aY",
 "input":"<!DOCTYPE aY",
-"output":["ParseError", ["DOCTYPE", "ay", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "ay", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE aZ",
 "input":"<!DOCTYPE aZ",
-"output":["ParseError", ["DOCTYPE", "az", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "az", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a[",
 "input":"<!DOCTYPE a[",
-"output":["ParseError", ["DOCTYPE", "a[", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a[", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a`",
 "input":"<!DOCTYPE a`",
-"output":["ParseError", ["DOCTYPE", "a`", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a`", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE aa",
 "input":"<!DOCTYPE aa",
-"output":["ParseError", ["DOCTYPE", "aa", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "aa", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE ab",
 "input":"<!DOCTYPE ab",
-"output":["ParseError", ["DOCTYPE", "ab", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "ab", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE ay",
 "input":"<!DOCTYPE ay",
-"output":["ParseError", ["DOCTYPE", "ay", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "ay", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE az",
 "input":"<!DOCTYPE az",
-"output":["ParseError", ["DOCTYPE", "az", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "az", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a{",
 "input":"<!DOCTYPE a{",
-"output":["ParseError", ["DOCTYPE", "a{", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a{", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a\\uDBC0\\uDC00",
 "input":"<!DOCTYPE a\uDBC0\uDC00",
-"output":["ParseError", ["DOCTYPE", "a\uDBC0\uDC00", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a\uDBC0\uDC00", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 14 }
+]},
 
 {"description":"<!DOCTYPE b",
 "input":"<!DOCTYPE b",
-"output":["ParseError", ["DOCTYPE", "b", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "b", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE y",
 "input":"<!DOCTYPE y",
-"output":["ParseError", ["DOCTYPE", "y", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "y", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE z",
 "input":"<!DOCTYPE z",
-"output":["ParseError", ["DOCTYPE", "z", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "z", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE {",
 "input":"<!DOCTYPE {",
-"output":["ParseError", ["DOCTYPE", "{", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "{", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE \\uDBC0\\uDC00",
 "input":"<!DOCTYPE \uDBC0\uDC00",
-"output":["ParseError", ["DOCTYPE", "\uDBC0\uDC00", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "\uDBC0\uDC00", null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE!",
 "input":"<!DOCTYPE!",
 "output":["ParseError", "ParseError", ["DOCTYPE", "!", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE\"",
 "input":"<!DOCTYPE\"",
 "output":["ParseError", "ParseError", ["DOCTYPE", "\"", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE&",
 "input":"<!DOCTYPE&",
 "output":["ParseError", "ParseError", ["DOCTYPE", "&", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE'",
 "input":"<!DOCTYPE'",
 "output":["ParseError", "ParseError", ["DOCTYPE", "'", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE-",
 "input":"<!DOCTYPE-",
 "output":["ParseError", "ParseError", ["DOCTYPE", "-", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE/",
 "input":"<!DOCTYPE/",
 "output":["ParseError", "ParseError", ["DOCTYPE", "/", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE0",
 "input":"<!DOCTYPE0",
 "output":["ParseError", "ParseError", ["DOCTYPE", "0", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE1",
 "input":"<!DOCTYPE1",
 "output":["ParseError", "ParseError", ["DOCTYPE", "1", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE9",
 "input":"<!DOCTYPE9",
 "output":["ParseError", "ParseError", ["DOCTYPE", "9", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE<",
 "input":"<!DOCTYPE<",
 "output":["ParseError", "ParseError", ["DOCTYPE", "<", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE=",
 "input":"<!DOCTYPE=",
 "output":["ParseError", "ParseError", ["DOCTYPE", "=", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE>",
@@ -3413,63 +3589,73 @@
 "input":"<!DOCTYPE?",
 "output":["ParseError", "ParseError", ["DOCTYPE", "?", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE@",
 "input":"<!DOCTYPE@",
 "output":["ParseError", "ParseError", ["DOCTYPE", "@", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEA",
 "input":"<!DOCTYPEA",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEB",
 "input":"<!DOCTYPEB",
 "output":["ParseError", "ParseError", ["DOCTYPE", "b", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEY",
 "input":"<!DOCTYPEY",
 "output":["ParseError", "ParseError", ["DOCTYPE", "y", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEZ",
 "input":"<!DOCTYPEZ",
 "output":["ParseError", "ParseError", ["DOCTYPE", "z", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE`",
 "input":"<!DOCTYPE`",
 "output":["ParseError", "ParseError", ["DOCTYPE", "`", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEa",
 "input":"<!DOCTYPEa",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEa\\u0000",
 "input":"<!DOCTYPEa\u0000",
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\uFFFD", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "unexpected-null-character", "line": 1, "col": 11 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa\\u0008",
@@ -3477,7 +3663,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u0008", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa\\u0009",
@@ -3499,7 +3686,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u000B", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa\\u000C",
@@ -3521,7 +3709,8 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a\u001F", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 11 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa ",
@@ -5914,77 +6103,88 @@
 "input":"<!DOCTYPEa!",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a!", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa\"",
 "input":"<!DOCTYPEa\"",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a\"", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa&",
 "input":"<!DOCTYPEa&",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a&", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa'",
 "input":"<!DOCTYPEa'",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a'", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa-",
 "input":"<!DOCTYPEa-",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a-", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa/",
 "input":"<!DOCTYPEa/",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a/", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa0",
 "input":"<!DOCTYPEa0",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a0", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa1",
 "input":"<!DOCTYPEa1",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a1", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa9",
 "input":"<!DOCTYPEa9",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a9", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa<",
 "input":"<!DOCTYPEa<",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a<", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa=",
 "input":"<!DOCTYPEa=",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a=", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa>",
@@ -5998,133 +6198,152 @@
 "input":"<!DOCTYPEa?",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a?", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa@",
 "input":"<!DOCTYPEa@",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a@", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEaA",
 "input":"<!DOCTYPEaA",
 "output":["ParseError", "ParseError", ["DOCTYPE", "aa", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEaB",
 "input":"<!DOCTYPEaB",
 "output":["ParseError", "ParseError", ["DOCTYPE", "ab", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEaY",
 "input":"<!DOCTYPEaY",
 "output":["ParseError", "ParseError", ["DOCTYPE", "ay", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEaZ",
 "input":"<!DOCTYPEaZ",
 "output":["ParseError", "ParseError", ["DOCTYPE", "az", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa[",
 "input":"<!DOCTYPEa[",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a[", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa`",
 "input":"<!DOCTYPEa`",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a`", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEaa",
 "input":"<!DOCTYPEaa",
 "output":["ParseError", "ParseError", ["DOCTYPE", "aa", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEab",
 "input":"<!DOCTYPEab",
 "output":["ParseError", "ParseError", ["DOCTYPE", "ab", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEay",
 "input":"<!DOCTYPEay",
 "output":["ParseError", "ParseError", ["DOCTYPE", "ay", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEaz",
 "input":"<!DOCTYPEaz",
 "output":["ParseError", "ParseError", ["DOCTYPE", "az", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa{",
 "input":"<!DOCTYPEa{",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a{", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa\\uDBC0\\uDC00",
 "input":"<!DOCTYPEa\uDBC0\uDC00",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a\uDBC0\uDC00", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPEb",
 "input":"<!DOCTYPEb",
 "output":["ParseError", "ParseError", ["DOCTYPE", "b", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEy",
 "input":"<!DOCTYPEy",
 "output":["ParseError", "ParseError", ["DOCTYPE", "y", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPEz",
 "input":"<!DOCTYPEz",
 "output":["ParseError", "ParseError", ["DOCTYPE", "z", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE{",
 "input":"<!DOCTYPE{",
 "output":["ParseError", "ParseError", ["DOCTYPE", "{", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 11 }
 ]},
 
 {"description":"<!DOCTYPE\\uDBC0\\uDC00",
 "input":"<!DOCTYPE\uDBC0\uDC00",
 "output":["ParseError", "ParseError", ["DOCTYPE", "\uDBC0\uDC00", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!Y",
