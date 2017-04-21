@@ -22,6 +22,8 @@
 <!DOCTYPEhtml>Hello
 #errors
 (1,9): need-space-after-doctype
+#new-errors
+(1:10) missing-whitespace-before-doctype-name
 #document
 | <!DOCTYPE html>
 | <html>

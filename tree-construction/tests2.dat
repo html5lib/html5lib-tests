@@ -253,6 +253,8 @@
 #errors
 (1,9): need-space-after-doctype
 (1,54): expected-named-closing-tag-but-got-eof
+#new-errors
+(1:10) missing-whitespace-before-doctype-name
 #document
 | <!DOCTYPE html>
 | <html>
@@ -338,6 +340,8 @@
 <!doctypehtml><p><li>
 #errors
 (1,9): need-space-after-doctype
+#new-errors
+(1:10) missing-whitespace-before-doctype-name
 #document
 | <!DOCTYPE html>
 | <html>
@@ -350,6 +354,8 @@
 <!doctypehtml><p><dt>
 #errors
 (1,9): need-space-after-doctype
+#new-errors
+(1:10) missing-whitespace-before-doctype-name
 #document
 | <!DOCTYPE html>
 | <html>
@@ -362,6 +368,8 @@
 <!doctypehtml><p><dd>
 #errors
 (1,9): need-space-after-doctype
+#new-errors
+(1:10) missing-whitespace-before-doctype-name
 #document
 | <!DOCTYPE html>
 | <html>
@@ -375,6 +383,8 @@
 #errors
 (1,9): need-space-after-doctype
 (1,23): expected-closing-tag-but-got-eof
+#new-errors
+(1:10) missing-whitespace-before-doctype-name
 #document
 | <!DOCTYPE html>
 | <html>
