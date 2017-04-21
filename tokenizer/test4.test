@@ -145,7 +145,10 @@
 
 {"description":"CR EOF after doctype name",
 "input":"<!doctype html \r",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"CR EOF in tag name",
 "input":"<z\r",
@@ -422,23 +425,38 @@
 
 {"description":"Doctype publik",
 "input":"<!DOCTYPE html PUBLIK \"AbC\" \"XyZ\">",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 16 }
+]},
 
 {"description":"Doctype publi",
 "input":"<!DOCTYPE html PUBLI",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 16 }
+]},
 
 {"description":"Doctype sistem",
 "input":"<!DOCTYPE html SISTEM \"AbC\">",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 16 }
+]},
 
 {"description":"Doctype sys",
 "input":"<!DOCTYPE html SYS",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 16 }
+]},
 
 {"description":"Doctype html x>text",
 "input":"<!DOCTYPE html x>text",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false], ["Character", "text"]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false], ["Character", "text"]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 16 }
+]},
 
 {"description":"Grave accent in unquoted attribute",
 "input":"<a a=aa`>",

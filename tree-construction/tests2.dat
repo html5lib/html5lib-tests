@@ -792,6 +792,7 @@ x { content:"</style" } "
 (1,25): unknown-doctype
 (1,35): unexpected-char-in-comment
 #new-errors
+(1:21) invalid-character-sequence-after-doctype-name
 (1:35) nested-comment
 #document
 | <!DOCTYPE <!doctype>

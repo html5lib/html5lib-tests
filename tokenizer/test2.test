@@ -63,7 +63,10 @@
 
 {"description":"Incomplete doctype",
 "input":"<!DOCTYPE html ",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 16 }
+]},
 
 {"description":"Numeric entity representing the NUL character",
 "input":"&#0000;",

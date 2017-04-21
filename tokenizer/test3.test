@@ -1834,11 +1834,17 @@
 
 {"description":"<!DOCTYPE a\\u0009",
 "input":"<!DOCTYPE a\u0009",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a\\u000A",
 "input":"<!DOCTYPE a\u000A",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE a\\u000B",
 "input":"<!DOCTYPE a\u000B",
@@ -1850,11 +1856,17 @@
 
 {"description":"<!DOCTYPE a\\u000C",
 "input":"<!DOCTYPE a\u000C",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a\\u000D",
 "input":"<!DOCTYPE a\u000D",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE a\\u001F",
 "input":"<!DOCTYPE a\u001F",
@@ -1866,96 +1878,153 @@
 
 {"description":"<!DOCTYPE a ",
 "input":"<!DOCTYPE a ",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a \\u0000",
 "input":"<!DOCTYPE a \u0000",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a \\u0008",
 "input":"<!DOCTYPE a \u0008",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPE a \\u0009",
 "input":"<!DOCTYPE a \u0009",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 14 }
+]},
 
 {"description":"<!DOCTYPE a \\u000A",
 "input":"<!DOCTYPE a \u000A",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE a \\u000B",
 "input":"<!DOCTYPE a \u000B",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPE a \\u000C",
 "input":"<!DOCTYPE a \u000C",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 14 }
+]},
 
 {"description":"<!DOCTYPE a \\u000D",
 "input":"<!DOCTYPE a \u000D",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE a \\u001F",
 "input":"<!DOCTYPE a \u001F",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPE a  ",
 "input":"<!DOCTYPE a  ",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "eof-in-doctype", "line": 1, "col": 14 }
+]},
 
 {"description":"<!DOCTYPE a !",
 "input":"<!DOCTYPE a !",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a \"",
 "input":"<!DOCTYPE a \"",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a &",
 "input":"<!DOCTYPE a &",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a '",
 "input":"<!DOCTYPE a '",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a -",
 "input":"<!DOCTYPE a -",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a /",
 "input":"<!DOCTYPE a /",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a 0",
 "input":"<!DOCTYPE a 0",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a 1",
 "input":"<!DOCTYPE a 1",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a 9",
 "input":"<!DOCTYPE a 9",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a <",
 "input":"<!DOCTYPE a <",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a =",
 "input":"<!DOCTYPE a =",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a >",
 "input":"<!DOCTYPE a >",
@@ -1963,19 +2032,31 @@
 
 {"description":"<!DOCTYPE a ?",
 "input":"<!DOCTYPE a ?",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a @",
 "input":"<!DOCTYPE a @",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a A",
 "input":"<!DOCTYPE a A",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a B",
 "input":"<!DOCTYPE a B",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a PUBLIC",
 "input":"<!DOCTYPE a PUBLIC",
@@ -3115,166 +3196,284 @@
 
 {"description":"<!DOCTYPE a Y",
 "input":"<!DOCTYPE a Y",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a Z",
 "input":"<!DOCTYPE a Z",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a `",
 "input":"<!DOCTYPE a `",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a",
 "input":"<!DOCTYPE a a",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a\\u0000",
 "input":"<!DOCTYPE a a\u0000",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a\\u0009",
 "input":"<!DOCTYPE a a\u0009",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a\\u000A",
 "input":"<!DOCTYPE a a\u000A",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a\\u000B",
 "input":"<!DOCTYPE a a\u000B",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 },
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 14 }
 ]},
 
 {"description":"<!DOCTYPE a a\\u000C",
 "input":"<!DOCTYPE a a\u000C",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a ",
 "input":"<!DOCTYPE a a ",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a!",
 "input":"<!DOCTYPE a a!",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a\"",
 "input":"<!DOCTYPE a a\"",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a&",
 "input":"<!DOCTYPE a a&",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a'",
 "input":"<!DOCTYPE a a'",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a-",
 "input":"<!DOCTYPE a a-",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a/",
 "input":"<!DOCTYPE a a/",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a0",
 "input":"<!DOCTYPE a a0",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a1",
 "input":"<!DOCTYPE a a1",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a9",
 "input":"<!DOCTYPE a a9",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a<",
 "input":"<!DOCTYPE a a<",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a=",
 "input":"<!DOCTYPE a a=",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a>",
 "input":"<!DOCTYPE a a>",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a?",
 "input":"<!DOCTYPE a a?",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a@",
 "input":"<!DOCTYPE a a@",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a aA",
 "input":"<!DOCTYPE a aA",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a aB",
 "input":"<!DOCTYPE a aB",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a aY",
 "input":"<!DOCTYPE a aY",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a aZ",
 "input":"<!DOCTYPE a aZ",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a`",
 "input":"<!DOCTYPE a a`",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a aa",
 "input":"<!DOCTYPE a aa",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a ab",
 "input":"<!DOCTYPE a ab",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a ay",
 "input":"<!DOCTYPE a ay",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a az",
 "input":"<!DOCTYPE a az",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a{",
 "input":"<!DOCTYPE a a{",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a a\\uDBC0\\uDC00",
 "input":"<!DOCTYPE a a\uDBC0\uDC00",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a b",
 "input":"<!DOCTYPE a b",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a y",
 "input":"<!DOCTYPE a y",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a z",
 "input":"<!DOCTYPE a z",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a {",
 "input":"<!DOCTYPE a {",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a \\uDBC0\\uDC00",
 "input":"<!DOCTYPE a \uDBC0\uDC00",
-"output":["ParseError", ["DOCTYPE", "a", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "a", null, null, false]],
+"errors":[
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 }
+]},
 
 {"description":"<!DOCTYPE a!",
 "input":"<!DOCTYPE a!",
@@ -3671,14 +3870,16 @@
 "input":"<!DOCTYPEa\u0009",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa\\u000A",
 "input":"<!DOCTYPEa\u000A",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
 ]},
 
 {"description":"<!DOCTYPEa\\u000B",
@@ -3694,14 +3895,16 @@
 "input":"<!DOCTYPEa\u000C",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa\\u000D",
 "input":"<!DOCTYPEa\u000D",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
 ]},
 
 {"description":"<!DOCTYPEa\\u001F",
@@ -3717,14 +3920,16 @@
 "input":"<!DOCTYPEa ",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa \\u0000",
 "input":"<!DOCTYPEa \u0000",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa \\u0008",
@@ -3732,21 +3937,24 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa \\u0009",
 "input":"<!DOCTYPEa \u0009",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPEa \\u000A",
 "input":"<!DOCTYPEa \u000A",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
 ]},
 
 {"description":"<!DOCTYPEa \\u000B",
@@ -3754,21 +3962,24 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa \\u000C",
 "input":"<!DOCTYPEa \u000C",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPEa \\u000D",
 "input":"<!DOCTYPEa \u000D",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 2, "col": 1 }
 ]},
 
 {"description":"<!DOCTYPEa \\u001F",
@@ -3776,91 +3987,104 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 }
+    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 12 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa  ",
 "input":"<!DOCTYPEa  ",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "eof-in-doctype", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPEa !",
 "input":"<!DOCTYPEa !",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa \"",
 "input":"<!DOCTYPEa \"",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa &",
 "input":"<!DOCTYPEa &",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa '",
 "input":"<!DOCTYPEa '",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa -",
 "input":"<!DOCTYPEa -",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa /",
 "input":"<!DOCTYPEa /",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa 0",
 "input":"<!DOCTYPEa 0",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa 1",
 "input":"<!DOCTYPEa 1",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa 9",
 "input":"<!DOCTYPEa 9",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa <",
 "input":"<!DOCTYPEa <",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa =",
 "input":"<!DOCTYPEa =",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa >",
@@ -3874,28 +4098,32 @@
 "input":"<!DOCTYPEa ?",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa @",
 "input":"<!DOCTYPEa @",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa A",
 "input":"<!DOCTYPEa A",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa B",
 "input":"<!DOCTYPEa B",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa PUBLIC",
@@ -5822,49 +6050,56 @@
 "input":"<!DOCTYPEa Y",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa Z",
 "input":"<!DOCTYPEa Z",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa `",
 "input":"<!DOCTYPEa `",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a",
 "input":"<!DOCTYPEa a",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a\\u0000",
 "input":"<!DOCTYPEa a\u0000",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a\\u0009",
 "input":"<!DOCTYPEa a\u0009",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a\\u000A",
 "input":"<!DOCTYPEa a\u000A",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a\\u000B",
@@ -5872,6 +6107,7 @@
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 },
     { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 13 }
 ]},
 
@@ -5879,224 +6115,256 @@
 "input":"<!DOCTYPEa a\u000C",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a ",
 "input":"<!DOCTYPEa a ",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a!",
 "input":"<!DOCTYPEa a!",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a\"",
 "input":"<!DOCTYPEa a\"",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a&",
 "input":"<!DOCTYPEa a&",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a'",
 "input":"<!DOCTYPEa a'",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a-",
 "input":"<!DOCTYPEa a-",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a/",
 "input":"<!DOCTYPEa a/",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a0",
 "input":"<!DOCTYPEa a0",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a1",
 "input":"<!DOCTYPEa a1",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a9",
 "input":"<!DOCTYPEa a9",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a<",
 "input":"<!DOCTYPEa a<",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a=",
 "input":"<!DOCTYPEa a=",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a>",
 "input":"<!DOCTYPEa a>",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a?",
 "input":"<!DOCTYPEa a?",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a@",
 "input":"<!DOCTYPEa a@",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa aA",
 "input":"<!DOCTYPEa aA",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa aB",
 "input":"<!DOCTYPEa aB",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa aY",
 "input":"<!DOCTYPEa aY",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa aZ",
 "input":"<!DOCTYPEa aZ",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a`",
 "input":"<!DOCTYPEa a`",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa aa",
 "input":"<!DOCTYPEa aa",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa ab",
 "input":"<!DOCTYPEa ab",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa ay",
 "input":"<!DOCTYPEa ay",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa az",
 "input":"<!DOCTYPEa az",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a{",
 "input":"<!DOCTYPEa a{",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa a\\uDBC0\\uDC00",
 "input":"<!DOCTYPEa a\uDBC0\uDC00",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa b",
 "input":"<!DOCTYPEa b",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa y",
 "input":"<!DOCTYPEa y",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa z",
 "input":"<!DOCTYPEa z",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa {",
 "input":"<!DOCTYPEa {",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa \\uDBC0\\uDC00",
 "input":"<!DOCTYPEa \uDBC0\uDC00",
 "output":["ParseError", "ParseError", ["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 }
 ]},
 
 {"description":"<!DOCTYPEa!",
