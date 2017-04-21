@@ -53,7 +53,8 @@
            "input":"<!--<script>\\u0000--><!--<script>-\\u0000--><!--<script>--\\u0000-->",
            "output":[["Character", "<!--<script>\\uFFFD--><!--<script>-\\uFFFD--><!--<script>--\\uFFFD-->"]],
            "errors":[
-                { "code": "unexpected-null-character", "line": 1, "col": 13 }
+                { "code": "unexpected-null-character", "line": 1, "col": 13 },
+                { "code": "unexpected-null-character", "line": 1, "col": 30 }
            ]
         },
         {
