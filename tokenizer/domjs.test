@@ -54,7 +54,8 @@
            "output":[["Character", "<!--<script>\\uFFFD--><!--<script>-\\uFFFD--><!--<script>--\\uFFFD-->"]],
            "errors":[
                 { "code": "unexpected-null-character", "line": 1, "col": 13 },
-                { "code": "unexpected-null-character", "line": 1, "col": 30 }
+                { "code": "unexpected-null-character", "line": 1, "col": 30 },
+                { "code": "unexpected-null-character", "line": 1, "col": 48 }
            ]
         },
         {
@@ -82,6 +83,24 @@
            "output":[["Character", "<!--test--"]],
            "errors":[
                { "code": "eof-in-script-html-comment", "line": 1, "col": 11 }
+           ]
+        },
+        {
+           "description":"EOF in script HTML comment double escaped after dash",
+           "initialStates":["Script data state"],
+           "input":"<!--<script>-",
+           "output":[["Character", "<!--<script>-"]],
+           "errors":[
+               { "code": "eof-in-script-html-comment", "line": 1, "col": 14 }
+           ]
+        },
+        {
+           "description":"EOF in script HTML comment double escaped after dash dash",
+           "initialStates":["Script data state"],
+           "input":"<!--<script>--",
+           "output":[["Character", "<!--<script>--"]],
+           "errors":[
+               { "code": "eof-in-script-html-comment", "line": 1, "col": 15 }
            ]
         },
         {
