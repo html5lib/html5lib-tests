@@ -1535,7 +1535,8 @@
 "input":"<!DOCTYPE\u0000",
 "output":["ParseError", "ParseError", "ParseError", ["DOCTYPE", "\uFFFD", null, null, false]],
 "errors":[
-    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 }
+    { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
+    { "code": "unexpected-null-character", "line": 1, "col": 10 }
 ]},
 
 {"description":"<!DOCTYPE\\u0008",
@@ -1548,11 +1549,17 @@
 
 {"description":"<!DOCTYPE\\u0009",
 "input":"<!DOCTYPE\u0009",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE\\u000A",
 "input":"<!DOCTYPE\u000A",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE\\u000B",
 "input":"<!DOCTYPE\u000B",
@@ -1564,11 +1571,17 @@
 
 {"description":"<!DOCTYPE\\u000C",
 "input":"<!DOCTYPE\u000C",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE\\u000D",
 "input":"<!DOCTYPE\u000D",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE\\u001F",
 "input":"<!DOCTYPE\u001F",
@@ -1580,11 +1593,17 @@
 
 {"description":"<!DOCTYPE ",
 "input":"<!DOCTYPE ",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE \\u0000",
 "input":"<!DOCTYPE \u0000",
-"output":["ParseError", "ParseError", ["DOCTYPE", "\uFFFD", null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", "\uFFFD", null, null, false]],
+"errors":[
+   { "code": "unexpected-null-character", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE \\u0008",
 "input":"<!DOCTYPE \u0008",
@@ -1595,11 +1614,17 @@
 
 {"description":"<!DOCTYPE \\u0009",
 "input":"<!DOCTYPE \u0009",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE \\u000A",
 "input":"<!DOCTYPE \u000A",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE \\u000B",
 "input":"<!DOCTYPE \u000B",
@@ -1610,11 +1635,17 @@
 
 {"description":"<!DOCTYPE \\u000C",
 "input":"<!DOCTYPE \u000C",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE \\u000D",
 "input":"<!DOCTYPE \u000D",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 2, "col": 1 }
+]},
 
 {"description":"<!DOCTYPE \\u001F",
 "input":"<!DOCTYPE \u001F",
@@ -1625,7 +1656,10 @@
 
 {"description":"<!DOCTYPE  ",
 "input":"<!DOCTYPE  ",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+   { "code": "eof-in-doctype", "line": 1, "col": 12 }
+]},
 
 {"description":"<!DOCTYPE !",
 "input":"<!DOCTYPE !",
@@ -1673,7 +1707,10 @@
 
 {"description":"<!DOCTYPE >",
 "input":"<!DOCTYPE >",
-"output":["ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+    { "code": "missing-doctype-name", "line": 1, "col": 11 }
+]},
 
 {"description":"<!DOCTYPE ?",
 "input":"<!DOCTYPE ?",
@@ -3367,7 +3404,10 @@
 
 {"description":"<!DOCTYPE>",
 "input":"<!DOCTYPE>",
-"output":["ParseError", "ParseError", ["DOCTYPE", null, null, null, false]]},
+"output":["ParseError", "ParseError", ["DOCTYPE", null, null, null, false]],
+"errors":[
+    { "code": "missing-doctype-name", "line": 1, "col": 10 }
+]},
 
 {"description":"<!DOCTYPE?",
 "input":"<!DOCTYPE?",

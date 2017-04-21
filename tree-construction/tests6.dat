@@ -51,6 +51,8 @@
 (1,9): need-space-after-doctype
 (1,10): expected-doctype-name-but-got-right-bracket
 (1,10): unknown-doctype
+#new-errors
+(1:10) missing-doctype-name
 #document
 | <!DOCTYPE >
 | <html>
