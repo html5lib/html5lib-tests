@@ -22,6 +22,8 @@
 <!DOCTYPEhtml>Hello
 #errors
 (1,9): need-space-after-doctype
+#new-errors
+(1:10) missing-whitespace-before-doctype-name
 #document
 | <!DOCTYPE html>
 | <html>
@@ -35,6 +37,8 @@
 (1,9): need-space-after-doctype
 (1,10): expected-doctype-name-but-got-right-bracket
 (1,10): unknown-doctype
+#new-errors
+(1:10) missing-doctype-name
 #document
 | <!DOCTYPE >
 | <html>
@@ -47,6 +51,8 @@
 #errors
 (1,11): expected-doctype-name-but-got-right-bracket
 (1,11): unknown-doctype
+#new-errors
+(1:11) missing-doctype-name
 #document
 | <!DOCTYPE >
 | <html>
@@ -81,6 +87,8 @@
 #errors
 (1,17): expected-space-or-right-bracket-in-doctype
 (1,22): unknown-doctype
+#new-errors
+(1:18) invalid-character-sequence-after-doctype-name
 #document
 | <!DOCTYPE potato>
 | <html>
@@ -93,6 +101,8 @@
 #errors
 (1,17): expected-space-or-right-bracket-in-doctype
 (1,27): unknown-doctype
+#new-errors
+(1:18) invalid-character-sequence-after-doctype-name
 #document
 | <!DOCTYPE potato>
 | <html>
@@ -198,6 +208,8 @@
 #errors
 (1,17): expected-space-or-right-bracket-in-doctype
 (1,35): unknown-doctype
+#new-errors
+(1:18) invalid-character-sequence-after-doctype-name
 #document
 | <!DOCTYPE potato>
 | <html>
@@ -350,6 +362,8 @@
 #errors
 (1,23): expected-space-or-right-bracket-in-doctype
 (2,30): unknown-doctype
+#new-errors
+(1:24) invalid-character-sequence-after-doctype-name
 #document
 | <!DOCTYPE root-element>
 | <html>
