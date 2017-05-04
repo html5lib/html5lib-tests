@@ -14,7 +14,7 @@ FOO&gtBAR
 (1,3): expected-doctype-but-got-chars
 (1,6): named-entity-without-semicolon
 #new-errors
-(1:6) missing-semicolon-after-character-reference
+(1:7) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -27,7 +27,7 @@ FOO&gt BAR
 (1,3): expected-doctype-but-got-chars
 (1,6): named-entity-without-semicolon
 #new-errors
-(1:6) missing-semicolon-after-character-reference
+(1:7) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>
@@ -50,7 +50,7 @@ I'm &notit; I tell you
 (1,4): expected-doctype-but-got-chars
 (1,9): named-entity-without-semicolon
 #new-errors
-(1:8) missing-semicolon-after-character-reference
+(1:9) missing-semicolon-after-character-reference
 #document
 | <html>
 |   <head>

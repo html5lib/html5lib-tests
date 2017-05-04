@@ -184,14 +184,14 @@
 "input":"I'm &notit",
 "output":[["Character","I'm "], "ParseError", ["Character", "\u00ACit"]],
 "errors": [
-    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 8 }
+    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 9 }
 ]},
 
 {"description":"Entity without trailing semicolon (2)",
 "input":"I'm &notin",
 "output":[["Character","I'm "], "ParseError", ["Character", "\u00ACin"]],
 "errors": [
-    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 8 }
+    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 9 }
 ]},
 
 {"description":"Partial entity match at end of file",
@@ -236,7 +236,7 @@
 "input":"<h a='&COPY'>",
 "output":["ParseError", ["StartTag", "h", {"a":"\u00A9"}]],
 "errors": [
-    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 11 }
+    {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 12 }
 ]},
 
 {"description":"Unquoted attribute ending in ampersand",

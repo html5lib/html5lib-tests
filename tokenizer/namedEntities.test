@@ -11,7 +11,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -35,7 +35,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -59,7 +59,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -106,7 +106,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -176,7 +176,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -338,7 +338,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -408,7 +408,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -432,7 +432,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -755,7 +755,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -894,7 +894,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -2781,7 +2781,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -2805,7 +2805,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -2852,7 +2852,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -2945,7 +2945,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -3268,7 +3268,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -3545,7 +3545,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 3 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
             ]
         }, 
         {
@@ -4351,7 +4351,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -4375,7 +4375,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -4468,7 +4468,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -4837,7 +4837,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -5229,7 +5229,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 3 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
             ]
         }, 
         {
@@ -8358,7 +8358,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -8428,7 +8428,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -8452,7 +8452,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -8545,7 +8545,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -8753,7 +8753,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -8777,7 +8777,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -8824,7 +8824,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -9377,7 +9377,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -9493,7 +9493,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -11403,7 +11403,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -11910,7 +11910,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -12026,7 +12026,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -12119,7 +12119,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -12718,7 +12718,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -13409,7 +13409,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -13801,7 +13801,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -13917,7 +13917,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -13941,7 +13941,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -13988,7 +13988,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -14058,7 +14058,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -14197,7 +14197,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -14980,7 +14980,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -15096,7 +15096,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -15120,7 +15120,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -17513,7 +17513,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -18112,7 +18112,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -18228,7 +18228,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -18275,7 +18275,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -19137,7 +19137,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -19792,7 +19792,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -20322,7 +20322,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -20668,7 +20668,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -21484,7 +21484,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -21577,7 +21577,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -21762,7 +21762,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -22706,7 +22706,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -22730,7 +22730,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -23283,7 +23283,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -23330,7 +23330,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -23469,7 +23469,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -24712,7 +24712,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 3 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
             ]
         }, 
         {
@@ -25546,7 +25546,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -25593,7 +25593,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -25663,7 +25663,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -25733,7 +25733,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -26424,7 +26424,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -26678,7 +26678,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -27461,7 +27461,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -30245,7 +30245,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 3 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
             ]
         }, 
         {
@@ -30494,7 +30494,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -30863,7 +30863,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -30956,7 +30956,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -31831,7 +31831,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -33166,7 +33166,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -34325,7 +34325,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -35016,7 +35016,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -35086,7 +35086,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -35340,7 +35340,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -35893,7 +35893,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -35917,7 +35917,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -36056,7 +36056,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -36103,7 +36103,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -36173,7 +36173,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -36243,7 +36243,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -36898,7 +36898,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -37037,7 +37037,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -37935,7 +37935,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -38258,7 +38258,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -39133,7 +39133,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -40836,7 +40836,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -41136,7 +41136,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -43128,7 +43128,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -43152,7 +43152,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -43176,7 +43176,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -43785,7 +43785,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -44246,7 +44246,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -44293,7 +44293,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -45106,7 +45106,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -45199,7 +45199,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
             ]
         }, 
         {
@@ -45361,7 +45361,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -45569,7 +45569,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -46099,7 +46099,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
@@ -47917,7 +47917,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 7 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 8 }
             ]
         }, 
         {
@@ -48010,7 +48010,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 4 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
             ]
         }, 
         {
@@ -48149,7 +48149,7 @@
                 ]
             ],
             "errors": [
-                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 5 }
+                { "code": "missing-semicolon-after-character-reference", "line": 1,  "col": 6 }
             ]
         }, 
         {
