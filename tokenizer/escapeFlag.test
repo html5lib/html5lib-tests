@@ -18,7 +18,7 @@
 "input":"foo<!--></xmp><!-->baz</xmp>",
 "output":[["Character", "foo<!-->"], ["EndTag", "xmp"], "ParseError", ["Comment", ""], ["Character", "baz"], ["EndTag", "xmp"]],
 "errors":[
-    { "code": "abrupt-comment", "line": 1, "col": 19 }
+    { "code": "abrupt-closing-of-comment", "line": 1, "col": 19 }
 ]},
 
 {"description":"Commented entities in RCDATA",
