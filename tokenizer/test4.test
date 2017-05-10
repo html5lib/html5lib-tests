@@ -56,23 +56,38 @@
 
 {"description":"\" after ampersand in double-quoted attribute value",
 "input":"<z z=\"&\">",
-"output":[["StartTag", "z", {"z": "&"}]]},
+"output":[["StartTag", "z", {"z": "&"}]],
+"errors": [
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
+]},
 
 {"description":"' after ampersand in double-quoted attribute value",
 "input":"<z z=\"&'\">",
-"output":[["StartTag", "z", {"z": "&'"}]]},
+"output":[["StartTag", "z", {"z": "&'"}]],
+"errors": [
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
+]},
 
 {"description":"' after ampersand in single-quoted attribute value",
 "input":"<z z='&'>",
-"output":[["StartTag", "z", {"z": "&"}]]},
+"output":[["StartTag", "z", {"z": "&"}]],
+"errors": [
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
+]},
 
 {"description":"\" after ampersand in single-quoted attribute value",
 "input":"<z z='&\"'>",
-"output":[["StartTag", "z", {"z": "&\""}]]},
+"output":[["StartTag", "z", {"z": "&\""}]],
+"errors": [
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
+]},
 
 {"description":"Text after bogus character reference",
 "input":"<z z='&xlink_xmlns;'>bar<z>",
-"output":[["StartTag","z",{"z":"&xlink_xmlns;"}],["Character","bar"],["StartTag","z",{}]]},
+"output":[["StartTag","z",{"z":"&xlink_xmlns;"}],["Character","bar"],["StartTag","z",{}]],
+"errors": [
+    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
+]},
 
 {"description":"Text after hex character reference",
 "input":"<z z='&#x0020; foo'>bar<z>",
