@@ -266,7 +266,7 @@ FOO&#x0080;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -279,7 +279,7 @@ FOO&#x0081;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -292,7 +292,7 @@ FOO&#x0082;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -305,7 +305,7 @@ FOO&#x0083;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -318,7 +318,7 @@ FOO&#x0084;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -331,7 +331,7 @@ FOO&#x0085;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -344,7 +344,7 @@ FOO&#x0086;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -357,7 +357,7 @@ FOO&#x0087;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -370,7 +370,7 @@ FOO&#x0088;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -383,7 +383,7 @@ FOO&#x0089;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -396,7 +396,7 @@ FOO&#x008A;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -409,7 +409,7 @@ FOO&#x008B;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -422,7 +422,7 @@ FOO&#x008C;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -435,7 +435,7 @@ FOO&#x008D;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -448,7 +448,7 @@ FOO&#x008E;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -461,7 +461,7 @@ FOO&#x008F;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -474,7 +474,7 @@ FOO&#x0090;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -487,7 +487,7 @@ FOO&#x0091;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -500,7 +500,7 @@ FOO&#x0092;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -513,7 +513,7 @@ FOO&#x0093;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -526,7 +526,7 @@ FOO&#x0094;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -539,7 +539,7 @@ FOO&#x0095;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -552,7 +552,7 @@ FOO&#x0096;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -565,7 +565,7 @@ FOO&#x0097;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -578,7 +578,7 @@ FOO&#x0098;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -591,7 +591,7 @@ FOO&#x0099;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -604,7 +604,7 @@ FOO&#x009A;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -617,7 +617,7 @@ FOO&#x009B;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -630,7 +630,7 @@ FOO&#x009C;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -643,7 +643,7 @@ FOO&#x009D;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -656,7 +656,7 @@ FOO&#x009E;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -669,7 +669,7 @@ FOO&#x009F;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,11): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:12) control-or-undefined-character-reference
+(1:12) control-character-reference
 #document
 | <html>
 |   <head>
@@ -764,7 +764,7 @@ FOO&#x10FFFE;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,13): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:14) control-or-undefined-character-reference
+(1:14) undefined-character-reference
 #document
 | <html>
 |   <head>
@@ -787,7 +787,7 @@ FOO&#x10FFFF;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,13): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:14) control-or-undefined-character-reference
+(1:14) undefined-character-reference
 #document
 | <html>
 |   <head>

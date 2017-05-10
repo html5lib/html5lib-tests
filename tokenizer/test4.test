@@ -226,7 +226,7 @@
 "input":"&#X10FFFF;",
 "output":["ParseError", ["Character", "\uDBFF\uDFFF"]],
 "errors":[
-    { "code": "control-or-undefined-character-reference", "line": 1, "col": 11 }
+    { "code": "undefined-character-reference", "line": 1, "col": 11 }
 ]},
 
 
@@ -370,7 +370,7 @@
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "malformed-comment", "line": 1, "col": 3 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+    { "code": "control-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
 {"description":"U+FDD1 in lookahead region",
@@ -379,7 +379,7 @@
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "malformed-comment", "line": 1, "col": 3 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+    { "code": "undefined-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
 {"description":"U+1FFFF in lookahead region",
@@ -388,7 +388,7 @@
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "malformed-comment", "line": 1, "col": 3 },
-    { "code": "control-or-undefined-character-in-input-stream", "line": 1, "col": 6 }
+    { "code": "undefined-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
 {"description":"CR followed by non-LF",
