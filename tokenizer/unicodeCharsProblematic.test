@@ -2,7 +2,7 @@
 {"description": "Invalid Unicode character U+DFFF",
 "doubleEscaped":true,
 "input": "\\uDFFF",
-"output":["ParseError", ["Character", "\\uDFFF"]],
+"output":[["Character", "\\uDFFF"]],
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 1 }
@@ -11,7 +11,7 @@
 {"description": "Invalid Unicode character U+D800",
 "doubleEscaped":true,
 "input": "\\uD800",
-"output":["ParseError", ["Character", "\\uD800"]],
+"output":[["Character", "\\uD800"]],
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 1 }
@@ -20,7 +20,7 @@
 {"description": "Invalid Unicode character U+DFFF with valid preceding character",
 "doubleEscaped":true,
 "input": "a\\uDFFF",
-"output":[["Character", "a"], "ParseError", ["Character", "\\uDFFF"]],
+"output":[["Character", "a"], ["Character", "\\uDFFF"]],
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 2 }
@@ -29,7 +29,7 @@
 {"description": "Invalid Unicode character U+D800 with valid following character",
 "doubleEscaped":true,
 "input": "\\uD800a",
-"output":["ParseError", ["Character", "\\uD800a"]],
+"output":[["Character", "\\uD800a"]],
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 1 }
@@ -37,7 +37,7 @@
 
 {"description":"CR followed by U+0000",
 "input":"\r\u0000",
-"output":[["Character", "\n"], "ParseError", ["Character", "\u0000"]],
+"output":[["Character", "\n"], ["Character", "\u0000"]],
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "unexpected-null-character", "line": 2, "col": 1 }

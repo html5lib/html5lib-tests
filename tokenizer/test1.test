@@ -15,14 +15,14 @@
 
 {"description":"Correct Doctype case with EOF",
 "input":"<!DOCTYPE HtMl", 
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"output":[["DOCTYPE", "html", null, null, false]],
 "errors":[
     { "code": "eof-in-doctype", "line": 1, "col": 15 }
 ]},
 
 {"description":"Truncated doctype start",
 "input":"<!DOC>", 
-"output":["ParseError", ["Comment", "DOC"]],
+"output":[["Comment", "DOC"]],
 "errors":[
     { "code": "malformed-comment", "line": 1, "col": 3 }
 ]},
@@ -37,14 +37,14 @@
 
 {"description":"Empty end tag",
 "input":"</>",
-"output":["ParseError"],
+"output":[],
 "errors":[
     { "code": "missing-end-tag-name", "line": 1, "col": 3 }
 ]},
 
 {"description":"Empty start tag",
 "input":"<>",
-"output":["ParseError", ["Character", "<>"]],
+"output":[["Character", "<>"]],
 "errors":[
     { "code": "invalid-first-character-of-tag-name", "line": 1, "col": 2 }
 ]},
@@ -67,7 +67,7 @@
 
 {"description":"End Tag w/attribute",
 "input":"<h></h a='b'>",
-"output":[["StartTag", "h", {}], "ParseError", ["EndTag", "h"]],
+"output":[["StartTag", "h", {}], ["EndTag", "h"]],
 "errors":[
     { "code": "end-tag-with-attributes", "line": 1, "col": 13 }
 ]},
@@ -78,14 +78,14 @@
 
 {"description":"Multiple atts no space",
 "input":"<h a='b'c='d'>",
-"output":["ParseError", ["StartTag", "h", {"a":"b", "c":"d"}]],
+"output":[["StartTag", "h", {"a":"b", "c":"d"}]],
 "errors":[
     { "code": "missing-whitespace-between-attributes", "line": 1, "col": 9 }
 ]},
 
 {"description":"Repeated attr",
  "input":"<h a='b' a='d'>",
- "output":["ParseError", ["StartTag", "h", {"a":"b"}]]},
+ "output":[["StartTag", "h", {"a":"b"}]]},
 
 {"description":"Simple comment",
  "input":"<!--comment-->",
@@ -93,29 +93,29 @@
 
 {"description":"Comment, Central dash no space",
  "input":"<!----->",
- "output":["ParseError", ["Comment", "-"]]},
+ "output":[["Comment", "-"]]},
 
 {"description":"Comment, two central dashes",
 "input":"<!-- --comment -->",
-"output":["ParseError", ["Comment", " --comment "]]},
+"output":[["Comment", " --comment "]]},
 
 {"description":"Unfinished comment",
 "input":"<!--comment",
-"output":["ParseError", ["Comment", "comment"]],
+"output":[["Comment", "comment"]],
 "errors":[
     { "code": "eof-in-comment", "line": 1, "col": 12 }
 ]},
 
 {"description":"Start of a comment",
 "input":"<!-",
-"output":["ParseError", ["Comment", "-"]],
+"output":[["Comment", "-"]],
 "errors":[
     { "code": "malformed-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"Short comment",
 "input":"<!-->",
-"output":["ParseError", ["Comment", ""]],
+"output":[["Comment", ""]],
 "errors":[
     { "code": "abrupt-closing-of-comment", "line": 1, "col": 5 }
 ]},
@@ -123,7 +123,7 @@
 
 {"description":"Short comment two",
 "input":"<!--->",
-"output":["ParseError", ["Comment", ""]],
+"output":[["Comment", ""]],
 "errors":[
     { "code": "abrupt-closing-of-comment", "line": 1, "col": 6 }
 ]},
@@ -160,14 +160,14 @@
 
 {"description":"Ampersand, number sign",
 "input":"&#",
-"output":["ParseError", ["Character", "&#"]],
+"output":[["Character", "&#"]],
 "errors":[
     { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 3 }
 ]},
 
 {"description":"Unfinished numeric entity",
 "input":"&#x",
-"output":["ParseError", ["Character", "&#x"]],
+"output":[["Character", "&#x"]],
 "errors":[
     { "code": "absence-of-digits-in-numeric-character-reference", "line": 1, "col": 4 }
 ]},
@@ -182,14 +182,14 @@
 
 {"description":"Entity without trailing semicolon (1)",
 "input":"I'm &notit",
-"output":[["Character","I'm "], "ParseError", ["Character", "\u00ACit"]],
+"output":[["Character","I'm "], ["Character", "\u00ACit"]],
 "errors": [
     {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 9 }
 ]},
 
 {"description":"Entity without trailing semicolon (2)",
 "input":"I'm &notin",
-"output":[["Character","I'm "], "ParseError", ["Character", "\u00ACin"]],
+"output":[["Character","I'm "], ["Character", "\u00ACin"]],
 "errors": [
     {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 9 }
 ]},
@@ -234,7 +234,7 @@
 
 {"description":"Entity in attribute without semicolon",
 "input":"<h a='&COPY'>",
-"output":["ParseError", ["StartTag", "h", {"a":"\u00A9"}]],
+"output":[["StartTag", "h", {"a":"\u00A9"}]],
 "errors": [
     {"code" : "missing-semicolon-after-character-reference", "line": 1, "col": 12 }
 ]},
@@ -256,7 +256,7 @@
 
 {"description":"Open angled bracket in unquoted attribute value state",
  "input":"<a a=f<>",
- "output":["ParseError", ["StartTag", "a", {"a":"f<"}]],
+ "output":[["StartTag", "a", {"a":"f<"}]],
  "errors":[
     { "code": "unexpected-character-in-unquoted-attribute-value", "line": 1, "col": 7 }
 ]}

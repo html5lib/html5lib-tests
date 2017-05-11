@@ -3,7 +3,7 @@
         {
             "description":"CR in bogus comment state",
             "input":"<?\u000d",
-            "output":["ParseError", ["Comment", "?\u000a"]],
+            "output":[["Comment", "?\u000a"]],
             "errors":[
                 { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
             ]
@@ -11,7 +11,7 @@
         {
             "description":"CRLF in bogus comment state",
             "input":"<?\u000d\u000a",
-            "output":["ParseError", ["Comment", "?\u000a"]],
+            "output":[["Comment", "?\u000a"]],
             "errors":[
                 { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
             ]
@@ -19,7 +19,7 @@
         {
             "description":"CRLFLF in bogus comment state",
             "input":"<?\u000d\u000a\u000a",
-            "output":["ParseError", ["Comment", "?\u000a\u000a"]],
+            "output":[["Comment", "?\u000a\u000a"]],
             "errors":[
                 { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
             ]
@@ -29,7 +29,7 @@
             "doubleEscaped":true,
             "initialStates":["RCDATA state", "RAWTEXT state", "PLAINTEXT state", "Script data state"],
             "input":"\\u0000",
-            "output":["ParseError", ["Character", "\\uFFFD"]],
+            "output":[["Character", "\\uFFFD"]],
             "errors":[
                 { "code": "unexpected-null-character", "line": 1, "col": 1 }
             ]
@@ -128,7 +128,7 @@
             "description":"Bad charref in in RCDATA",
             "initialStates":["RCDATA state"],
             "input":"&NotEqualTild;",
-            "output":["ParseError", ["Character", "&NotEqualTild;"]],
+            "output":[["Character", "&NotEqualTild;"]],
             "errors": [
                 {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
             ]
@@ -177,7 +177,7 @@
             "description":"--!NUL in comment ",
             "doubleEscaped":true,
             "input":"<!----!\\u0000-->",
-            "output":["ParseError", "ParseError", ["Comment", "--!\\uFFFD"]],
+            "output":[["Comment", "--!\\uFFFD"]],
             "errors":[
                 { "code": "unexpected-null-character", "line": 1, "col": 8 }
             ]
@@ -185,7 +185,7 @@
         {
             "description":"space EOF after doctype ",
             "input":"<!DOCTYPE html ",
-            "output":["ParseError", ["DOCTYPE", "html", null, null , false]],
+            "output":[["DOCTYPE", "html", null, null , false]],
             "errors":[
                 { "code": "eof-in-doctype", "line": 1, "col": 16 }
             ]

@@ -3,7 +3,7 @@
 {"description":"Non-XML character",
 "input":"a\uFFFFb",
 "ignoreErrorOrder":true,
-"output":["ParseError",["Character","a\uFFFDb"]]},
+"output":[["Character","a\uFFFDb"]]},
 
 {"description":"Non-XML space",
 "input":"a\u000Cb",
@@ -12,7 +12,7 @@
 
 {"description":"Double hyphen in comment",
 "input":"<!-- foo -- bar -->",
-"output":["ParseError",["Comment"," foo - - bar "]]},
+"output":[["Comment"," foo - - bar "]]},
 
 {"description":"FF between attributes",
 "input":"<a b=''\u000Cc=''>",

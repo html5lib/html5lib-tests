@@ -22,7 +22,7 @@
 "initialStates":["RCDATA state", "RAWTEXT state"],
 "lastStartTag":"xmp",
 "input":"foo</xmp ",
-"output":[["Character", "foo"], "ParseError"],
+"output":[["Character", "foo"]],
 "errors":[
     { "code": "eof-in-tag", "line": 1, "col": 10 }
 ]},
@@ -37,7 +37,7 @@
 "initialStates":["RCDATA state", "RAWTEXT state"],
 "lastStartTag":"xmp",
 "input":"foo</xmp/",
-"output":[["Character", "foo"], "ParseError"],
+"output":[["Character", "foo"]],
 "errors":[
     { "code": "eof-in-tag", "line": 1, "col": 10 }
 ]},
