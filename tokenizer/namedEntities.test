@@ -4,7 +4,6 @@
             "input": "&AElig", 
             "description": "Named entity: AElig without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c6"
@@ -28,7 +27,6 @@
             "input": "&AMP", 
             "description": "Named entity: AMP without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "&"
@@ -52,7 +50,6 @@
             "input": "&Aacute", 
             "description": "Named entity: Aacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c1"
@@ -99,7 +96,6 @@
             "input": "&Acirc", 
             "description": "Named entity: Acirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c2"
@@ -169,7 +165,6 @@
             "input": "&Agrave", 
             "description": "Named entity: Agrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c0"
@@ -331,7 +326,6 @@
             "input": "&Aring", 
             "description": "Named entity: Aring without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c5"
@@ -401,7 +395,6 @@
             "input": "&Atilde", 
             "description": "Named entity: Atilde without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c3"
@@ -425,7 +418,6 @@
             "input": "&Auml", 
             "description": "Named entity: Auml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c4"
@@ -748,7 +740,6 @@
             "input": "&COPY", 
             "description": "Named entity: COPY without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a9"
@@ -887,7 +878,6 @@
             "input": "&Ccedil", 
             "description": "Named entity: Ccedil without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c7"
@@ -2774,7 +2764,6 @@
             "input": "&ETH", 
             "description": "Named entity: ETH without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d0"
@@ -2798,7 +2787,6 @@
             "input": "&Eacute", 
             "description": "Named entity: Eacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c9"
@@ -2845,7 +2833,6 @@
             "input": "&Ecirc", 
             "description": "Named entity: Ecirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ca"
@@ -2938,7 +2925,6 @@
             "input": "&Egrave", 
             "description": "Named entity: Egrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00c8"
@@ -3261,7 +3247,6 @@
             "input": "&Euml", 
             "description": "Named entity: Euml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00cb"
@@ -3538,7 +3523,6 @@
             "input": "&GT", 
             "description": "Named entity: GT without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     ">"
@@ -4344,7 +4328,6 @@
             "input": "&Iacute", 
             "description": "Named entity: Iacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00cd"
@@ -4368,7 +4351,6 @@
             "input": "&Icirc", 
             "description": "Named entity: Icirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ce"
@@ -4461,7 +4443,6 @@
             "input": "&Igrave", 
             "description": "Named entity: Igrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00cc"
@@ -4830,7 +4811,6 @@
             "input": "&Iuml", 
             "description": "Named entity: Iuml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00cf"
@@ -5222,7 +5202,6 @@
             "input": "&LT", 
             "description": "Named entity: LT without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "<"
@@ -8351,7 +8330,6 @@
             "input": "&Ntilde", 
             "description": "Named entity: Ntilde without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d1"
@@ -8421,7 +8399,6 @@
             "input": "&Oacute", 
             "description": "Named entity: Oacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d3"
@@ -8445,7 +8422,6 @@
             "input": "&Ocirc", 
             "description": "Named entity: Ocirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d4"
@@ -8538,7 +8514,6 @@
             "input": "&Ograve", 
             "description": "Named entity: Ograve without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d2"
@@ -8746,7 +8721,6 @@
             "input": "&Oslash", 
             "description": "Named entity: Oslash without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d8"
@@ -8770,7 +8744,6 @@
             "input": "&Otilde", 
             "description": "Named entity: Otilde without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d5"
@@ -8817,7 +8790,6 @@
             "input": "&Ouml", 
             "description": "Named entity: Ouml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d6"
@@ -9370,7 +9342,6 @@
             "input": "&QUOT", 
             "description": "Named entity: QUOT without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\""
@@ -9486,7 +9457,6 @@
             "input": "&REG", 
             "description": "Named entity: REG without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ae"
@@ -11396,7 +11366,6 @@
             "input": "&THORN", 
             "description": "Named entity: THORN without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00de"
@@ -11903,7 +11872,6 @@
             "input": "&Uacute", 
             "description": "Named entity: Uacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00da"
@@ -12019,7 +11987,6 @@
             "input": "&Ucirc", 
             "description": "Named entity: Ucirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00db"
@@ -12112,7 +12079,6 @@
             "input": "&Ugrave", 
             "description": "Named entity: Ugrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d9"
@@ -12711,7 +12677,6 @@
             "input": "&Uuml", 
             "description": "Named entity: Uuml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00dc"
@@ -13402,7 +13367,6 @@
             "input": "&Yacute", 
             "description": "Named entity: Yacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00dd"
@@ -13794,7 +13758,6 @@
             "input": "&aacute", 
             "description": "Named entity: aacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e1"
@@ -13910,7 +13873,6 @@
             "input": "&acirc", 
             "description": "Named entity: acirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e2"
@@ -13934,7 +13896,6 @@
             "input": "&acute", 
             "description": "Named entity: acute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b4"
@@ -13981,7 +13942,6 @@
             "input": "&aelig", 
             "description": "Named entity: aelig without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e6"
@@ -14051,7 +14011,6 @@
             "input": "&agrave", 
             "description": "Named entity: agrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e0"
@@ -14190,7 +14149,6 @@
             "input": "&amp", 
             "description": "Named entity: amp without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "&"
@@ -14973,7 +14931,6 @@
             "input": "&aring", 
             "description": "Named entity: aring without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e5"
@@ -15089,7 +15046,6 @@
             "input": "&atilde", 
             "description": "Named entity: atilde without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e3"
@@ -15113,7 +15069,6 @@
             "input": "&auml", 
             "description": "Named entity: auml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e4"
@@ -17506,7 +17461,6 @@
             "input": "&brvbar", 
             "description": "Named entity: brvbar without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a6"
@@ -18105,7 +18059,6 @@
             "input": "&ccedil", 
             "description": "Named entity: ccedil without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e7"
@@ -18221,7 +18174,6 @@
             "input": "&cedil", 
             "description": "Named entity: cedil without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b8"
@@ -18268,7 +18220,6 @@
             "input": "&cent", 
             "description": "Named entity: cent without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a2"
@@ -19130,7 +19081,6 @@
             "input": "&copy", 
             "description": "Named entity: copy without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a9"
@@ -19785,7 +19735,6 @@
             "input": "&curren", 
             "description": "Named entity: curren without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a4"
@@ -20315,7 +20264,6 @@
             "input": "&deg", 
             "description": "Named entity: deg without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b0"
@@ -20661,7 +20609,6 @@
             "input": "&divide", 
             "description": "Named entity: divide without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f7"
@@ -21477,7 +21424,6 @@
             "input": "&eacute", 
             "description": "Named entity: eacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e9"
@@ -21570,7 +21516,6 @@
             "input": "&ecirc", 
             "description": "Named entity: ecirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ea"
@@ -21755,7 +21700,6 @@
             "input": "&egrave", 
             "description": "Named entity: egrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00e8"
@@ -22699,7 +22643,6 @@
             "input": "&eth", 
             "description": "Named entity: eth without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f0"
@@ -22723,7 +22666,6 @@
             "input": "&euml", 
             "description": "Named entity: euml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00eb"
@@ -23276,7 +23218,6 @@
             "input": "&frac12", 
             "description": "Named entity: frac12 without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00bd"
@@ -23323,7 +23264,6 @@
             "input": "&frac14", 
             "description": "Named entity: frac14 without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00bc"
@@ -23462,7 +23402,6 @@
             "input": "&frac34", 
             "description": "Named entity: frac34 without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00be"
@@ -24705,7 +24644,6 @@
             "input": "&gt", 
             "description": "Named entity: gt without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     ">"
@@ -25539,7 +25477,6 @@
             "input": "&iacute", 
             "description": "Named entity: iacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ed"
@@ -25586,7 +25523,6 @@
             "input": "&icirc", 
             "description": "Named entity: icirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ee"
@@ -25656,7 +25592,6 @@
             "input": "&iexcl", 
             "description": "Named entity: iexcl without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a1"
@@ -25726,7 +25661,6 @@
             "input": "&igrave", 
             "description": "Named entity: igrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ec"
@@ -26417,7 +26351,6 @@
             "input": "&iquest", 
             "description": "Named entity: iquest without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00bf"
@@ -26671,7 +26604,6 @@
             "input": "&iuml", 
             "description": "Named entity: iuml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ef"
@@ -27454,7 +27386,6 @@
             "input": "&laquo", 
             "description": "Named entity: laquo without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ab"
@@ -30238,7 +30169,6 @@
             "input": "&lt", 
             "description": "Named entity: lt without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "<"
@@ -30487,7 +30417,6 @@
             "input": "&macr", 
             "description": "Named entity: macr without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00af"
@@ -30856,7 +30785,6 @@
             "input": "&micro", 
             "description": "Named entity: micro without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b5"
@@ -30949,7 +30877,6 @@
             "input": "&middot", 
             "description": "Named entity: middot without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b7"
@@ -31824,7 +31751,6 @@
             "input": "&nbsp", 
             "description": "Named entity: nbsp without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a0"
@@ -33159,7 +33085,6 @@
             "input": "&not", 
             "description": "Named entity: not without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ac"
@@ -34318,7 +34243,6 @@
             "input": "&ntilde", 
             "description": "Named entity: ntilde without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f1"
@@ -35009,7 +34933,6 @@
             "input": "&oacute", 
             "description": "Named entity: oacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f3"
@@ -35079,7 +35002,6 @@
             "input": "&ocirc", 
             "description": "Named entity: ocirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f4"
@@ -35333,7 +35255,6 @@
             "input": "&ograve", 
             "description": "Named entity: ograve without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f2"
@@ -35886,7 +35807,6 @@
             "input": "&ordf", 
             "description": "Named entity: ordf without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00aa"
@@ -35910,7 +35830,6 @@
             "input": "&ordm", 
             "description": "Named entity: ordm without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ba"
@@ -36049,7 +35968,6 @@
             "input": "&oslash", 
             "description": "Named entity: oslash without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f8"
@@ -36096,7 +36014,6 @@
             "input": "&otilde", 
             "description": "Named entity: otilde without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f5"
@@ -36166,7 +36083,6 @@
             "input": "&ouml", 
             "description": "Named entity: ouml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f6"
@@ -36236,7 +36152,6 @@
             "input": "&para", 
             "description": "Named entity: para without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b6"
@@ -36891,7 +36806,6 @@
             "input": "&plusmn", 
             "description": "Named entity: plusmn without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b1"
@@ -37030,7 +36944,6 @@
             "input": "&pound", 
             "description": "Named entity: pound without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a3"
@@ -37928,7 +37841,6 @@
             "input": "&quot", 
             "description": "Named entity: quot without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\""
@@ -38251,7 +38163,6 @@
             "input": "&raquo", 
             "description": "Named entity: raquo without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00bb"
@@ -39126,7 +39037,6 @@
             "input": "&reg", 
             "description": "Named entity: reg without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ae"
@@ -40829,7 +40739,6 @@
             "input": "&sect", 
             "description": "Named entity: sect without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a7"
@@ -41129,7 +41038,6 @@
             "input": "&shy", 
             "description": "Named entity: shy without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ad"
@@ -43121,7 +43029,6 @@
             "input": "&sup1", 
             "description": "Named entity: sup1 without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b9"
@@ -43145,7 +43052,6 @@
             "input": "&sup2", 
             "description": "Named entity: sup2 without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b2"
@@ -43169,7 +43075,6 @@
             "input": "&sup3", 
             "description": "Named entity: sup3 without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00b3"
@@ -43778,7 +43683,6 @@
             "input": "&szlig", 
             "description": "Named entity: szlig without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00df"
@@ -44239,7 +44143,6 @@
             "input": "&thorn", 
             "description": "Named entity: thorn without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00fe"
@@ -44286,7 +44189,6 @@
             "input": "&times", 
             "description": "Named entity: times without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00d7"
@@ -45099,7 +45001,6 @@
             "input": "&uacute", 
             "description": "Named entity: uacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00fa"
@@ -45192,7 +45093,6 @@
             "input": "&ucirc", 
             "description": "Named entity: ucirc without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00fb"
@@ -45354,7 +45254,6 @@
             "input": "&ugrave", 
             "description": "Named entity: ugrave without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00f9"
@@ -45562,7 +45461,6 @@
             "input": "&uml", 
             "description": "Named entity: uml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a8"
@@ -46092,7 +45990,6 @@
             "input": "&uuml", 
             "description": "Named entity: uuml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00fc"
@@ -47910,7 +47807,6 @@
             "input": "&yacute", 
             "description": "Named entity: yacute without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00fd"
@@ -48003,7 +47899,6 @@
             "input": "&yen", 
             "description": "Named entity: yen without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00a5"
@@ -48142,7 +48037,6 @@
             "input": "&yuml", 
             "description": "Named entity: yuml without a semi-colon", 
             "output": [
-                "ParseError", 
                 [
                     "Character", 
                     "\u00ff"
