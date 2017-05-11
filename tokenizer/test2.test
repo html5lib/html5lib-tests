@@ -27,15 +27,24 @@
 
 {"description":"DOCTYPE with EOF after PUBLIC",
 "input":"<!DOCTYPE html PUBLIC",
-"output":["ParseError", ["DOCTYPE", "html", null, null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", null, null, false]],
+"errors": [
+    { "code": "eof-in-doctype", "col": 22, "line": 1 }
+]},
 
 {"description":"DOCTYPE with EOF after PUBLIC '",
 "input":"<!DOCTYPE html PUBLIC '",
-"output":["ParseError", ["DOCTYPE", "html", "", null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", "", null, false]],
+"errors": [
+    { "code": "eof-in-doctype", "col": 24, "line": 1 }
+]},
 
 {"description":"DOCTYPE with EOF after PUBLIC 'x",
 "input":"<!DOCTYPE html PUBLIC 'x",
-"output":["ParseError", ["DOCTYPE", "html", "x", null, false]]},
+"output":["ParseError", ["DOCTYPE", "html", "x", null, false]],
+"errors": [
+    { "code": "eof-in-doctype", "col": 25, "line": 1 }
+]},
 
 {"description":"DOCTYPE with systemId",
 "input":"<!DOCTYPE html SYSTEM \"-//W3C//DTD HTML Transitional 4.01//EN\">",
@@ -47,19 +56,31 @@
 
 {"description":"DOCTYPE with > in double-quoted publicId",
 "input":"<!DOCTYPE html PUBLIC \">x",
-"output":["ParseError", ["DOCTYPE", "html", "", null, false], ["Character", "x"]]},
+"output":["ParseError", ["DOCTYPE", "html", "", null, false], ["Character", "x"]],
+"errors": [
+    { "code": "abrupt-closing-of-doctype", "col": 24, "line": 1 }
+]},
 
 {"description":"DOCTYPE with > in single-quoted publicId",
 "input":"<!DOCTYPE html PUBLIC '>x",
-"output":["ParseError", ["DOCTYPE", "html", "", null, false], ["Character", "x"]]},
+"output":["ParseError", ["DOCTYPE", "html", "", null, false], ["Character", "x"]],
+"errors": [
+    { "code": "abrupt-closing-of-doctype", "col": 24, "line": 1 }
+]},
 
 {"description":"DOCTYPE with > in double-quoted systemId",
 "input":"<!DOCTYPE html PUBLIC \"foo\" \">x",
-"output":["ParseError", ["DOCTYPE", "html", "foo", "", false], ["Character", "x"]]},
+"output":["ParseError", ["DOCTYPE", "html", "foo", "", false], ["Character", "x"]],
+"errors": [
+    { "code": "abrupt-closing-of-doctype", "col": 30, "line": 1 }
+]},
 
 {"description":"DOCTYPE with > in single-quoted systemId",
 "input":"<!DOCTYPE html PUBLIC 'foo' '>x",
-"output":["ParseError", ["DOCTYPE", "html", "foo", "", false], ["Character", "x"]]},
+"output":["ParseError", ["DOCTYPE", "html", "foo", "", false], ["Character", "x"]],
+"errors": [
+    { "code": "abrupt-closing-of-doctype", "col": 30, "line": 1 }
+]},
 
 {"description":"Incomplete doctype",
 "input":"<!DOCTYPE html ",
