@@ -10,25 +10,25 @@
 "output":[["DOCTYPE", "html", null, null, true]]},
 
 {"description":"Correct Doctype mixed case",
-"input":"<!DOCTYPE HtMl>", 
+"input":"<!DOCTYPE HtMl>",
 "output":[["DOCTYPE", "html", null, null, true]]},
 
 {"description":"Correct Doctype case with EOF",
-"input":"<!DOCTYPE HtMl", 
+"input":"<!DOCTYPE HtMl",
 "output":[["DOCTYPE", "html", null, null, false]],
 "errors":[
     { "code": "eof-in-doctype", "line": 1, "col": 15 }
 ]},
 
 {"description":"Truncated doctype start",
-"input":"<!DOC>", 
+"input":"<!DOC>",
 "output":[["Comment", "DOC"]],
 "errors":[
-    { "code": "malformed-comment", "line": 1, "col": 3 }
+    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
 ]},
 
 {"description":"Doctype in error",
-"input":"<!DOCTYPE foo>", 
+"input":"<!DOCTYPE foo>",
 "output":[["DOCTYPE", "foo", null, null, true]]},
 
 {"description":"Single Start Tag",
@@ -110,7 +110,7 @@
 "input":"<!-",
 "output":[["Comment", "-"]],
 "errors":[
-    { "code": "malformed-comment", "line": 1, "col": 3 }
+    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
 ]},
 
 {"description":"Short comment",
