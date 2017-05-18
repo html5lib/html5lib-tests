@@ -4,7 +4,7 @@
 "input":"<z/0  <>",
 "output":[["StartTag", "z", {"0": "", "<": ""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 7 }
 ]},
 
