@@ -10191,7 +10191,7 @@
 "input":"<a/\u0000>",
 "output":[["StartTag", "a", {"\uFFFD":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 },
     { "code": "unexpected-null-character", "line": 1, "col": 4 }
 ]},
 
@@ -10199,14 +10199,14 @@
 "input":"<a/\u0009>",
 "output":[["StartTag", "a", {}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/\\u000A>",
 "input":"<a/\u000A>",
 "output":[["StartTag", "a", {}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/\\u000B>",
@@ -10214,35 +10214,35 @@
 "output":[["StartTag", "a", {"\u000B":""}]],
 "errors":[
     { "code": "control-character-in-input-stream", "line": 1, "col": 4 },
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/\\u000C>",
 "input":"<a/\u000C>",
 "output":[["StartTag", "a", {}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/ >",
 "input":"<a/ >",
 "output":[["StartTag", "a", {}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/!>",
 "input":"<a/!>",
 "output":[["StartTag", "a", {"!":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/\">",
 "input":"<a/\">",
 "output":[["StartTag", "a", {"\"":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
@@ -10250,14 +10250,14 @@
 "input":"<a/&>",
 "output":[["StartTag", "a", {"&":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/'>",
 "input":"<a/'>",
 "output":[["StartTag", "a", {"'":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
@@ -10265,42 +10265,42 @@
 "input":"<a/->",
 "output":[["StartTag", "a", {"-":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a//>",
 "input":"<a//>",
 "output":[["StartTag", "a", {}, true]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/0>",
 "input":"<a/0>",
 "output":[["StartTag", "a", {"0":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/1>",
 "input":"<a/1>",
 "output":[["StartTag", "a", {"1":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/9>",
 "input":"<a/9>",
 "output":[["StartTag", "a", {"9":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/<>",
 "input":"<a/<>",
 "output":[["StartTag", "a", {"<":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 },
     { "code": "unexpected-character-in-attribute-name", "line": 1, "col": 4 }
 ]},
 
@@ -10308,7 +10308,7 @@
 "input":"<a/=>",
 "output":[["StartTag", "a", {"=":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 },
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 },
     { "code": "unexpected-equals-sign-before-attribute-name", "line": 1, "col": 4 }
 ]},
 
@@ -10320,91 +10320,91 @@
 "input":"<a/?>",
 "output":[["StartTag", "a", {"?":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/@>",
 "input":"<a/@>",
 "output":[["StartTag", "a", {"@":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/A>",
 "input":"<a/A>",
 "output":[["StartTag", "a", {"a":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/B>",
 "input":"<a/B>",
 "output":[["StartTag", "a", {"b":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/Y>",
 "input":"<a/Y>",
 "output":[["StartTag", "a", {"y":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/Z>",
 "input":"<a/Z>",
 "output":[["StartTag", "a", {"z":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/`>",
 "input":"<a/`>",
 "output":[["StartTag", "a", {"`":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/a>",
 "input":"<a/a>",
 "output":[["StartTag", "a", {"a":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/b>",
 "input":"<a/b>",
 "output":[["StartTag", "a", {"b":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/y>",
 "input":"<a/y>",
 "output":[["StartTag", "a", {"y":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/z>",
 "input":"<a/z>",
 "output":[["StartTag", "a", {"z":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/{>",
 "input":"<a/{>",
 "output":[["StartTag", "a", {"{":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a/\\uDBC0\\uDC00>",
 "input":"<a/\uDBC0\uDC00>",
 "output":[["StartTag", "a", {"\uDBC0\uDC00":""}]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"<a0>",

@@ -164,7 +164,7 @@
 "input":"<h/a='b'>",
 "output":[["StartTag", "h", { "a":"b" }]],
 "errors":[
-    { "code": "abruption-of-tag-self-closure", "line": 1, "col": 4 }
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 4 }
 ]},
 
 {"description":"Double-quoted attribute value",
