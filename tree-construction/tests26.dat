@@ -368,7 +368,7 @@
 (1,28): expected-dashes-or-doctype
 (1,34): expected-closing-tag-but-got-eof
 #new-errors
-(1:29) malformed-comment
+(1:29) unsupported-markup-declaration
 #document
 | <!DOCTYPE html>
 | <html>
