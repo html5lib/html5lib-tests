@@ -331,8 +331,6 @@
 &x-test
 #errors
 (1,2): expected-doctype-but-got-chars
-#new-errors
-(1:1) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -426,7 +424,7 @@
 (1,3): expected-named-entity
 (1,3): expected-doctype-but-got-chars
 #new-errors
-(1:1) unknown-named-character-reference
+(1:5) unknown-named-character-reference
 #document
 | <html>
 |   <head>

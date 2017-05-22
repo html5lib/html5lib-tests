@@ -129,8 +129,8 @@
             "initialStates":["RCDATA state"],
             "input":"&NotEqualTild;",
             "output":[["Character", "&NotEqualTild;"]],
-            "errors": [
-                {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
+            "errors":[
+               { "code": "unknown-named-character-reference", "line": 1, "col": 14 }
             ]
         },
         {

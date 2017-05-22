@@ -6,9 +6,13 @@
 
 {"description": "Entity name followed by the equals sign in an attribute value.",
 "input":"<h a='&lang='>",
-"output": [["StartTag", "h", {"a": "&lang="}]],
-"errors": [
-    {"code" : "unknown-named-character-reference", "line": 1, "col": 7 }
+"output": [["StartTag", "h", {"a": "&lang="}]]},
+
+{"description": "Ambiguous ampersand.",
+"input":"&rrrraannddom;",
+"output": [["Character", "&rrrraannddom;"]],
+"errors":[
+    { "code": "unknown-character-reference", "line": 1, "col": 14 }
 ]},
 
 {"description": "CR as numeric entity",

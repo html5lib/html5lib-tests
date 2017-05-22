@@ -13,8 +13,6 @@
 <div bar="ZZ&"></div>
 #errors
 (1,15): expected-doctype-but-got-start-tag
-#new-errors
-(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -26,8 +24,6 @@
 <div bar='ZZ&'></div>
 #errors
 (1,15): expected-doctype-but-got-start-tag
-#new-errors
-(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -39,8 +35,6 @@
 <div bar=ZZ&></div>
 #errors
 (1,13): expected-doctype-but-got-start-tag
-#new-errors
-(1:12) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -178,8 +172,6 @@
 <div bar="ZZ&prod_id=23"></div>
 #errors
 (1,25): expected-doctype-but-got-start-tag
-#new-errors
-(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -225,8 +217,6 @@
 <div bar="ZZ&prod=23"></div>
 #errors
 (1,22): expected-doctype-but-got-start-tag
-#new-errors
-(1:13) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -252,8 +242,6 @@
 <div>ZZ&prod_id=23</div>
 #errors
 (1,5): expected-doctype-but-got-start-tag
-#new-errors
-(1:8) unknown-named-character-reference
 #document
 | <html>
 |   <head>
@@ -301,8 +289,6 @@
 <div>ZZ&prod=23</div>
 #errors
 (1,5): expected-doctype-but-got-start-tag
-#new-errors
-(1:8) unknown-named-character-reference
 #document
 | <html>
 |   <head>

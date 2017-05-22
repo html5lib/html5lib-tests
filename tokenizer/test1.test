@@ -153,10 +153,7 @@
 
 {"description":"Unfinished entity",
 "input":"&f",
-"output":[["Character", "&f"]],
-"errors": [
-    {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
-]},
+"output":[["Character", "&f"]]},
 
 {"description":"Ampersand, number sign",
 "input":"&#",
@@ -196,17 +193,11 @@
 
 {"description":"Partial entity match at end of file",
 "input":"I'm &no",
-"output":[["Character","I'm &no"]],
-"errors": [
-    {"code" : "unknown-named-character-reference", "line": 1, "col": 5}
-]},
+"output":[["Character","I'm &no"]]},
 
 {"description":"Non-ASCII character reference name",
 "input":"&\u00AC;",
-"output":[["Character", "&\u00AC;"]],
-"errors": [
-    {"code" : "unknown-named-character-reference", "line": 1, "col": 1}
-]},
+"output":[["Character", "&\u00AC;"]]},
 
 {"description":"ASCII decimal entity",
 "input":"&#0036;",
@@ -245,10 +236,7 @@
 
 {"description":"Unquoted attribute at end of tag with final character of &, with tag followed by characters",
 "input":"<a a=a&>foo",
-"output":[["StartTag", "a", {"a":"a&"}], ["Character", "foo"]],
-"errors": [
-    {"code" : "unknown-named-character-reference", "line": 1, "col": 7}
-]},
+"output":[["StartTag", "a", {"a":"a&"}], ["Character", "foo"]]},
 
 {"description":"plaintext element",
  "input":"<plaintext>foobar",
