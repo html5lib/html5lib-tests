@@ -12,7 +12,7 @@
 "input":"&rrrraannddom;",
 "output": [["Character", "&rrrraannddom;"]],
 "errors":[
-    { "code": "unknown-character-reference", "line": 1, "col": 14 }
+    { "code": "unknown-named-character-reference", "line": 1, "col": 14 }
 ]},
 
 {"description": "CR as numeric entity",
