@@ -580,7 +580,7 @@ Line1<br>Line2<br>Line3<br>Line4
 (1,2): expected-dashes-or-doctype
 (1,2): expected-doctype-but-got-eof
 #new-errors
-(1:3) unsupported-markup-declaration
+(1:3) incorrectly-opened-comment
 #document
 | <!--  -->
 | <html>
@@ -593,7 +593,7 @@ Line1<br>Line2<br>Line3<br>Line4
 (1,2): expected-dashes-or-doctype
 (1,3): expected-doctype-but-got-eof
 #new-errors
-(1:3) unsupported-markup-declaration
+(1:3) incorrectly-opened-comment
 #document
 | <!-- # -->
 | <html>
@@ -619,7 +619,7 @@ Line1<br>Line2<br>Line3<br>Line4
 (1,2): expected-dashes-or-doctype
 (1,10): expected-doctype-but-got-eof
 #new-errors
-(1:3) unsupported-markup-declaration
+(1:3) incorrectly-opened-comment
 #document
 | <!-- COMMENT -->
 | <html>
@@ -658,7 +658,7 @@ Line1<br>Line2<br>Line3<br>Line4
 (1,2): expected-dashes-or-doctype
 (1,12): expected-doctype-but-got-eof
 #new-errors
-(1:3) unsupported-markup-declaration
+(1:3) incorrectly-opened-comment
 #document
 | <!-- COM--MENT -->
 | <html>
