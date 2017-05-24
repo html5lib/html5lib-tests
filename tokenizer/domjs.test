@@ -64,7 +64,7 @@
            "input":"<!--test",
            "output":[["Character", "<!--test"]],
            "errors":[
-               { "code": "eof-in-script-html-comment", "line": 1, "col": 9 }
+               { "code": "eof-in-script-html-comment-like-text", "line": 1, "col": 9 }
            ]
         },
         {
@@ -73,7 +73,7 @@
            "input":"<!--test-",
            "output":[["Character", "<!--test-"]],
            "errors":[
-               { "code": "eof-in-script-html-comment", "line": 1, "col": 10 }
+               { "code": "eof-in-script-html-comment-like-text", "line": 1, "col": 10 }
            ]
         },
         {
@@ -82,7 +82,7 @@
            "input":"<!--test--",
            "output":[["Character", "<!--test--"]],
            "errors":[
-               { "code": "eof-in-script-html-comment", "line": 1, "col": 11 }
+               { "code": "eof-in-script-html-comment-like-text", "line": 1, "col": 11 }
            ]
         },
         {
@@ -91,7 +91,7 @@
            "input":"<!--<script>-",
            "output":[["Character", "<!--<script>-"]],
            "errors":[
-               { "code": "eof-in-script-html-comment", "line": 1, "col": 14 }
+               { "code": "eof-in-script-html-comment-like-text", "line": 1, "col": 14 }
            ]
         },
         {
@@ -100,7 +100,7 @@
            "input":"<!--<script>--",
            "output":[["Character", "<!--<script>--"]],
            "errors":[
-               { "code": "eof-in-script-html-comment", "line": 1, "col": 15 }
+               { "code": "eof-in-script-html-comment-like-text", "line": 1, "col": 15 }
            ]
         },
         {
@@ -109,7 +109,7 @@
            "input":"<!--<script>",
            "output":[["Character", "<!--<script>"]],
            "errors":[
-               { "code": "eof-in-script-html-comment", "line": 1, "col": 13 }
+               { "code": "eof-in-script-html-comment-like-text", "line": 1, "col": 13 }
            ]
         },
         {
