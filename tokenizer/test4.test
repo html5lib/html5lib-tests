@@ -328,7 +328,7 @@
 "input":"</br/>",
 "output":[["EndTag", "br"]],
 "errors":[
-    { "code": "self-closing-end-tag", "line": 1, "col": 6 }
+    { "code": "end-tag-with-trailing-solidus", "line": 1, "col": 6 }
 ]},
 
 {"description":"Doctype public case-sensitivity (1)",

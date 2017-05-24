@@ -41,7 +41,7 @@ FOO<script></script/>BAR
 (1,3): expected-doctype-but-got-chars
 (1,21): self-closing-flag-on-end-tag
 #new-errors
-(1:21) self-closing-end-tag
+(1:21) end-tag-with-trailing-solidus
 #document
 | <html>
 |   <head>
