@@ -183,14 +183,14 @@
 "input":"<?namespace>",
 "output":[["Comment", "?namespace"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"A bogus comment stops at >, even if preceeded by two dashes",
 "input":"<?foo-->",
 "output":[["Comment", "?foo--"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"Unescaped <",
