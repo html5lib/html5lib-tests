@@ -3037,7 +3037,7 @@
 "input":"<!DOCTYPE a PUBLIC>",
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 19, "line": 1 }
+    { "code": "missing-doctype-public-identifier", "col": 19, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC?",
@@ -6221,7 +6221,7 @@
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 18 }
+    { "code": "missing-doctype-public-identifier", "line": 1, "col": 18 }
 ]},
 
 {"description":"<!DOCTYPEa PUBLIC?",
