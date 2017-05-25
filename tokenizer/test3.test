@@ -2298,7 +2298,7 @@
 "output":[["DOCTYPE", "a", "", null, false]],
 "errors": [
     { "code": "missing-whitespace-after-doctype-public-keyword", "col": 19, "line": 1 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC\"?",
@@ -2870,7 +2870,7 @@
 "output":[["DOCTYPE", "a", "", null, false]],
 "errors": [
     { "code": "missing-whitespace-after-doctype-public-keyword", "col": 19, "line": 1 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC'?",
@@ -3370,7 +3370,7 @@
 "output":[["DOCTYPE", "a", null, "", false]],
 "errors":[
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 19 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a SYSTEM\"?",
@@ -3924,7 +3924,7 @@
 "output":[["DOCTYPE", "a", null, "", false]],
 "errors":[
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 19 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a SYSTEM'?",
@@ -5389,7 +5389,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-public-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-public-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa PUBLIC\"?",
@@ -6032,7 +6032,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-public-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-public-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa PUBLIC'?",
@@ -6599,7 +6599,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-system-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa SYSTEM\"?",
@@ -7222,7 +7222,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-system-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa SYSTEM'?",

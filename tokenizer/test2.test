@@ -58,28 +58,28 @@
 "input":"<!DOCTYPE html PUBLIC \">x",
 "output":[["DOCTYPE", "html", "", null, false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 24, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 24, "line": 1 }
 ]},
 
 {"description":"DOCTYPE with > in single-quoted publicId",
 "input":"<!DOCTYPE html PUBLIC '>x",
 "output":[["DOCTYPE", "html", "", null, false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 24, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 24, "line": 1 }
 ]},
 
 {"description":"DOCTYPE with > in double-quoted systemId",
 "input":"<!DOCTYPE html PUBLIC \"foo\" \">x",
 "output":[["DOCTYPE", "html", "foo", "", false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 30, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 30, "line": 1 }
 ]},
 
 {"description":"DOCTYPE with > in single-quoted systemId",
 "input":"<!DOCTYPE html PUBLIC 'foo' '>x",
 "output":[["DOCTYPE", "html", "foo", "", false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 30, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 30, "line": 1 }
 ]},
 
 {"description":"Incomplete doctype",
