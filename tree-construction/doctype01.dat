@@ -116,7 +116,7 @@
 (1,24): unexpected-char-in-doctype
 (1,24): unknown-doctype
 #new-errors
-(1:24) abrupt-closing-of-doctype
+(1:24) missing-doctype-system-identifier
 #document
 | <!DOCTYPE potato>
 | <html>
@@ -130,7 +130,7 @@
 (1,28): unexpected-char-in-doctype
 (1,28): unknown-doctype
 #new-errors
-(1:28) abrupt-closing-of-doctype
+(1:28) missing-doctype-system-identifier
 #document
 | <!DOCTYPE potato>
 | <html>
