@@ -641,7 +641,7 @@ console.log("FOO<span>BAR</span>BAZ");
 (1,23): non-void-element-with-trailing-solidus
 (1,29): end-tag-too-early
 #new-errors
-(1:9-1:24) self-closing-non-void-html-element
+(1:9-1:24) non-void-element-start-tag-with-trailing-solidus
 #document
 | <html>
 |   <head>

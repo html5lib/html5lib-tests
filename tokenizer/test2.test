@@ -58,28 +58,28 @@
 "input":"<!DOCTYPE html PUBLIC \">x",
 "output":[["DOCTYPE", "html", "", null, false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 24, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 24, "line": 1 }
 ]},
 
 {"description":"DOCTYPE with > in single-quoted publicId",
 "input":"<!DOCTYPE html PUBLIC '>x",
 "output":[["DOCTYPE", "html", "", null, false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 24, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 24, "line": 1 }
 ]},
 
 {"description":"DOCTYPE with > in double-quoted systemId",
 "input":"<!DOCTYPE html PUBLIC \"foo\" \">x",
 "output":[["DOCTYPE", "html", "foo", "", false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 30, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 30, "line": 1 }
 ]},
 
 {"description":"DOCTYPE with > in single-quoted systemId",
 "input":"<!DOCTYPE html PUBLIC 'foo' '>x",
 "output":[["DOCTYPE", "html", "foo", "", false], ["Character", "x"]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 30, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 30, "line": 1 }
 ]},
 
 {"description":"Incomplete doctype",
@@ -183,14 +183,14 @@
 "input":"<?namespace>",
 "output":[["Comment", "?namespace"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"A bogus comment stops at >, even if preceeded by two dashes",
 "input":"<?foo-->",
 "output":[["Comment", "?foo--"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"Unescaped <",

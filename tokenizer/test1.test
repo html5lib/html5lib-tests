@@ -24,7 +24,7 @@
 "input":"<!DOC>",
 "output":[["Comment", "DOC"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"Doctype in error",
@@ -110,7 +110,7 @@
 "input":"<!-",
 "output":[["Comment", "-"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"Short comment",

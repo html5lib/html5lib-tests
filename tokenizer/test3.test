@@ -134,28 +134,28 @@
 "input":"<!",
 "output":[["Comment", ""]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\\u0000",
 "input":"<!\u0000",
 "output":[["Comment", "\uFFFD"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\\u0009",
 "input":"<!\u0009",
 "output":[["Comment", "\u0009"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\\u000A",
 "input":"<!\u000A",
 "output":[["Comment", "\u000A"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\\u000B",
@@ -163,56 +163,56 @@
 "output":[["Comment", "\u000B"]],
 "errors":[
     { "code": "control-character-in-input-stream", "line": 1, "col": 3 },
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\\u000C",
 "input":"<!\u000C",
 "output":[["Comment", "\u000C"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<! ",
 "input":"<! ",
 "output":[["Comment", " "]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!!",
 "input":"<!!",
 "output":[["Comment", "!"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\"",
 "input":"<!\"",
 "output":[["Comment", "\""]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!&",
 "input":"<!&",
 "output":[["Comment", "&"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!'",
 "input":"<!'",
 "output":[["Comment", "'"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!-",
 "input":"<!-",
 "output":[["Comment", "-"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!--",
@@ -1451,77 +1451,77 @@
 "input":"<!/",
 "output":[["Comment", "/"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!0",
 "input":"<!0",
 "output":[["Comment", "0"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!1",
 "input":"<!1",
 "output":[["Comment", "1"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!9",
 "input":"<!9",
 "output":[["Comment", "9"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!<",
 "input":"<!<",
 "output":[["Comment", "<"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!=",
 "input":"<!=",
 "output":[["Comment", "="]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!>",
 "input":"<!>",
 "output":[["Comment", ""]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!?",
 "input":"<!?",
 "output":[["Comment", "?"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!@",
 "input":"<!@",
 "output":[["Comment", "@"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!A",
 "input":"<!A",
 "output":[["Comment", "A"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!B",
 "input":"<!B",
 "output":[["Comment", "B"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!DOCTYPE",
@@ -2298,7 +2298,7 @@
 "output":[["DOCTYPE", "a", "", null, false]],
 "errors": [
     { "code": "missing-whitespace-after-doctype-public-keyword", "col": 19, "line": 1 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC\"?",
@@ -2870,7 +2870,7 @@
 "output":[["DOCTYPE", "a", "", null, false]],
 "errors": [
     { "code": "missing-whitespace-after-doctype-public-keyword", "col": 19, "line": 1 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-public-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC'?",
@@ -3037,7 +3037,7 @@
 "input":"<!DOCTYPE a PUBLIC>",
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors": [
-    { "code": "abrupt-closing-of-doctype", "col": 19, "line": 1 }
+    { "code": "missing-doctype-public-identifier", "col": 19, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC?",
@@ -3370,7 +3370,7 @@
 "output":[["DOCTYPE", "a", null, "", false]],
 "errors":[
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 19 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a SYSTEM\"?",
@@ -3924,7 +3924,7 @@
 "output":[["DOCTYPE", "a", null, "", false]],
 "errors":[
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 19 },
-    { "code": "abrupt-closing-of-doctype", "col": 20, "line": 1 }
+    { "code": "abrupt-doctype-system-identifier", "col": 20, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a SYSTEM'?",
@@ -4091,7 +4091,7 @@
 "input":"<!DOCTYPE a SYSTEM>",
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors":[
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "missing-doctype-system-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPE a SYSTEM?",
@@ -5389,7 +5389,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-public-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-public-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa PUBLIC\"?",
@@ -6032,7 +6032,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-public-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-public-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa PUBLIC'?",
@@ -6221,7 +6221,7 @@
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 18 }
+    { "code": "missing-doctype-public-identifier", "line": 1, "col": 18 }
 ]},
 
 {"description":"<!DOCTYPEa PUBLIC?",
@@ -6599,7 +6599,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-system-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa SYSTEM\"?",
@@ -7222,7 +7222,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "missing-whitespace-after-doctype-system-keyword", "line": 1, "col": 18 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 19 }
+    { "code": "abrupt-doctype-system-identifier", "line": 1, "col": 19 }
 ]},
 
 {"description":"<!DOCTYPEa SYSTEM'?",
@@ -7411,7 +7411,7 @@
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
-    { "code": "abrupt-closing-of-doctype", "line": 1, "col": 18 }
+    { "code": "missing-doctype-system-identifier", "line": 1, "col": 18 }
 ]},
 
 {"description":"<!DOCTYPEa SYSTEM?",
@@ -8090,63 +8090,63 @@
 "input":"<!Y",
 "output":[["Comment", "Y"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!Z",
 "input":"<!Z",
 "output":[["Comment", "Z"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!`",
 "input":"<!`",
 "output":[["Comment", "`"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!a",
 "input":"<!a",
 "output":[["Comment", "a"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!b",
 "input":"<!b",
 "output":[["Comment", "b"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!y",
 "input":"<!y",
 "output":[["Comment", "y"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!z",
 "input":"<!z",
 "output":[["Comment", "z"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!{",
 "input":"<!{",
 "output":[["Comment", "{"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<!\\uDBC0\\uDC00",
 "input":"<!\uDBC0\uDC00",
 "output":[["Comment", "\uDBC0\uDC00"]],
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"<\"",
@@ -8439,35 +8439,35 @@
 "input":"<?",
 "output":[["Comment", "?"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?\\u0000",
 "input":"<?\u0000",
 "output":[["Comment", "?\uFFFD"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?\\u0009",
 "input":"<?\u0009",
 "output":[["Comment", "?\u0009"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?\\u000A",
 "input":"<?\u000A",
 "output":[["Comment", "?\u000A"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?\\u000B",
 "input":"<?\u000B",
 "output":[["Comment", "?\u000B"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 },
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 },
     { "code": "control-character-in-input-stream", "line": 1, "col": 3 }
 ]},
 
@@ -8475,189 +8475,189 @@
 "input":"<?\u000C",
 "output":[["Comment", "?\u000C"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<? ",
 "input":"<? ",
 "output":[["Comment", "? "]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?!",
 "input":"<?!",
 "output":[["Comment", "?!"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?\"",
 "input":"<?\"",
 "output":[["Comment", "?\""]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?&",
 "input":"<?&",
 "output":[["Comment", "?&"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?'",
 "input":"<?'",
 "output":[["Comment", "?'"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?-",
 "input":"<?-",
 "output":[["Comment", "?-"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?/",
 "input":"<?/",
 "output":[["Comment", "?/"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?0",
 "input":"<?0",
 "output":[["Comment", "?0"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?1",
 "input":"<?1",
 "output":[["Comment", "?1"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?9",
 "input":"<?9",
 "output":[["Comment", "?9"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?<",
 "input":"<?<",
 "output":[["Comment", "?<"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?=",
 "input":"<?=",
 "output":[["Comment", "?="]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?>",
 "input":"<?>",
 "output":[["Comment", "?"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<??",
 "input":"<??",
 "output":[["Comment", "??"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?@",
 "input":"<?@",
 "output":[["Comment", "?@"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?A",
 "input":"<?A",
 "output":[["Comment", "?A"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?B",
 "input":"<?B",
 "output":[["Comment", "?B"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?Y",
 "input":"<?Y",
 "output":[["Comment", "?Y"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?Z",
 "input":"<?Z",
 "output":[["Comment", "?Z"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?`",
 "input":"<?`",
 "output":[["Comment", "?`"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?a",
 "input":"<?a",
 "output":[["Comment", "?a"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?b",
 "input":"<?b",
 "output":[["Comment", "?b"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?y",
 "input":"<?y",
 "output":[["Comment", "?y"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?z",
 "input":"<?z",
 "output":[["Comment", "?z"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?{",
 "input":"<?{",
 "output":[["Comment", "?{"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<?\\uDBC0\\uDC00",
 "input":"<?\uDBC0\uDC00",
 "output":[["Comment", "?\uDBC0\uDC00"]],
 "errors":[
-    { "code": "start-of-processing-instruction-or-xml-declaration", "line": 1, "col": 2 }
+    { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 }
 ]},
 
 {"description":"<@",

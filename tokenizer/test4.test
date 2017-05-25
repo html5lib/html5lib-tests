@@ -328,7 +328,7 @@
 "input":"</br/>",
 "output":[["EndTag", "br"]],
 "errors":[
-    { "code": "self-closing-end-tag", "line": 1, "col": 6 }
+    { "code": "end-tag-with-trailing-solidus", "line": 1, "col": 6 }
 ]},
 
 {"description":"Doctype public case-sensitivity (1)",
@@ -352,7 +352,7 @@
 "output":[["Comment", "doc"], ["Character", "\u0000"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 },
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "unexpected-null-character", "line": 1, "col": 7 }
 ]},
 
@@ -361,7 +361,7 @@
 "output":[["Comment", "doc\uFFFD"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 }
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
 {"description":"U+0080 in lookahead region",
@@ -369,7 +369,7 @@
 "output":[["Comment", "doc\u0080"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 },
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "control-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
@@ -378,7 +378,7 @@
 "output":[["Comment", "doc\uFDD1"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 },
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "undefined-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
@@ -387,7 +387,7 @@
 "output":[["Comment", "doc\uD83F\uDFFF"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "unsupported-markup-declaration", "line": 1, "col": 3 },
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "undefined-character-in-input-stream", "line": 1, "col": 6 }
 ]},
 
