@@ -117,7 +117,7 @@
 "input":"<!-->",
 "output":[["Comment", ""]],
 "errors":[
-    { "code": "abrupt-closing-of-comment", "line": 1, "col": 5 }
+    { "code": "abrupt-closing-of-empty-comment", "line": 1, "col": 5 }
 ]},
 
 
@@ -125,7 +125,7 @@
 "input":"<!--->",
 "output":[["Comment", ""]],
 "errors":[
-    { "code": "abrupt-closing-of-comment", "line": 1, "col": 6 }
+    { "code": "abrupt-closing-of-empty-comment", "line": 1, "col": 6 }
 ]},
 
 {"description":"Short comment three",
