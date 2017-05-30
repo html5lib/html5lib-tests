@@ -85,7 +85,10 @@
 
 {"description":"Repeated attr",
  "input":"<h a='b' a='d'>",
- "output":[["StartTag", "h", {"a":"b"}]]},
+ "output":[["StartTag", "h", {"a":"b"}]],
+ "errors":[
+    { "code": "duplicate-attribute", "line": 1, "col": 11 }
+]},
 
 {"description":"Simple comment",
  "input":"<!--comment-->",

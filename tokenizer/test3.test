@@ -9083,7 +9083,10 @@
 
 {"description":"<a a A>",
 "input":"<a a A>",
-"output":[["StartTag", "a", {"a":""}]]},
+"output":[["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "duplicate-attribute", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a B>",
 "input":"<a a B>",
@@ -9107,7 +9110,10 @@
 
 {"description":"<a a a>",
 "input":"<a a a>",
-"output":[["StartTag", "a", {"a":""}]]},
+"output":[["StartTag", "a", {"a":""}]],
+"errors":[
+    { "code": "duplicate-attribute", "line": 1, "col": 7 }
+]},
 
 {"description":"<a a b>",
 "input":"<a a b>",
@@ -9631,7 +9637,8 @@
 "input":"<a a=''A>",
 "output":[["StartTag", "a", {"a":""}]],
 "errors":[
-    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 },
+    { "code": "duplicate-attribute", "line": 1, "col": 9 }
 ]},
 
 {"description":"<a a=''B>",
@@ -9666,7 +9673,8 @@
 "input":"<a a=''a>",
 "output":[["StartTag", "a", {"a":""}]],
 "errors":[
-    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 }
+    { "code": "missing-whitespace-between-attributes", "line": 1, "col": 8 },
+    { "code": "duplicate-attribute", "line": 1, "col": 9 }
 ]},
 
 {"description":"<a a=''b>",
