@@ -65,7 +65,6 @@ tokens are:
     ["EndTag", name]
     ["Comment", data]
     ["Character", data]
-    "ParseError"
 
 `public_id` and `system_id` are either strings or `null`. `correctness`
 is either `true` or `false`; `true` corresponds to the force-quirks flag

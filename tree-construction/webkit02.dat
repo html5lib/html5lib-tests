@@ -59,7 +59,9 @@
 <html><body><img src="" border="0" alt="><div>A</div></body></html>
 #errors
 (1,6): expected-doctype-but-got-start-tag
-(1,67): eof-in-attribute-value-double-quote
+(1,67): eof-in-tag-double-quote
+#new-errors
+(1:68) eof-in-tag
 #document
 | <html>
 |   <head>

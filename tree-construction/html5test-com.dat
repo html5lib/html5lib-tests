@@ -12,9 +12,11 @@
 #data
 <div foo<bar=''>
 #errors
-(1,9): invalid-character-in-attribute-name
+(1,9): unexpected-character-in-attribute-name
 (1,16): expected-doctype-but-got-start-tag
 (1,16): expected-closing-tag-but-got-eof
+#new-errors
+(1:9) unexpected-character-in-attribute-name
 #document
 | <html>
 |   <head>
@@ -26,9 +28,12 @@
 <div foo=`bar`>
 #errors
 (1,10): equals-in-unquoted-attribute-value
-(1,14): unexpected-character-in-unquoted-attribute-value
+(1,14): missing-whitespace-between-attributes
 (1,15): expected-doctype-but-got-start-tag
 (1,15): expected-closing-tag-but-got-eof
+#new-errors
+(1:10) unexpected-character-in-unquoted-attribute-value
+(1:14) unexpected-character-in-unquoted-attribute-value
 #document
 | <html>
 |   <head>
@@ -39,9 +44,11 @@
 #data
 <div \"foo=''>
 #errors
-(1,7): invalid-character-in-attribute-name
+(1,7): unexpected-character-in-attribute-name
 (1,14): expected-doctype-but-got-start-tag
 (1,14): expected-closing-tag-but-got-eof
+#new-errors
+(1:7) unexpected-character-in-attribute-name
 #document
 | <html>
 |   <head>
@@ -124,6 +131,8 @@
 #errors
 (1,1): expected-tag-name-but-got-question-mark
 (1,47): expected-doctype-but-got-eof
+#new-errors
+(1:2) unexpected-question-mark-instead-of-tag-name
 #document
 | <!-- ?import namespace="foo" implementation="#bar" -->
 | <html>
@@ -146,6 +155,8 @@
 #errors
 (1,2): expected-dashes-or-doctype
 (1,13): expected-doctype-but-got-eof
+#new-errors
+(1:9) cdata-in-html-content
 #document
 | <!-- [CDATA[x]] -->
 | <html>
