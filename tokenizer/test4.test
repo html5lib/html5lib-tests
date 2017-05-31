@@ -234,42 +234,42 @@
 "input":"&#x110000;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "surrogate-character-reference", "line": 1, "col": 11 }
+    { "code": "character-reference-outside-unicode-range", "line": 1, "col": 11 }
 ]},
 
 {"description":"32-bit hex numeric entity",
 "input":"&#x80000041;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "surrogate-character-reference", "line": 1, "col": 13 }
+    { "code": "character-reference-outside-unicode-range", "line": 1, "col": 13 }
 ]},
 
 {"description":"33-bit hex numeric entity",
 "input":"&#x100000041;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "surrogate-character-reference", "line": 1, "col": 14 }
+    { "code": "character-reference-outside-unicode-range", "line": 1, "col": 14 }
 ]},
 
 {"description":"33-bit decimal numeric entity",
 "input":"&#4294967361;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "surrogate-character-reference", "line": 1, "col": 14 }
+    { "code": "character-reference-outside-unicode-range", "line": 1, "col": 14 }
 ]},
 
 {"description":"65-bit hex numeric entity",
 "input":"&#x10000000000000041;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "surrogate-character-reference", "line": 1, "col": 22 }
+    { "code": "character-reference-outside-unicode-range", "line": 1, "col": 22 }
 ]},
 
 {"description":"65-bit decimal numeric entity",
 "input":"&#18446744073709551681;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "surrogate-character-reference", "line": 1, "col": 24 }
+    { "code": "character-reference-outside-unicode-range", "line": 1, "col": 24 }
 ]},
 
 {"description":"Surrogate code point edge cases",
