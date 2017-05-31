@@ -107,22 +107,22 @@
 "input":"&#2225222;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 11 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 11 }
 ]},
 
 {"description":"Hexadecimal entity representing a codepoint after 1114111 (U+10FFFF)",
 "input":"&#x1010FFFF;",
 "output":[["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 13 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 13 }
 ]},
 
 {"description":"Hexadecimal entity pair representing a surrogate pair",
 "input":"&#xD869;&#xDED6;",
 "output":[["Character", "\uFFFD"], ["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 9 },
-    { "code": "non-unicode-character-reference", "line": 1, "col": 17 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 9 },
+    { "code": "surrogate-character-reference", "line": 1, "col": 17 }
 ]},
 
 {"description":"Hexadecimal entity with mixed uppercase and lowercase",

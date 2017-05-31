@@ -5,7 +5,7 @@
 "output": [["Character", "\uFFFD"]],
 "errors":[
     { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 14 },
-    { "code": "non-unicode-character-reference", "line": 1, "col": 14 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 14 }
 ]},
 
 {"description": "Invalid unterminated numeric entity character overflow before EOF",
@@ -13,7 +13,7 @@
 "output": [["Character", "\uFFFD"]],
 "errors":[
     { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 13 },
-    { "code": "non-unicode-character-reference", "line": 1, "col": 13 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 13 }
 ]},
 
 {"description": "Invalid unterminated numeric entity character overflow before EOF",
@@ -21,7 +21,7 @@
 "output": [["Character", "\uFFFD"]],
 "errors":[
     { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 15 },
-    { "code": "non-unicode-character-reference", "line": 1, "col": 15 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 15 }
 ]},
 
 {"description": "Invalid unterminated numeric entity character overflow",
@@ -29,7 +29,7 @@
 "output": [["Character", "\uFFFDx"]],
 "errors":[
     { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 14 },
-    { "code": "non-unicode-character-reference", "line": 1, "col": 14 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 14 }
 ]},
 
 {"description": "Invalid unterminated numeric entity character overflow",
@@ -37,7 +37,7 @@
 "output": [["Character", "\uFFFDx"]],
 "errors":[
     { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 13 },
-    { "code": "non-unicode-character-reference", "line": 1, "col": 13 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 13 }
 ]},
 
 {"description": "Invalid unterminated numeric entity character overflow",
@@ -45,28 +45,28 @@
 "output": [["Character", "\uFFFDx"]],
 "errors":[
     { "code": "missing-semicolon-after-character-reference", "line": 1, "col": 15 },
-    { "code": "non-unicode-character-reference", "line": 1, "col": 15 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 15 }
 ]},
 
 {"description": "Invalid numeric entity character overflow",
 "input": "&#11111111111;",
 "output": [["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 15 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 15 }
 ]},
 
 {"description": "Invalid numeric entity character overflow",
 "input": "&#1111111111;",
 "output": [["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 14 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 14 }
 ]},
 
 {"description": "Invalid numeric entity character overflow",
 "input": "&#111111111111;",
 "output": [["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 16 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 16 }
 ]},
 
 {"description": "Invalid numeric entity character U+0000",
@@ -280,14 +280,14 @@
 "input": "&#xd800;",
 "output": [["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 9 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 9 }
 ]},
 
 {"description": "Invalid numeric entity character U+DFFF",
 "input": "&#xdfff;",
 "output": [["Character", "\uFFFD"]],
 "errors":[
-    { "code": "non-unicode-character-reference", "line": 1, "col": 9 }
+    { "code": "surrogate-character-reference", "line": 1, "col": 9 }
 ]},
 
 {"description": "Invalid numeric entity character U+FDD0",
