@@ -5,7 +5,7 @@
 "output":[["Character", "\\uDFFF"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 1 }
+    { "code": "surrogate-in-input-stream", "line": 1, "col": 1 }
 ]},
 
 {"description": "Invalid Unicode character U+D800",
@@ -14,7 +14,7 @@
 "output":[["Character", "\\uD800"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 1 }
+    { "code": "surrogate-in-input-stream", "line": 1, "col": 1 }
 ]},
 
 {"description": "Invalid Unicode character U+DFFF with valid preceding character",
@@ -23,7 +23,7 @@
 "output":[["Character", "a"], ["Character", "\\uDFFF"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 2 }
+    { "code": "surrogate-in-input-stream", "line": 1, "col": 2 }
 ]},
 
 {"description": "Invalid Unicode character U+D800 with valid following character",
@@ -32,7 +32,7 @@
 "output":[["Character", "\\uD800a"]],
 "ignoreErrorOrder":true,
 "errors":[
-    { "code": "non-unicode-character-in-input-stream", "line": 1, "col": 1 }
+    { "code": "surrogate-in-input-stream", "line": 1, "col": 1 }
 ]},
 
 {"description":"CR followed by U+0000",
