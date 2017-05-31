@@ -226,7 +226,7 @@
 "input":"&#X10FFFF;",
 "output":[["Character", "\uDBFF\uDFFF"]],
 "errors":[
-    { "code": "undefined-character-reference", "line": 1, "col": 11 }
+    { "code": "noncharacter-character-reference", "line": 1, "col": 11 }
 ]},
 
 

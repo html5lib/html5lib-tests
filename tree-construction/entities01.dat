@@ -770,7 +770,7 @@ FOO&#x10FFFE;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,13): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:14) undefined-character-reference
+(1:14) noncharacter-character-reference
 #document
 | <html>
 |   <head>
@@ -793,7 +793,7 @@ FOO&#x10FFFF;ZOO
 (1,3): expected-doctype-but-got-chars
 (1,13): illegal-codepoint-for-numeric-entity
 #new-errors
-(1:14) undefined-character-reference
+(1:14) noncharacter-character-reference
 #document
 | <html>
 |   <head>
