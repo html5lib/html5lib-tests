@@ -384,7 +384,7 @@
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
-    { "code": "undefined-character-in-input-stream", "line": 1, "col": 6 }
+    { "code": "noncharacter-in-input-stream", "line": 1, "col": 6 }
 ]},
 
 {"description":"U+1FFFF in lookahead region",
@@ -393,7 +393,7 @@
 "ignoreErrorOrder":true,
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
-    { "code": "undefined-character-in-input-stream", "line": 1, "col": 6 }
+    { "code": "noncharacter-in-input-stream", "line": 1, "col": 6 }
 ]},
 
 {"description":"CR followed by non-LF",
