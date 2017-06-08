@@ -355,7 +355,6 @@
 {"description":"U+0000 in lookahead region after non-matching character",
 "input":"<!doc>\u0000",
 "output":[["Comment", "doc"], ["Character", "\u0000"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "unexpected-null-character", "line": 1, "col": 7 }
@@ -364,7 +363,6 @@
 {"description":"U+0000 in lookahead region",
 "input":"<!doc\u0000",
 "output":[["Comment", "doc\uFFFD"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
@@ -372,7 +370,6 @@
 {"description":"U+0080 in lookahead region",
 "input":"<!doc\u0080",
 "output":[["Comment", "doc\u0080"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "control-character-in-input-stream", "line": 1, "col": 6 }
@@ -381,7 +378,6 @@
 {"description":"U+FDD1 in lookahead region",
 "input":"<!doc\uFDD1",
 "output":[["Comment", "doc\uFDD1"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "noncharacter-in-input-stream", "line": 1, "col": 6 }
@@ -390,7 +386,6 @@
 {"description":"U+1FFFF in lookahead region",
 "input":"<!doc\uD83F\uDFFF",
 "output":[["Comment", "doc\uD83F\uDFFF"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "noncharacter-in-input-stream", "line": 1, "col": 6 }
