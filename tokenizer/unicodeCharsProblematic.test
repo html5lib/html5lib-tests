@@ -3,7 +3,6 @@
 "doubleEscaped":true,
 "input": "\\uDFFF",
 "output":[["Character", "\\uDFFF"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "surrogate-in-input-stream", "line": 1, "col": 1 }
 ]},
@@ -12,7 +11,6 @@
 "doubleEscaped":true,
 "input": "\\uD800",
 "output":[["Character", "\\uD800"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "surrogate-in-input-stream", "line": 1, "col": 1 }
 ]},
@@ -21,7 +19,6 @@
 "doubleEscaped":true,
 "input": "a\\uDFFF",
 "output":[["Character", "a"], ["Character", "\\uDFFF"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "surrogate-in-input-stream", "line": 1, "col": 2 }
 ]},
@@ -30,7 +27,6 @@
 "doubleEscaped":true,
 "input": "\\uD800a",
 "output":[["Character", "\\uD800a"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "surrogate-in-input-stream", "line": 1, "col": 1 }
 ]},
@@ -38,7 +34,6 @@
 {"description":"CR followed by U+0000",
 "input":"\r\u0000",
 "output":[["Character", "\n"], ["Character", "\u0000"]],
-"ignoreErrorOrder":true,
 "errors":[
     { "code": "unexpected-null-character", "line": 2, "col": 1 }
 ]}

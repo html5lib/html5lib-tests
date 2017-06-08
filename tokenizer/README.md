@@ -14,12 +14,15 @@ Basic Structure
         "output": [expected_output_tokens],
         "initialStates": [initial_states],
         "lastStartTag": last_start_tag,
-        "ignoreErrorOrder": ignore_error_order
+        "errors": [parse_errors]
         }
     ]}
 
 Multiple tests per file are allowed simply by adding more objects to the
 "tests" list.
+
+Each parse error is an object that contains error `code` and one-based
+error location indices: `line` and `col`.
 
 `description`, `input` and `output` are always present. The other values
 are optional.
