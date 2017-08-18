@@ -468,3 +468,198 @@
 | <html>
 |   <head>
 |   <body>
+
+#data
+<!DOCTYPE html  >
+#errors
+(1,15): unexpected-char-in-doctype
+#new-errors
+(1:15) invalid-character-sequence-after-doctype-name
+(1:15) unexpected-null-character
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC >
+#errors
+(1,21): unexpected-char-in-doctype
+#new-errors
+(1:21) missing-quote-before-doctype-public-identifier
+(1:21) unexpected-null-character
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" >
+#errors
+(1,49): unexpected-char-in-doctype
+#new-errors
+(1:49) missing-quote-before-doctype-system-identifier
+(1:49) unexpected-null-character
+#document
+| <!DOCTYPE html "-//W3C//DTD HTML 4.01//EN">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"  >
+#errors
+(1,50): unexpected-char-in-doctype
+#new-errors
+(1:50) missing-quote-before-doctype-system-identifier
+(1:50) unexpected-null-character
+#document
+| <!DOCTYPE html "-//W3C//DTD HTML 4.01//EN">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM >
+#errors
+(1,21): unexpected-char-in-doctype
+#new-errors
+(1:21) missing-quote-before-doctype-system-identifier
+(1:21) unexpected-null-character
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM  >
+#errors
+(1,22): unexpected-char-in-doctype
+#new-errors
+(1:22) missing-quote-before-doctype-system-identifier
+(1:22) unexpected-null-character
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM x >
+#errors
+(1,22): unexpected-char-in-doctype
+#new-errors
+(1:22) missing-quote-before-doctype-system-identifier
+(1:23) unexpected-null-character
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM "about:legacy-compat" >
+#errors
+(1,43): unexpected-char-in-doctype
+#new-errors
+(1:43) unexpected-character-after-doctype-system-identifier
+(1:43) unexpected-null-character
+#document
+| <!DOCTYPE html "" "about:legacy-compat">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM "about:legacy-compat"x >
+#errors
+(1,43): unexpected-char-in-doctype
+#new-errors
+(1:43) unexpected-character-after-doctype-system-identifier
+(1:44) unexpected-null-character
+#document
+| <!DOCTYPE html "" "about:legacy-compat">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM "about:legacy-compat"  >
+#errors
+(1,44): unexpected-char-in-doctype
+#new-errors
+(1:44) unexpected-character-after-doctype-system-identifier
+(1:44) unexpected-null-character
+#document
+| <!DOCTYPE html "" "about:legacy-compat">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM "about:legacy-compat" x >
+#errors
+(1,44): unexpected-char-in-doctype
+#new-errors
+(1:44) unexpected-character-after-doctype-system-identifier
+(1:45) unexpected-null-character
+#document
+| <!DOCTYPE html "" "about:legacy-compat">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" >
+#errors
+(1,89): unexpected-char-in-doctype
+#new-errors
+(1:89) unexpected-character-after-doctype-system-identifier
+(1:89) unexpected-null-character
+#document
+| <!DOCTYPE html "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"x >
+#errors
+(1,89): unexpected-char-in-doctype
+#new-errors
+(1:89) unexpected-character-after-doctype-system-identifier
+(1:90) unexpected-null-character
+#document
+| <!DOCTYPE html "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"  >
+#errors
+(1,90): unexpected-char-in-doctype
+#new-errors
+(1:90) unexpected-character-after-doctype-system-identifier
+(1:90) unexpected-null-character
+#document
+| <!DOCTYPE html "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" x >
+#errors
+(1,90): unexpected-char-in-doctype
+#new-errors
+(1:90) unexpected-character-after-doctype-system-identifier
+(1:91) unexpected-null-character
+#document
+| <!DOCTYPE html "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+| <html>
+|   <head>
+|   <body>
