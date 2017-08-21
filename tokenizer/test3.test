@@ -183,7 +183,7 @@
 
 {"description":"<! \\u0000",
 "input":"<! \u0000",
-"output":[["Comment", "\uFFFD"]],
+"output":[["Comment", " \uFFFD"]],
 "errors":[
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 },
     { "code": "unexpected-null-character", "line": 1, "col": 4 }
@@ -2229,8 +2229,8 @@
 "output":[["DOCTYPE", "a", "", null, false]],
 "errors": [
     { "code": "missing-whitespace-after-doctype-public-keyword", "col": 19, "line": 1 },
-    { "code": "unexpected-null-character", "col": 21, "line": 1 },
-    { "code": "eof-in-doctype", "col": 22, "line": 1 }
+    { "code": "missing-quote-before-doctype-system-identifier", "col": 21, "line": 1 },
+    { "code": "unexpected-null-character", "col": 21, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC\"\" \\u0000",
@@ -2238,8 +2238,8 @@
 "output":[["DOCTYPE", "a", "", null, false]],
 "errors": [
     { "code": "missing-whitespace-after-doctype-public-keyword", "col": 19, "line": 1 },
-    { "code": "unexpected-null-character", "col": 22, "line": 1 },
-    { "code": "eof-in-doctype", "col": 23, "line": 1 }
+    { "code": "missing-quote-before-doctype-system-identifier", "col": 22, "line": 1 },
+    { "code": "unexpected-null-character", "col": 22, "line": 1 }
 ]},
 
 {"description":"<!DOCTYPE a PUBLIC\"#",
@@ -3229,7 +3229,7 @@
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors": [
     { "code": "missing-quote-before-doctype-system-identifier", "col": 20, "line": 1 },
-    { "code": "unexpected-null-character", "line": 1, "col": 21 }
+    { "code": "unexpected-null-character", "line": 1, "col": 20 }
 ]},
 
 {"description":"<!DOCTYPE a SYSTEM\\u0008",
@@ -4324,7 +4324,7 @@
 "output":[["DOCTYPE", "a", null, null, false]],
 "errors":[
     { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 13 },
-    { "code": "unexpected-null-character", "line": 1, "col": 13 }
+    { "code": "unexpected-null-character", "line": 1, "col": 14 }
 ]},
 
 {"description":"<!DOCTYPE a a\\u0009",
@@ -7668,7 +7668,7 @@
 "errors":[
     { "code": "missing-whitespace-before-doctype-name", "line": 1, "col": 10 },
     { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 12 },
-    { "code": "unexpected-null-character", "line": 1, "col": 12 }
+    { "code": "unexpected-null-character", "line": 1, "col": 13 }
 ]},
 
 {"description":"<!DOCTYPEa a\\u0009",
@@ -8350,7 +8350,7 @@
 
 {"description":"</ \\u0000",
 "input":"</ \u0000",
-"output":[["Comment", "\uFFFD"]],
+"output":[["Comment", " \uFFFD"]],
 "errors":[
     { "code": "invalid-first-character-of-tag-name", "line": 1, "col": 3 },
     { "code": "unexpected-null-character", "line": 1, "col": 4 }
@@ -8569,7 +8569,7 @@
 "output":[["Comment", "?\uFFFD"]],
 "errors":[
     { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 },
-    { "code": "unexpected-null-character", "line": 1, "col": 2 }
+    { "code": "unexpected-null-character", "line": 1, "col": 3 }
 ]},
 
 {"description":"<?\\u0009",
@@ -8610,10 +8610,10 @@
 
 {"description":"<? \\u0000",
 "input":"<? \u0000",
-"output":[["Comment", "?\uFFFD"]],
+"output":[["Comment", "? \uFFFD"]],
 "errors":[
     { "code": "unexpected-question-mark-instead-of-tag-name", "line": 1, "col": 2 },
-    { "code": "unexpected-null-character", "line": 1, "col": 3 }
+    { "code": "unexpected-null-character", "line": 1, "col": 4 }
 ]},
 
 {"description":"<?!",
