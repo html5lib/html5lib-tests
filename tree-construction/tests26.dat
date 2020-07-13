@@ -391,3 +391,166 @@ Line 1 Col 19 Expected closing tag. Unexpected end of file.
 |     <button>
 |       <p>
 |     <button>
+
+#data
+<!DOCTYPE html><dd>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+
+#data
+<!DOCTYPE html><dt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+
+#data
+<!DOCTYPE html><li>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+
+#data
+<!DOCTYPE html><menuitem>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <menuitem>
+
+#data
+<!DOCTYPE html><optgroup>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <optgroup>
+
+#data
+<!DOCTYPE html><option>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <option>
+
+#data
+<!DOCTYPE html><p>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+
+#data
+<!DOCTYPE html><rb>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <rb>
+
+#data
+<!DOCTYPE html><rp>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <rp>
+
+#data
+<!DOCTYPE html><rt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <rt>
+
+#data
+<!DOCTYPE html><rtc>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <rtc>
+
+#data
+<tbody>
+#errors
+#document-fragment
+table
+#document
+| <tbody>
+
+#data
+<thead>
+#errors
+#document-fragment
+table
+#document
+| <thead>
+
+#data
+<tfoot>
+#errors
+#document-fragment
+table
+#document
+| <tfoot>
+
+#data
+<tr>
+#errors
+#document-fragment
+table
+#document
+| <tbody>
+|   <tr>
+
+#data
+<td>
+#errors
+#document-fragment
+table
+#document
+| <tbody>
+|   <tr>
+|     <td>
+
+#data
+<th>
+#errors
+#document-fragment
+table
+#document
+| <tbody>
+|   <tr>
+|     <th>
