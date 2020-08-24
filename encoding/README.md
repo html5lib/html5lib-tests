@@ -30,7 +30,10 @@ is the expected result of running the *encoding sniffing algorithm* at
 https://html.spec.whatwg.org/#encoding-sniffing-algorithm with the given
 test data as input; this is, it's the expected result of running *only* the
 *encoding sniffing algorithm* — without also running the tokenization state
-machine and tree-construction stage defined in the spec.
+machine and tree-construction stage defined in the spec — and specifically,
+for running the *prescan the byte stream to determine its encoding*
+https://html.spec.whatwg.org/#prescan-a-byte-stream-to-determine-its-encoding
+algorithm on only the first 1024 bytes of the test data.
 
 For all tests outside the subdirectory named `preparsed`, the encoding name
 indicated is instead the expected character encoding for the output after
