@@ -438,8 +438,8 @@
     { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 16 }
 ]},
 
-{"description":"Doctype sistem",
-"input":"<!DOCTYPE html SISTEM \"AbC\">",
+{"description":"Doctype system",
+"input":"<!DOCTYPE html SYSTEM \"AbC\">",
 "output":[["DOCTYPE", "html", null, null, false]],
 "errors":[
     { "code": "invalid-character-sequence-after-doctype-name", "line": 1, "col": 16 }
