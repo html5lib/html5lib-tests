@@ -590,7 +590,7 @@ div
 #data
 <svg></br><foo>
 #errors
-9: HTML end tag “br” in a foreign namespace context.
+10: HTML end tag “br” in a foreign namespace context.
 #document-fragment
 div
 #document
@@ -601,7 +601,7 @@ div
 #data
 </p><foo>
 #errors
-3: HTML end tag “p” in a foreign namespace context.
+4: HTML end tag “p” in a foreign namespace context.
 #document-fragment
 svg svg
 #document
@@ -611,7 +611,7 @@ svg svg
 #data
 </br><foo>
 #errors
-3: HTML end tag “br” in a foreign namespace context.
+5: HTML end tag “br” in a foreign namespace context.
 #document-fragment
 svg svg
 #document
