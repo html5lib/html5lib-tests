@@ -1,0 +1,3 @@
+#!/usr/bin/env python
+import lint_lib.lint as lint
+lint.main()
