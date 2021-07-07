@@ -591,6 +591,15 @@
     { "code": "incorrectly-opened-comment", "line": 1, "col": 3 }
 ]},
 
+{"description":"<!-\\u0000",
+"input":"<!-\u0000",
+"output":[["Comment", "-\uFFFD"]],
+"errors":[
+    { "code": "incorrectly-opened-comment", "line": 1, "col": 4 },
+    { "code": "unexpected-null-character", "line": 1, "col": 4 },
+    { "code": "eof-in-comment", "line": 1, "col": 5 }
+]},
+
 {"description":"<!--",
 "input":"<!--",
 "output":[["Comment", ""]],
