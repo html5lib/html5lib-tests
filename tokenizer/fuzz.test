@@ -1,0 +1,9 @@
+{"tests": [
+{"description":"Lots of started attributes, EOF in tag",
+"input":"<D/0=&\r0='>",
+"output":[],
+"errors":[
+    { "code": "unexpected-solidus-in-tag", "line": 1, "col": 2 },
+    { "code": "eof-in-tag", "line": 1, "col": 12 }
+]}
+]}
