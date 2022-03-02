@@ -2,10 +2,7 @@
 
 {"description": "Undefined named entity in a double-quoted attribute value ending in semicolon and whose name starts with a known entity name.",
 "input":"<h a=\"&noti;\">",
-"output": [["StartTag", "h", {"a": "&noti;"}]],
-"errors":[
-    { "code": "unknown-named-character-reference", "line": 1, "col": 12 }
-]},
+"output": [["StartTag", "h", {"a": "&noti;"}]]},
 
 {"description": "Entity name requiring semicolon instead followed by the equals sign in a double-quoted attribute value.",
 "input":"<h a=\"&lang=\">",
@@ -17,10 +14,7 @@
 
 {"description": "Undefined named entity in a single-quoted attribute value ending in semicolon and whose name starts with a known entity name.",
 "input":"<h a='&noti;'>",
-"output": [["StartTag", "h", {"a": "&noti;"}]],
-"errors":[
-    { "code": "unknown-named-character-reference", "line": 1, "col": 12 }
-]},
+"output": [["StartTag", "h", {"a": "&noti;"}]]},
 
 {"description": "Entity name requiring semicolon instead followed by the equals sign in a single-quoted attribute value.",
 "input":"<h a='&lang='>",
@@ -32,10 +26,7 @@
 
 {"description": "Undefined named entity in an unquoted attribute value ending in semicolon and whose name starts with a known entity name.",
 "input":"<h a=&noti;>",
-"output": [["StartTag", "h", {"a": "&noti;"}]],
-"errors":[
-    { "code": "unknown-named-character-reference", "line": 1, "col": 11 }
-]},
+"output": [["StartTag", "h", {"a": "&noti;"}]]},
 
 {"description": "Entity name requiring semicolon instead followed by the equals sign in an unquoted attribute value.",
 "input":"<h a=&lang=>",
