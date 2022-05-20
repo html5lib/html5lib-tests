@@ -284,3 +284,15 @@
 |             <svg svg>
 |               <svg desc>
 |           <td>
+
+#data
+<table>a<!doctype html>
+#errors
+(1,7): expected-doctype-but-got-start-tag
+(1,30): expected-closing-tag-but-got-eof
+#document
+| <html>
+|   <head>
+|   <body>
+|     "a"
+|     <table>
