@@ -1661,3 +1661,21 @@ template
 |           " "
 |         " "
 |   <body>
+
+#data
+<!DOCTYPE HTML><template><tr><td>cell</td></tr>a</template>
+#document-fragment
+template
+#errors
+(1,48): foster-parenting-character
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <template>
+|       content
+|         <tr>
+|           <td>
+|             "cell"
+|         "a"
+|   <body>
