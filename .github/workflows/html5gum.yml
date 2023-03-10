@@ -1,0 +1,22 @@
+name: html5gum
+
+on: [push, pull_request]
+
+jobs:
+  check:
+    name: 'parser: html5gum'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: untitaker/html5gum
+      - run: rm -rf tests/html5lib-tests/
+      - uses: actions/checkout@v2
+        with:
+          path: tests/html5lib-tests/
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - run: cargo test
