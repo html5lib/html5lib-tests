@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: inikulin/parse5
+          submodules: recursive
       - run: rm -rf test/data/html5lib-tests/
       - uses: actions/checkout@v2
         with:
