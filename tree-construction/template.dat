@@ -1614,9 +1614,9 @@ eof table
 
 #data
 <template><form><input name="q"></form><div>second</div></template>
+#errors
 #document-fragment
 template
-#errors
 #document
 | <template>
 |   content
@@ -1625,3 +1625,51 @@ template
 |         name="q"
 |     <div>
 |       "second"
+
+#data
+<!DOCTYPE HTML><template><tr><td>cell</td></tr></template>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <template>
+|       content
+|         <tr>
+|           <td>
+|             "cell"
+|   <body>
+
+#data
+<!DOCTYPE HTML><template> <tr> <td>cell</td> </tr> </template>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <template>
+|       content
+|         " "
+|         <tr>
+|           " "
+|           <td>
+|             "cell"
+|           " "
+|         " "
+|   <body>
+
+#data
+<!DOCTYPE HTML><template><tr><td>cell</td></tr>a</template>
+#errors
+(1,59): foster-parenting-character
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <template>
+|       content
+|         <tr>
+|           <td>
+|             "cell"
+|         "a"
+|   <body>
