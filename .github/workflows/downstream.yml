@@ -30,7 +30,7 @@ parse5:
     - uses: actions/checkout@v2
       with:
         path: test/data/html5lib-tests/
-    - uses: actions/setup-node@v3.6.0
+    - uses: actions/setup-node@v3
       with:
         node-version: lts/*
         cache: npm
