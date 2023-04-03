@@ -1636,13 +1636,16 @@ eof table
 <template><form><input name="q"></form><div>second</div></template>
 #errors
 #document
-| <template>
-|   content
-|     <form>
-|       <input>
-|         name="q"
-|     <div>
-|       "second"
+| <html>
+|   <head>
+|     <template>
+|       content
+|         <form>
+|           <input>
+|             name="q"
+|         <div>
+|           "second"
+|   <body>
 
 #data
 <!DOCTYPE HTML><template><tr><td>cell</td></tr></template>
