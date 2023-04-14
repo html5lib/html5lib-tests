@@ -255,7 +255,7 @@ def lint_tree_construction_test(path: str) -> None:
         return
 
     # We'd put extra linting here, if we ever have anything specific to the
-    # encoding tests here.
+    # tree construction tests here.
 
 
 def lint_tree_construction_tests(path: str) -> None:
