@@ -14,9 +14,6 @@ from ._vendor.funcparserlib.parser import (
     tok,
 )
 
-text_type = str
-binary_type = bytes
-
 StringLike = TypeVar("StringLike", str, bytes)
 
 
@@ -36,14 +33,14 @@ def _make_tokenizer(specs: List[Tuple[str, Tuple[StringLike]]]) -> Callable:
 
     compiled = [compile_spec(s) for s in specs]
 
-    def match_specs(specs, str, i, position):
-        if isinstance(str, text_type):
+    def match_specs(specs, s, i, position):
+        if isinstance(s, str):
             lf = "\n"
         else:
             lf = b"\n"
         line, pos = position
         for type, regexp in specs:
-            m = regexp.match(str, i)
+            m = regexp.match(s, i)
             if m is not None:
                 value = m.group()
                 nls = value.count(lf)
@@ -54,15 +51,15 @@ def _make_tokenizer(specs: List[Tuple[str, Tuple[StringLike]]]) -> Callable:
                     n_pos = len(value) - value.rfind(lf) - 1
                 return Token(type, value, (line, pos + 1), (n_line, n_pos))
         else:
-            errline = str.splitlines()[line - 1]
+            errline = s.splitlines()[line - 1]
             raise LexerError((line, pos + 1), errline)
 
-    def f(str):
-        length = len(str)
+    def f(s):
+        length = len(s)
         line, pos = 1, 0
         i = 0
         while i < length:
-            t = match_specs(compiled, str, i, (line, pos))
+            t = match_specs(compiled, s, i, (line, pos))
             yield t
             line, pos = t.end
             i += len(t.value)
@@ -121,9 +118,9 @@ def _parser(
     new_test_header: StringLike,
     tok_type: Union[Type[str], Type[bytes]],
 ) -> List[Test]:
-    if tok_type is text_type:
+    if tok_type is str:
         header_prefix = "#"
-    elif tok_type is binary_type:
+    elif tok_type is bytes:
         header_prefix = b"#"
     else:
         assert False, "unreachable"
@@ -172,9 +169,9 @@ def parse(s: StringLike, new_test_header: StringLike) -> List[Test]:
     if type(s) != type(new_test_header):
         raise TypeError("s and new_test_header must have same type")
 
-    if isinstance(s, text_type):
-        return _parser(list(_tokenizer_u(s)), new_test_header, text_type)
-    elif isinstance(s, binary_type):
-        return _parser(list(_tokenizer_b(s)), new_test_header, binary_type)
+    if isinstance(s, str):
+        return _parser(list(_tokenizer_u(s)), new_test_header, str)
+    elif isinstance(s, bytes):
+        return _parser(list(_tokenizer_b(s)), new_test_header, bytes)
     else:
         raise TypeError("s must be unicode or bytes object")

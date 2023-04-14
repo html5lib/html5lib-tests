@@ -169,7 +169,11 @@ def lint_encoding_test(path: str) -> None:
         input_headers={b"data"},
     )
     if not parsed:
+        # We'll already have output if there's a parse error.
         return
+
+    # We'd put extra linting here, if we ever have anything specific to the
+    # encoding tests here.
 
 
 def lint_encoding_tests(path: str) -> None:
@@ -247,7 +251,11 @@ def lint_tree_construction_test(path: str) -> None:
         },
     )
     if not parsed:
+        # We'll already have output if there's a parse error.
         return
+
+    # We'd put extra linting here, if we ever have anything specific to the
+    # encoding tests here.
 
 
 def lint_tree_construction_tests(path: str) -> None:
