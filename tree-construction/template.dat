@@ -868,21 +868,6 @@ no doctype
 |         <td>
 
 #data
-<body><template><template><tr></tr></template><td></td></template>
-#errors
-no doctype
-#document
-| <html>
-|   <head>
-|   <body>
-|     <template>
-|       content
-|         <template>
-|           content
-|             <tr>
-|         <td>
-
-#data
 <body><table><colgroup><template><col></col></template></colgroup></table></body>
 #errors
 no doctype
@@ -1107,7 +1092,7 @@ eof in template
 <body><template><i><menu>Foo</i>
 #errors
 no doctype
-mising /menu
+missing /menu
 eof in template
 #document
 | <html>
@@ -1570,6 +1555,19 @@ no doctype
 |     <template>
 |       content
 |         "Foo"
+|   <body>
+
+#data
+<html><head></head><template></template><head>
+#errors
+no doctype
+template-after-head
+head-after-head
+#document
+| <html>
+|   <head>
+|     <template>
+|       content
 |   <body>
 
 #data
