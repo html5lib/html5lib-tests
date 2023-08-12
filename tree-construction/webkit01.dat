@@ -360,6 +360,32 @@ console.log("FOO<span>BAR</span>BAZ");
 | <!--  Again  -->
 
 #data
+<html><body></body>
+   <!-- Hi there --></html>
+#errors
+no-doctype
+#document
+| <html>
+|   <head>
+|   <body>
+|     "
+   "
+|   <!--  Hi there  -->
+
+#data
+<html><body></body></html>
+   <!-- Hi there -->
+#errors
+no-doctype
+#document
+| <html>
+|   <head>
+|   <body>
+|     "
+   "
+| <!--  Hi there  -->
+
+#data
 <html><body><ruby><div><rp>xx</rp></div></ruby></body></html>
 #errors
 (1,6): expected-doctype-but-got-start-tag
