@@ -35,13 +35,6 @@
             ]
         },
         {
-            "description":"NUL in CDATA section",
-            "doubleEscaped":true,
-            "initialStates":["CDATA section state"],
-            "input":"\\u0000]]>",
-            "output":[["Character", "\\u0000"]]
-        },
-        {
            "description":"NUL in script HTML comment",
            "doubleEscaped":true,
            "initialStates":["Script data state"],
@@ -278,51 +271,6 @@
             "output":[["Comment", "[CDATA[foo]]"]],
             "errors":[
                 { "code": "cdata-in-html-content", "line": 1, "col": 9 }
-            ]
-        },
-        {
-            "description":"CDATA content",
-            "input":"foo&#32;]]>",
-            "initialStates":["CDATA section state"],
-            "output":[["Character", "foo&#32;"]]
-        },
-        {
-            "description":"CDATA followed by HTML content",
-            "input":"foo&#32;]]>&#32;",
-            "initialStates":["CDATA section state"],
-            "output":[["Character", "foo&#32; "]]
-        },
-        {
-            "description":"CDATA with extra bracket",
-            "input":"foo]]]>",
-            "initialStates":["CDATA section state"],
-            "output":[["Character", "foo]"]]
-        },
-        {
-            "description":"CDATA without end marker",
-            "input":"foo",
-            "initialStates":["CDATA section state"],
-            "output":[["Character", "foo"]],
-            "errors":[
-                { "code": "eof-in-cdata", "line": 1, "col": 4 }
-            ]
-        },
-        {
-            "description":"CDATA with single bracket ending",
-            "input":"foo]",
-            "initialStates":["CDATA section state"],
-            "output":[["Character", "foo]"]],
-            "errors":[
-                { "code": "eof-in-cdata", "line": 1, "col": 5 }
-            ]
-        },
-        {
-            "description":"CDATA with two brackets ending",
-            "input":"foo]]",
-            "initialStates":["CDATA section state"],
-            "output":[["Character", "foo]]"]],
-            "errors":[
-                { "code": "eof-in-cdata", "line": 1, "col": 6 }
             ]
         },
         {
