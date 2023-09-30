@@ -1,0 +1,162 @@
+#data
+<!doctype html><svg xmlns="http://www.w3.org/2000/svg"></svg>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns="http://www.w3.org/2000/svg"
+
+#data
+<!doctype html><math xmlns="http://www.w3.org/1998/Math/MathML"></math>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       xmlns="http://www.w3.org/1998/Math/MathML"
+
+#data
+<!doctype html><svg xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns:xlink="http://www.w3.org/1999/xlink"
+
+#data
+<!doctype html><html xmlns="totally not html"></html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   xmlns="totally not html"
+|   <head>
+|   <body>
+
+#data
+<!doctype html><html xmlns:xlink="totally not xlink"></html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   xmlns:xlink="totally not xlink"
+|   <head>
+|   <body>
+
+#data
+<!doctype html><svg xmlns="totally not svg"></svg>
+#errors
+xmlns mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns="totally not svg"
+
+#data
+<!doctype html><math xmlns="totally not mathml"></math>
+#errors
+xmlns mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       xmlns="totally not mathml"
+
+#data
+<!doctype html><svg xmlns:xlink="totally not xlink"></svg>
+#errors
+xmlns:xlink mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns:xlink="totally not xlink"
+
+#data
+<!doctype html><math xmlns:xlink="totally not xlink"></math>
+#errors
+xmlns:xlink mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <math math>
+|       xmlns:xlink="totally not xlink"
+
+#data
+<!doctype html><svg xmlns="totally not svg" xmlns:xlink="totally not xlink"></svg>
+#errors
+xmlns mismatch
+xmlns:xlink mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns="totally not svg"
+|       xmlns:xlink="totally not xlink"
+
+#data
+<!doctype html><svg xmlns="Http://www.w3.org/2000/svg"></svg>
+#errors
+xmlns mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns="Http://www.w3.org/2000/svg"
+
+#data
+<!doctype html><svg xmlns:xlink="Http://www.w3.org/2000/svg"></svg>
+#errors
+xmlns:xlink mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns:xlink="Http://www.w3.org/2000/svg"
+
+#data
+<!doctype html><svg xmlns></svg>
+#errors
+xmlns mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns=""
+
+#data
+<!doctype html><svg xmlns:xlink></svg>
+#errors
+xmlns:xlink mismatch
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <svg svg>
+|       xmlns:xlink=""
