@@ -790,29 +790,29 @@ select
 #data
 <input><option>
 #errors
-(1,7): unexpected-input-in-select
 #document-fragment
 select
 #document
+| <input>
 | <option>
 
 #data
 <keygen><option>
 #errors
-(1,8): unexpected-input-in-select
 #document-fragment
 select
 #document
+| <keygen>
 | <option>
 
 #data
 <textarea><option>
 #errors
-(1,10): unexpected-input-in-select
 #document-fragment
 select
 #document
-| <option>
+| <textarea>
+|   "<option>"
 
 #data
 </html><!--abc-->

@@ -500,7 +500,6 @@
 #data
 <!DOCTYPE html><select><optgroup><option></optgroup><option><select><option>
 #errors
-(1,68): unexpected-select-in-select
 #document
 | <!DOCTYPE html>
 | <html>
@@ -510,7 +509,8 @@
 |       <optgroup>
 |         <option>
 |       <option>
-|     <option>
+|     <select>
+|       <option>
 
 #data
 <!DOCTYPE html><select><optgroup><option><optgroup>

@@ -437,11 +437,6 @@ no-doctype
 #data
 <select><option>A<select><option>B<select><option>C<select><option>D<select><option>E<select><option>F<select><option>G<select>
 #errors
-(1,8): expected-doctype-but-got-start-tag
-(1,25): unexpected-select-in-select
-(1,59): unexpected-select-in-select
-(1,93): unexpected-select-in-select
-(1,127): unexpected-select-in-select
 #document
 | <html>
 |   <head>
@@ -449,21 +444,25 @@ no-doctype
 |     <select>
 |       <option>
 |         "A"
-|     <option>
-|       "B"
-|       <select>
-|         <option>
-|           "C"
-|     <option>
-|       "D"
-|       <select>
-|         <option>
-|           "E"
-|     <option>
-|       "F"
-|       <select>
-|         <option>
-|           "G"
+|     <select>
+|       <option>
+|         "B"
+|     <select>
+|       <option>
+|         "C"
+|     <select>
+|       <option>
+|         "D"
+|     <select>
+|       <option>
+|         "E"
+|     <select>
+|       <option>
+|         "F"
+|     <select>
+|       <option>
+|         "G"
+|     <select>
 
 #data
 <dd><dd><dt><dt><dd><li><li>

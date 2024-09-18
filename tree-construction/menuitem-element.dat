@@ -161,13 +161,13 @@
 #data
 <!DOCTYPE html><select><menuitem></select>
 #errors
-33: Stray start tag “menuitem”.
 #document
 | <!DOCTYPE html>
 | <html>
 |   <head>
 |   <body>
 |     <select>
+|       <menuitem>
 
 #data
 <!DOCTYPE html><option><menuitem>

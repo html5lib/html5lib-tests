@@ -227,34 +227,27 @@
 #data
 <!doctype html><select><plaintext></plaintext>X
 #errors
-34: Stray start tag “plaintext”.
-46: Stray end tag “plaintext”.
-47: End of file seen and there were open elements.
 #document
 | <!DOCTYPE html>
 | <html>
 |   <head>
 |   <body>
 |     <select>
-|       "X"
+|       <plaintext>
+|         "</plaintext>X"
 
 #data
 <!doctype html><table><select><plaintext>a<caption>b
 #errors
-30: Start tag “select” seen in “table”.
-41: Stray start tag “plaintext”.
-51: “caption” start tag with “select” open.
-52: End of file seen and there were open elements.
 #document
 | <!DOCTYPE html>
 | <html>
 |   <head>
 |   <body>
 |     <select>
-|       "a"
+|       <plaintext>
+|         "a<caption>b"
 |     <table>
-|       <caption>
-|         "b"
 
 #data
 <!doctype html><template><plaintext>a</template>b

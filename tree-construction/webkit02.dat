@@ -309,12 +309,11 @@ div
 #data
 <option><XH<optgroup></optgroup>
 #errors
-(1,21): unexpected-start-tag-in-select
-(1,32): unexpected-end-tag-in-select
 #document-fragment
 select
 #document
 | <option>
+|   <xh<optgroup>
 
 #data
 <svg><foreignObject><div>foo</div><plaintext></foreignObject></svg><div>bar</div>
@@ -438,26 +437,22 @@ eof-in-math
 |     <select>
 |       <optgroup>
 |         <option>
-|       <hr>
+|         <hr>
 
 #data
 <select><optgroup><hr>
 #errors
-1:1: ERROR: Expected a doctype token
-1:23: ERROR: Premature end of file. Currently open tags: html, body, select.
 #document
 | <html>
 |   <head>
 |   <body>
 |     <select>
 |       <optgroup>
-|       <hr>
+|         <hr>
 
 #data
 <select><option><optgroup><hr>
 #errors
-1:1: ERROR: Expected a doctype token
-1:31: ERROR: Premature end of file. Currently open tags: html, body, select.
 #document
 | <html>
 |   <head>
@@ -465,7 +460,7 @@ eof-in-math
 |     <select>
 |       <option>
 |       <optgroup>
-|       <hr>
+|         <hr>
 
 #data
 <table><tr><td><select><hr>
@@ -503,8 +498,6 @@ eof-in-math
 #data
 <table><tr><td><select><optgroup><option><hr>
 #errors
-1:1: ERROR: Expected a doctype token
-1:46: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select.
 #document
 | <html>
 |   <head>
@@ -516,13 +509,11 @@ eof-in-math
 |             <select>
 |               <optgroup>
 |                 <option>
-|               <hr>
+|                 <hr>
 
 #data
 <table><tr><td><select><optgroup><hr>
 #errors
-1:1: ERROR: Expected a doctype token
-1:38: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select.
 #document
 | <html>
 |   <head>
@@ -533,13 +524,11 @@ eof-in-math
 |           <td>
 |             <select>
 |               <optgroup>
-|               <hr>
+|                 <hr>
 
 #data
 <table><tr><td><select><option><optgroup><hr>
 #errors
-1:1: ERROR: Expected a doctype token
-1:46: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select.
 #document
 | <html>
 |   <head>
@@ -551,4 +540,18 @@ eof-in-math
 |             <select>
 |               <option>
 |               <optgroup>
-|               <hr>
+|                 <hr>
+
+#data
+<select><div><i></div><option>option
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <div>
+|         <i>
+|       <option>
+|         <i>
+|           "option"

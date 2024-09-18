@@ -200,27 +200,26 @@ X</listing>
 #data
 <!doctype html><select><input>X
 #errors
-(1,30): unexpected-input-in-select
 #document
 | <!DOCTYPE html>
 | <html>
 |   <head>
 |   <body>
 |     <select>
-|     <input>
-|     "X"
+|       <input>
+|       "X"
 
 #data
 <!doctype html><select><select>X
 #errors
-(1,31): unexpected-select-in-select
 #document
 | <!DOCTYPE html>
 | <html>
 |   <head>
 |   <body>
 |     <select>
-|     "X"
+|     <select>
+|       "X"
 
 #data
 <!doctype html><table><input type=hidDEN></table>
@@ -443,11 +442,9 @@ A<table><tr> B</tr> </em>C</table>
 #data
 <select><keygen>
 #errors
-(1,8): expected-doctype-but-got-start-tag
-(1,16): unexpected-input-in-select
 #document
 | <html>
 |   <head>
 |   <body>
 |     <select>
-|     <keygen>
+|       <keygen>
