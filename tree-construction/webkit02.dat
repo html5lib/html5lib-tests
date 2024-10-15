@@ -646,3 +646,13 @@ eof-in-math
 |         <option>
 |           <img>
 |           "option"
+
+#data
+<select><input>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <input>
