@@ -555,3 +555,94 @@ eof-in-math
 |       <option>
 |         <i>
 |           "option"
+
+#data
+<div><i></div><option>option
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <div>
+|       <i>
+|     <i>
+|       <option>
+|         "option"
+
+#data
+<select><div>div 1</div><button>button</button><div>div 2</div><datalist><option>option</option></datalist><div>div 3</div></select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <div>
+|         "div 1"
+|       <button>
+|         "button"
+|       <div>
+|         "div 2"
+|       <datalist>
+|         <option>
+|           "option"
+|       <div>
+|         "div 3"
+
+#data
+<select><button>button</select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <button>
+|         "button"
+
+#data
+<select><datalist>datalist</select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <datalist>
+|         "datalist"
+
+#data
+<select><button><select></select></button></select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <button>
+|     <select>
+
+#data
+<select><button><div><select></select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <button>
+|         <div>
+|     <select>
+
+#data
+<select><div><option><img>option</option></div></select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <div>
+|         <option>
+|           <img>
+|           "option"
