@@ -309,6 +309,8 @@ div
 #data
 <option><XH<optgroup></optgroup>
 #errors
+1:22: ERROR: End tag 'optgroup' isn't allowed here. Currently open tags: html, option, xh<optgroup.
+1:33: ERROR: Premature end of file. Currently open tags: html, option, xh<optgroup.
 #document-fragment
 select
 #document
@@ -442,6 +444,8 @@ eof-in-math
 #data
 <select><optgroup><hr>
 #errors
+1:1: ERROR: Expected a doctype token
+1:23: ERROR: Premature end of file. Currently open tags: html, body, select, optgroup.
 #document
 | <html>
 |   <head>
@@ -453,6 +457,8 @@ eof-in-math
 #data
 <select><option><optgroup><hr>
 #errors
+1:1: ERROR: Expected a doctype token
+1:31: ERROR: Premature end of file. Currently open tags: html, body, select, optgroup.
 #document
 | <html>
 |   <head>
@@ -498,6 +504,8 @@ eof-in-math
 #data
 <table><tr><td><select><optgroup><option><hr>
 #errors
+1:1: ERROR: Expected a doctype token
+1:46: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select, optgroup.
 #document
 | <html>
 |   <head>
@@ -514,6 +522,8 @@ eof-in-math
 #data
 <table><tr><td><select><optgroup><hr>
 #errors
+1:1: ERROR: Expected a doctype token
+1:38: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select, optgroup.
 #document
 | <html>
 |   <head>
@@ -529,7 +539,8 @@ eof-in-math
 #data
 <table><tr><td><select><option><optgroup><hr>
 #errors
-#document
+1:1: ERROR: Expected a doctype token
+1:38: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select, optgroup.#document
 | <html>
 |   <head>
 |   <body>
@@ -545,6 +556,9 @@ eof-in-math
 #data
 <select><div><i></div><option>option
 #errors
+1:1: ERROR: Expected a doctype token
+1:17: ERROR: End tag 'div' isn't allowed here. Currently open tags: html, body, select, div, i.
+1:37: ERROR: Premature end of file. Currently open tags: html, body, select, option, i.
 #document
 | <html>
 |   <head>
@@ -559,6 +573,9 @@ eof-in-math
 #data
 <div><i></div><option>option
 #errors
+1:1: ERROR: Expected a doctype token
+1:9: ERROR: End tag 'div' isn't allowed here. Currently open tags: html, body, div, i.
+1:29: ERROR: Premature end of file. Currently open tags: html, body, i, option.
 #document
 | <html>
 |   <head>
@@ -572,6 +589,7 @@ eof-in-math
 #data
 <select><div>div 1</div><button>button</button><div>div 2</div><datalist><option>option</option></datalist><div>div 3</div></select>
 #errors
+1:1: ERROR: Expected a doctype token
 #document
 | <html>
 |   <head>
@@ -592,6 +610,9 @@ eof-in-math
 #data
 <select><button>button</select>
 #errors
+1:1: ERROR: Expected a doctype token
+1:23: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body, select, button.
+1:32: ERROR: Premature end of file. Currently open tags: html, body, select, button.
 #document
 | <html>
 |   <head>
@@ -603,6 +624,8 @@ eof-in-math
 #data
 <select><datalist>datalist</select>
 #errors
+1:1: ERROR: Expected a doctype token
+1:27: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body, select, datalist.
 #document
 | <html>
 |   <head>
@@ -614,6 +637,10 @@ eof-in-math
 #data
 <select><button><select></select></button></select>
 #errors
+1:1: ERROR: Expected a doctype token
+1:17: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, button.
+1:34: ERROR: End tag 'button' isn't allowed here. Currently open tags: html, body.
+1:43: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body.
 #document
 | <html>
 |   <head>
@@ -625,6 +652,8 @@ eof-in-math
 #data
 <select><button><div><select></select>
 #errors
+1:1: ERROR: Expected a doctype token
+1:22: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, button, div.
 #document
 | <html>
 |   <head>
@@ -637,6 +666,7 @@ eof-in-math
 #data
 <select><div><option><img>option</option></div></select>
 #errors
+1:1: ERROR: Expected a doctype token
 #document
 | <html>
 |   <head>
@@ -650,6 +680,8 @@ eof-in-math
 #data
 <select><input>
 #errors
+1:1: ERROR: Expected a doctype token
+1:16: ERROR: Premature end of file. Currently open tags: html, body, select.
 #document
 | <html>
 |   <head>

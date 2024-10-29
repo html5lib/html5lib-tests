@@ -500,6 +500,8 @@
 #data
 <!DOCTYPE html><select><optgroup><option></optgroup><option><select><option>
 #errors
+1:61: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
+1:77: ERROR: Premature end of file. Currently open tags: html, body, select, option.
 #document
 | <!DOCTYPE html>
 | <html>

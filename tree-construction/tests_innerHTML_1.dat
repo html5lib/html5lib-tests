@@ -808,6 +808,7 @@ select
 #data
 <textarea><option>
 #errors
+1:19: ERROR: Premature end of file. Currently open tags: html, textarea.
 #document-fragment
 select
 #document

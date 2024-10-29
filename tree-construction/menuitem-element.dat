@@ -161,6 +161,7 @@
 #data
 <!DOCTYPE html><select><menuitem></select>
 #errors
+1:34: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body, select, menuitem.
 #document
 | <!DOCTYPE html>
 | <html>

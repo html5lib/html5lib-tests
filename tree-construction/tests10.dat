@@ -259,6 +259,8 @@
 #data
 <!DOCTYPE html><body><table><tr><td><select><svg><g>foo</g><g>bar</g><p>baz</table><p>quux
 #errors
+1:70: ERROR: Start tag 'p' isn't allowed here. Currently open tags: html, body, table, tbody, tr, td, select, svg.
+1:76: ERROR: End tag 'table' isn't allowed here. Currently open tags: html, body, table, tbody, tr, td, select.
 #document
 | <!DOCTYPE html>
 | <html>
@@ -282,6 +284,13 @@
 #data
 <!DOCTYPE html><body><table><select><svg><g>foo</g><g>bar</g><p>baz</table><p>quux
 #errors
+1:29: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, table.
+1:37: ERROR: Start tag 'svg' isn't allowed here. Currently open tags: html, body, table, select.
+1:62: ERROR: Start tag 'p' isn't allowed here. Currently open tags: html, body, table, select, svg.
+1:62: ERROR: Start tag 'p' isn't allowed here. Currently open tags: html, body, table, select.
+1:65: ERROR: Character tokens aren't legal here
+1:66: ERROR: Character tokens aren't legal here
+1:67: ERROR: Character tokens aren't legal here
 #document
 | <!DOCTYPE html>
 | <html>

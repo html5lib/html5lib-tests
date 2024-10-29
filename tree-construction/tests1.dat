@@ -355,6 +355,10 @@ Line1<br>Line2<br>Line3<br>Line4
 #data
 <select><b><option><select><option></b></select>X
 #errors
+1:1: ERROR: Expected a doctype token
+1:20: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, b, option.
+1:36: ERROR: End tag 'b' isn't allowed here. Currently open tags: html, body, b, select, option.
+1:50: ERROR: Premature end of file. Currently open tags: html, body, b.
 #document
 | <html>
 |   <head>
@@ -1530,6 +1534,10 @@ Line1<br>Line2<br>Line3<br>Line4
 #data
 <select><b><option><select><option></b></select>
 #errors
+1:1: ERROR: Expected a doctype token
+1:20: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, b, option.
+1:36: ERROR: End tag 'b' isn't allowed here. Currently open tags: html, body, b, select, option.
+1:49: ERROR: Premature end of file. Currently open tags: html, body, b.
 #document
 | <html>
 |   <head>
