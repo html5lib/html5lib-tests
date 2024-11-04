@@ -540,7 +540,8 @@ eof-in-math
 <table><tr><td><select><option><optgroup><hr>
 #errors
 1:1: ERROR: Expected a doctype token
-1:38: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select, optgroup.#document
+1:38: ERROR: Premature end of file. Currently open tags: html, body, table, tbody, tr, td, select, optgroup.
+#document
 | <html>
 |   <head>
 |   <body>
