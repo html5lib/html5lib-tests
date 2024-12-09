@@ -367,9 +367,8 @@ Line1<br>Line2<br>Line3<br>Line4
 |       <b>
 |         <option>
 |     <b>
-|       <select>
-|         <option>
-|       "X"
+|       <option>
+|     "X"
 
 #data
 <a><table><td><a><table></table><a></tr><a></table><b>X</b>C<a>Y
@@ -1546,8 +1545,7 @@ Line1<br>Line2<br>Line3<br>Line4
 |       <b>
 |         <option>
 |     <b>
-|       <select>
-|         <option>
+|       <option>
 
 #data
 <html><head><title></title><body></body></html>

@@ -511,8 +511,7 @@
 |       <optgroup>
 |         <option>
 |       <option>
-|     <select>
-|       <option>
+|     <option>
 
 #data
 <!DOCTYPE html><select><optgroup><option><optgroup>

@@ -439,7 +439,7 @@ eof-in-math
 |     <select>
 |       <optgroup>
 |         <option>
-|         <hr>
+|       <hr>
 
 #data
 <select><optgroup><hr>
@@ -452,7 +452,7 @@ eof-in-math
 |   <body>
 |     <select>
 |       <optgroup>
-|         <hr>
+|       <hr>
 
 #data
 <select><option><optgroup><hr>
@@ -466,7 +466,7 @@ eof-in-math
 |     <select>
 |       <option>
 |       <optgroup>
-|         <hr>
+|       <hr>
 
 #data
 <table><tr><td><select><hr>
@@ -517,7 +517,7 @@ eof-in-math
 |             <select>
 |               <optgroup>
 |                 <option>
-|                 <hr>
+|               <hr>
 
 #data
 <table><tr><td><select><optgroup><hr>
@@ -534,7 +534,7 @@ eof-in-math
 |           <td>
 |             <select>
 |               <optgroup>
-|                 <hr>
+|               <hr>
 
 #data
 <table><tr><td><select><option><optgroup><hr>
@@ -552,7 +552,7 @@ eof-in-math
 |             <select>
 |               <option>
 |               <optgroup>
-|                 <hr>
+|               <hr>
 
 #data
 <select><div><i></div><option>option
@@ -567,8 +567,8 @@ eof-in-math
 |     <select>
 |       <div>
 |         <i>
-|       <option>
-|         <i>
+|       <i>
+|         <option>
 |           "option"
 
 #data
@@ -648,7 +648,6 @@ eof-in-math
 |   <body>
 |     <select>
 |       <button>
-|     <select>
 
 #data
 <select><button><div><select></select>
@@ -662,7 +661,6 @@ eof-in-math
 |     <select>
 |       <button>
 |         <div>
-|     <select>
 
 #data
 <select><div><option><img>option</option></div></select>
