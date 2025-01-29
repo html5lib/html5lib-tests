@@ -613,7 +613,6 @@ eof-in-math
 #errors
 1:1: ERROR: Expected a doctype token
 1:23: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body, select, button.
-1:32: ERROR: Premature end of file. Currently open tags: html, body, select, button.
 #document
 | <html>
 |   <head>
@@ -640,6 +639,7 @@ eof-in-math
 #errors
 1:1: ERROR: Expected a doctype token
 1:17: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, button.
+1:25: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body.
 1:34: ERROR: End tag 'button' isn't allowed here. Currently open tags: html, body.
 1:43: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body.
 #document
@@ -654,6 +654,7 @@ eof-in-math
 #errors
 1:1: ERROR: Expected a doctype token
 1:22: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, button, div.
+1:30: ERROR: End tag 'select' isn't allowed here. Currently open tags: html, body.
 #document
 | <html>
 |   <head>

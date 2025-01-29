@@ -439,13 +439,9 @@ no-doctype
 #errors
 1:1: ERROR: Expected a doctype token
 1:18: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
-1:35: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
 1:52: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
-1:69: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
 1:86: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
-1:103: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
 1:120: ERROR: Start tag 'select' isn't allowed here. Currently open tags: html, body, select, option.
-1:128: ERROR: Premature end of file. Currently open tags: html, body, select.
 #document
 | <html>
 |   <head>
