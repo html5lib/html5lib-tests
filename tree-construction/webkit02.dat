@@ -728,3 +728,15 @@ eof-in-math
 |             "ib"
 |         <b>
 |           "b"
+
+#data
+<font><select><option>a</option></font></select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <font>
+|       <select>
+|         <option>
+|           "a"
