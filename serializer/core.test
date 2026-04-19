@@ -13,7 +13,7 @@
 
 {"description": "proper attribute value non-quoting (with <)",
  "input": [["StartTag", "http://www.w3.org/1999/xhtml", "span", [{"namespace": null, "name": "title", "value": "foo<bar"}]]],
- "expected": ["<span title=foo<bar>"],
+ "expected": ["<span title=foo&lt;bar>"],
  "xhtml":    ["<span title=\"foo&lt;bar\">"]
 },
 
@@ -24,7 +24,7 @@
 
 {"description": "proper attribute value quoting (with >)",
  "input": [["StartTag", "http://www.w3.org/1999/xhtml", "span", [{"namespace": null, "name": "title", "value": "foo>bar"}]]],
- "expected": ["<span title=\"foo>bar\">"]
+ "expected": ["<span title=\"foo&gt;bar\">"]
 },
 
 {"description": "proper attribute value quoting (with \")",

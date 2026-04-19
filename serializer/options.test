@@ -45,10 +45,10 @@
  "expected": ["<div irrelevant=\"\">"]
 },
 
-{"description": "escape less than signs in attribute values",
+{"description": "escape angle brackets in attribute values",
  "options": {"escape_lt_in_attrs": true},
  "input": [["StartTag", "http://www.w3.org/1999/xhtml", "a", [{"namespace": null, "name": "title", "value": "a<b>c&d"}]]],
- "expected": ["<a title=\"a&lt;b>c&amp;d\">"]
+ "expected": ["<a title=\"a&lt;b&gt;c&amp;d\">"]
 },
 
 {"description": "rcdata",
