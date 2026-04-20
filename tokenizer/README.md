@@ -52,7 +52,7 @@ tokenizer state which can be one of the following:
 -   `RCDATA state`
 -   `RAWTEXT state`
 -   `Script data state`
--   `CDATA section state`
+-   `CDATA section state` (only occurs in `cdataSection.test`)
 
  The test should be run once for each string, using it
 to set the tokenizer's initial state for that run. If

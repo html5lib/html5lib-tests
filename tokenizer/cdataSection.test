@@ -1,0 +1,450 @@
+{
+    "tests": [
+        {
+            "description":"NUL in CDATA section",
+            "doubleEscaped":true,
+            "initialStates":["CDATA section state"],
+            "input":"\\u0000]]>",
+            "output":[["Character", "\\u0000"]]
+        },
+        {
+            "description":"CDATA content",
+            "input":"foo&#32;]]>",
+            "initialStates":["CDATA section state"],
+            "output":[["Character", "foo&#32;"]]
+        },
+        {
+            "description":"CDATA followed by HTML content",
+            "input":"foo&#32;]]>&#32;",
+            "initialStates":["CDATA section state"],
+            "output":[["Character", "foo&#32; "]]
+        },
+        {
+            "description":"CDATA with extra bracket",
+            "input":"foo]]]>",
+            "initialStates":["CDATA section state"],
+            "output":[["Character", "foo]"]]
+        },
+        {
+            "description":"CDATA without end marker",
+            "input":"foo",
+            "initialStates":["CDATA section state"],
+            "output":[["Character", "foo"]],
+            "errors":[
+                { "code": "eof-in-cdata", "line": 1, "col": 4 }
+            ]
+        },
+        {
+            "description":"CDATA with single bracket ending",
+            "input":"foo]",
+            "initialStates":["CDATA section state"],
+            "output":[["Character", "foo]"]],
+            "errors":[
+                { "code": "eof-in-cdata", "line": 1, "col": 5 }
+            ]
+        },
+        {
+            "description":"CDATA with two brackets ending",
+            "input":"foo]]",
+            "initialStates":["CDATA section state"],
+            "output":[["Character", "foo]]"]],
+            "errors":[
+                { "code": "eof-in-cdata", "line": 1, "col": 6 }
+            ]
+        },
+
+{"description":"[empty]",
+"initialStates":["CDATA section state"],
+"input":"",
+"output":[],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 1 }
+]},
+
+{"description":"\\u0009",
+"initialStates":["CDATA section state"],
+"input":"\u0009",
+"output":[["Character", "\u0009"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"\\u000A",
+"initialStates":["CDATA section state"],
+"input":"\u000A",
+"output":[["Character", "\u000A"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 2, "col": 1 }
+]},
+
+{"description":"\\u000B",
+"initialStates":["CDATA section state"],
+"input":"\u000B",
+"output":[["Character", "\u000B"]],
+"errors":[
+    { "code": "control-character-in-input-stream", "line": 1, "col": 1 },
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"\\u000C",
+"initialStates":["CDATA section state"],
+"input":"\u000C",
+"output":[["Character", "\u000C"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":" ",
+"initialStates":["CDATA section state"],
+"input":" ",
+"output":[["Character", " "]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"!",
+"initialStates":["CDATA section state"],
+"input":"!",
+"output":[["Character", "!"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"\"",
+"initialStates":["CDATA section state"],
+"input":"\"",
+"output":[["Character", "\""]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"%",
+"initialStates":["CDATA section state"],
+"input":"%",
+"output":[["Character", "%"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"&",
+"initialStates":["CDATA section state"],
+"input":"&",
+"output":[["Character", "&"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"'",
+"initialStates":["CDATA section state"],
+"input":"'",
+"output":[["Character", "'"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":",",
+"initialStates":["CDATA section state"],
+"input":",",
+"output":[["Character", ","]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"-",
+"initialStates":["CDATA section state"],
+"input":"-",
+"output":[["Character", "-"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":".",
+"initialStates":["CDATA section state"],
+"input":".",
+"output":[["Character", "."]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"/",
+"initialStates":["CDATA section state"],
+"input":"/",
+"output":[["Character", "/"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"0",
+"initialStates":["CDATA section state"],
+"input":"0",
+"output":[["Character", "0"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"1",
+"initialStates":["CDATA section state"],
+"input":"1",
+"output":[["Character", "1"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"9",
+"initialStates":["CDATA section state"],
+"input":"9",
+"output":[["Character", "9"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":";",
+"initialStates":["CDATA section state"],
+"input":";",
+"output":[["Character", ";"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":";=",
+"initialStates":["CDATA section state"],
+"input":";=",
+"output":[["Character", ";="]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";>",
+"initialStates":["CDATA section state"],
+"input":";>",
+"output":[["Character", ";>"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";?",
+"initialStates":["CDATA section state"],
+"input":";?",
+"output":[["Character", ";?"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";@",
+"initialStates":["CDATA section state"],
+"input":";@",
+"output":[["Character", ";@"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";A",
+"initialStates":["CDATA section state"],
+"input":";A",
+"output":[["Character", ";A"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";B",
+"initialStates":["CDATA section state"],
+"input":";B",
+"output":[["Character", ";B"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";Y",
+"initialStates":["CDATA section state"],
+"input":";Y",
+"output":[["Character", ";Y"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";Z",
+"initialStates":["CDATA section state"],
+"input":";Z",
+"output":[["Character", ";Z"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";`",
+"initialStates":["CDATA section state"],
+"input":";`",
+"output":[["Character", ";`"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";a",
+"initialStates":["CDATA section state"],
+"input":";a",
+"output":[["Character", ";a"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";b",
+"initialStates":["CDATA section state"],
+"input":";b",
+"output":[["Character", ";b"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";y",
+"initialStates":["CDATA section state"],
+"input":";y",
+"output":[["Character", ";y"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";z",
+"initialStates":["CDATA section state"],
+"input":";z",
+"output":[["Character", ";z"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";{",
+"initialStates":["CDATA section state"],
+"input":";{",
+"output":[["Character", ";{"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]},
+
+{"description":";\\uDBC0\\uDC00",
+"initialStates":["CDATA section state"],
+"input":";\uDBC0\uDC00",
+"output":[["Character", ";\uDBC0\uDC00"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 4 }
+]},
+
+{"description":"=",
+"initialStates":["CDATA section state"],
+"input":"=",
+"output":[["Character", "="]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":">",
+"initialStates":["CDATA section state"],
+"input":">",
+"output":[["Character", ">"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"?",
+"initialStates":["CDATA section state"],
+"input":"?",
+"output":[["Character", "?"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"@",
+"initialStates":["CDATA section state"],
+"input":"@",
+"output":[["Character", "@"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"A",
+"initialStates":["CDATA section state"],
+"input":"A",
+"output":[["Character", "A"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"B",
+"initialStates":["CDATA section state"],
+"input":"B",
+"output":[["Character", "B"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"Y",
+"initialStates":["CDATA section state"],
+"input":"Y",
+"output":[["Character", "Y"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"Z",
+"initialStates":["CDATA section state"],
+"input":"Z",
+"output":[["Character", "Z"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"`",
+"initialStates":["CDATA section state"],
+"input":"`",
+"output":[["Character", "`"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"a",
+"initialStates":["CDATA section state"],
+"input":"a",
+"output":[["Character", "a"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"b",
+"initialStates":["CDATA section state"],
+"input":"b",
+"output":[["Character", "b"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"y",
+"initialStates":["CDATA section state"],
+"input":"y",
+"output":[["Character", "y"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"z",
+"initialStates":["CDATA section state"],
+"input":"z",
+"output":[["Character", "z"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"{",
+"initialStates":["CDATA section state"],
+"input":"{",
+"output":[["Character", "{"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 2 }
+]},
+
+{"description":"\\uDBC0\\uDC00",
+"initialStates":["CDATA section state"],
+"input":"\uDBC0\uDC00",
+"output":[["Character", "\uDBC0\uDC00"]],
+"errors":[
+    { "code": "eof-in-cdata", "line": 1, "col": 3 }
+]}
+
+    ]
+}
