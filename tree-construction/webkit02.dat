@@ -692,6 +692,9 @@ eof-in-math
 #data
 <select><button><selectedcontent></button><option>X
 #errors
+missing doctype
+unexpected </button>
+unexpected open element at EOF: <select>
 #document
 | <html>
 |   <head>
@@ -706,6 +709,10 @@ eof-in-math
 #data
 <select><button><selectedcontent></button><option>x<i>i<b>ib</i>b
 #errors
+missing doctype
+unexpected </button>
+adoption agency 4.6: formatting element: <i>, current node: <b>
+unexpected open elements at EOF: <select>, <b>
 #document
 | <html>
 |   <head>
@@ -732,6 +739,9 @@ eof-in-math
 #data
 <select><button><selectedcontent></button><option>X<option>Y
 #errors
+missing doctype
+unexpected </button>
+unexpected open element at EOF: <select>
 #document
 | <html>
 |   <head>
@@ -748,6 +758,9 @@ eof-in-math
 #data
 <select><button><selectedcontent></button><option>X<option selected>Y
 #errors
+missing doctype
+unexpected </button>
+unexpected open element at EOF: <select>
 #document
 | <html>
 |   <head>
@@ -765,6 +778,9 @@ eof-in-math
 #data
 <font><select><option>a</option></font></select>
 #errors
+missing doctype
+adoption agency 4.5: formatting element: <font>
+unexpected open element at EOF: <font>
 #document
 | <html>
 |   <head>
