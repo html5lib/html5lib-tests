@@ -840,3 +840,16 @@
 |       <math annotation-xml>
 |         <svg svg>
 |           "x"
+
+#data
+<details name=hello open></details><details name=hello open></details>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <details>
+|       name="hello"
+|       open=""
+|     <details>
+|       name="hello"
