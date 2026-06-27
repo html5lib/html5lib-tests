@@ -527,6 +527,16 @@
 "output":[],
 "errors":[
     { "code": "eof-in-tag", "line": 1, "col": 10 }
+]},
+
+{"description":"EOF in comment in script data",
+"input": "<script><!",
+"output": [
+    ["StartTag", "script", {}],
+    ["Comment", ""]
+],
+"errors": [
+    {"code": "incorrectly-opened-comment", "line": 1, "col": 10 }
 ]}
 
 ]}
