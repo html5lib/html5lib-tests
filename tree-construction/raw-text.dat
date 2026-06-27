@@ -1,0 +1,116 @@
+#data
+<r><iframe><math id="</iframe><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <iframe>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><noembed><math id="</noembed><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <noembed>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><noframes><math id="</noframes><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <noframes>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><noscript><math id="</noscript><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <noscript>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><script><math id="</script><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <script>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><style><math id="</style><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <style>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><textarea><math id="</textarea><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <textarea>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><title><math id="</title><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <title>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
+
+#data
+<r><xmp><math id="</xmp><b>should be outside</b>">
+#document
+| <html>
+|   <head>
+|   <body>
+|     <r>
+|       <xmp>
+|         "<math id=""
+|       <b>
+|         "should be outside"
+|       "">"
