@@ -76,6 +76,7 @@ tokens are:
     ["StartTag", name, {attributes}]
     ["EndTag", name]
     ["Comment", data]
+    ["ProcessingInstruction", data]
     ["Character", data]
 
 `public_id` and `system_id` are either strings or `null`. `correctness`
