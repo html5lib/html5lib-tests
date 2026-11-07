@@ -36,6 +36,30 @@
 "output":[["Character", "\n\u0000"]],
 "errors":[
     { "code": "unexpected-null-character", "line": 2, "col": 1 }
-]}
+]},
+
+{
+  "description": "Consecutive low surrogates followed by a valid surrogate pair",
+  "doubleEscaped": true,
+  "input": "\\uDC00\\uDC00\\uD83D\\uDE00",
+  "output": [
+    [
+      "Character",
+      "\\uDC00\\uDC00\\uD83D\\uDE00"
+    ]
+  ],
+  "errors": [
+    {
+      "code": "surrogate-in-input-stream",
+      "line": 1,
+      "col": 1
+    },
+    {
+      "code": "surrogate-in-input-stream",
+      "line": 1,
+      "col": 2
+    }
+  ]
+}
 ]
 }
